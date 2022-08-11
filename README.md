@@ -3,10 +3,10 @@ A website that will curate recently-asked interview questions from FAANG+ to hel
 
 The questions will be submitted anonymously, or at least semi-anonymously. We'll ensure that no matter who submits them, we won't reveal the usernames, emails or any other personal info unless they explicitly choose to do so.
 
-# resources
+# Resources
 You can find YK's original tweet [here](https://twitter.com/ykdojo/status/1557611357251350528).
 
-# tech stack
+# Tech stack
 Currently planning to use:
 - frontend: Next.js / React
 - CSS framework: Tailwind - probably?
@@ -15,7 +15,7 @@ Currently planning to use:
 
 However, this is by no means set in stone!
 
-# how to contribute
+# How to contribute
 First of all, feel free to submit feature requests as issues.
 
 If you have any other thoughts, feel free to start discussions around those, too.
