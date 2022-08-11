@@ -23,3 +23,5 @@ If you have any other thoughts, feel free to start discussions around those, too
 Right now, we don't even have a UI mockup yet. This is a completely new project. So, the next step is probably to make some UI mockups. Feel free to take a stab at that and submit your idea as a PR!
 
 The other thing that'd be helpful is a flowchart of how users might interact with the website.
+
+Finally - this might be a good (first) issue to tackle: https://github.com/ykdojo/defaang/issues/14
