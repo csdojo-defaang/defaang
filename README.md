@@ -48,3 +48,11 @@ npm run build && npm run start (in case of npm, it will build for production and
 # or
 yarn run build && npm run start (in case of Yarn, it will build for production and start the server on that build)
 ```
+
+# How to deploy the application to Vercel
+
+`#1` Ensure you have a vercel account if not signup for one [here](https://vercel.com/).
+
+`#2` Import the project into vercel.
+
+`#3` Give vercel the nessecary permissions, deploy the projects and voila the deployment is done.
