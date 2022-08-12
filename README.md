@@ -56,3 +56,7 @@ yarn run build && npm run start (in case of Yarn, it will build for production a
 `#2` Import the project into vercel.
 
 `#3` Give vercel the nessecary permissions, deploy the projects and voila the deployment is done.
+
+# Demo
+
+https://defaang.vercel.app/
