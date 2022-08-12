@@ -31,7 +31,9 @@ Second, please take a look through [the other issues](https://github.com/ykdojo/
 
 `#1)`  Make sure you have installed  [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) in your local machine where you want to start app
 
-`#2)` Use below commands respective to your node package manager (npm or Yarn) installed on your system
+`#2` Run ```npm install ``` to install all the required packages
+
+`#3)` Use below commands respective to your node package manager (npm or Yarn) installed on your system
 
 ### To start the application as development server
 ```bash
