@@ -16,15 +16,14 @@ Currently planning to use:
 However, this is by no means set in stone!
 
 # How to contribute
-First of all, feel free to submit feature requests as issues.
 
-If you have any other thoughts, feel free to start discussions around those, too.
+First, feel free to search for good first issues to tackle: https://github.com/ykdojo/defaang/labels/good%20first%20issue
 
-Right now, we don't even have a UI mockup yet. This is a completely new project. So, the next step is probably to make some UI mockups. Feel free to take a stab at that and submit your idea as a PR!
+Even if you're an advanced coder, feel free to take one of them.
 
-The other thing that'd be helpful is a flowchart of how users might interact with the website.
+Second, please take a look through [the other issues](https://github.com/ykdojo/defaang/issues) and [discussions](https://github.com/ykdojo/defaang/discussions) to get a better idea about our vision, and to get inspired. If you have any idea about something you want to contribute, feel free to start an issue or discussion around that.
 
-Finally - feel free to search for good first issues to tackle: https://github.com/ykdojo/defaang/labels/good%20first%20issue
+
 
 # How to start Frontend (Next.js + TailwindCSS)
 
