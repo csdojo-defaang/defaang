@@ -25,3 +25,25 @@ Right now, we don't even have a UI mockup yet. This is a completely new project.
 The other thing that'd be helpful is a flowchart of how users might interact with the website.
 
 Finally - feel free to search for good first issues to tackle: https://github.com/ykdojo/defaang/labels/good%20first%20issue
+
+# How to start Frontend (Next.js + TailwindCSS)
+
+##### Steps:-
+
+`#1)`  Make sure you have installed  [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) in your local machine where you want to start app
+
+`#2)` Use below commands respective to your node package manager (npm or Yarn) installed on your system
+
+### To start the application as development server
+```bash
+npm run dev (in case of npm)
+# or
+yarn run dev (in case of Yarn)
+```
+
+### To start the application as a production server
+```bash
+npm run build && npm run start (in case of npm, it will build for production and start the server on that build)
+# or
+yarn run build && npm run start (in case of Yarn, it will build for production and start the server on that build)
+```
