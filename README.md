@@ -24,4 +24,4 @@ Right now, we don't even have a UI mockup yet. This is a completely new project.
 
 The other thing that'd be helpful is a flowchart of how users might interact with the website.
 
-Finally - this might be a good (first) issue to tackle: https://github.com/ykdojo/defaang/issues/14
+Finally - feel free to search for good first issues to tackle: https://github.com/ykdojo/defaang/labels/good%20first%20issue
