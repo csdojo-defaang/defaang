@@ -34,6 +34,7 @@ style: (formatting, missing semi colons, etc; no production code change)
 refactor: (refactoring production code, eg. renaming a variable)
 test: (adding missing tests, refactoring tests; no production code change)
 chore: (updating grunt tasks etc; no production code change)
+dx: (dev experience; whatever helps to improve developer's experience and performance, comes under dx)
 ```
 #### Example
 ```bash 
