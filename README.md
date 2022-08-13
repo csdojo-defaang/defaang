@@ -67,7 +67,7 @@ yarn run build && npm run start (in case of Yarn, it will build for production a
 
 `#4` Paste the values in the .env.template at ```NEXT_PUBLIC_SUPABASE_URL``` for the URL and ```NEXT_PUBLIC_SUPABASE_ANON_KEY``` for the anon.
 
-`#5` Go th the [SQL Editor](https://app.supabase.com/project/_/sql) inside the Supabase Dashboard
+`#5` Go th the [SQL Editor](https://app.supabase.com/project/_/sql) Page inside the Supabase Dashboard
 
 `#6` Click User Management Starter and then run
 
@@ -78,19 +78,3 @@ For more reference watch the [Next Quickstart for Supabase](https://supabase.com
 # Demo
 
 https://defaang.vercel.app/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
