@@ -57,6 +57,40 @@ yarn run build && npm run start (in case of Yarn, it will build for production a
 
 `#3` Give vercel the nessecary permissions, deploy the projects and voila the deployment is done.
 
+# How to enable E-Mail auth in Supabase
+
+`#1` Sign up on Supabase [here](https://supabase.com/).
+
+`#2` Create a new Project inside Supabase
+
+`#3` Go to settings -> API and copy the Project ```URL``` and ```Anon/Public```
+
+`#4` Paste the values in the .env.template at ```NEXT_PUBLIC_SUPABASE_URL``` for the URL and ```NEXT_PUBLIC_SUPABASE_ANON_KEY``` for the anon.
+
+`#5` Go th the [SQL Editor](https://app.supabase.com/project/_/sql) inside the Supabase Dashboard
+
+`#6` Click User Management Starter and then run
+
+`#7` Change the .env.template to .env.local and all is done. 
+
+For more reference watch the [Next Quickstart for Supabase](https://supabase.com/docs/guides/with-nextjs)
+
 # Demo
 
 https://defaang.vercel.app/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
