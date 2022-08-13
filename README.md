@@ -21,7 +21,24 @@ Even if you're an advanced coder, feel free to take one of them.
 
 Second, please take a look through [the other issues](https://github.com/ykdojo/defaang/issues) and [discussions](https://github.com/ykdojo/defaang/discussions) to get a better idea about our vision, and to get inspired. If you have any idea about something you want to contribute, feel free to start an issue or discussion around that.
 
+### Semantic commits
+Please use `Semantic Commits` while you commit your code changes. It helps reviewers to review the code and makes you a **better coder**.
 
+```bash feat: (new feature for the user, not a new feature for build script)
+feat: (adding new feature)
+fix: (bug fix for the user, not a fix to a build script)
+docs: (changes to the documentation)
+style: (formatting, missing semi colons, etc; no production code change)
+refactor: (refactoring production code, eg. renaming a variable)
+test: (adding missing tests, refactoring tests; no production code change)
+dx: (dev experience; whatever helps to improve developer's experience and performance, comes under dx)
+chore: (updating grunt tasks etc; no production code change)
+```
+#### Example
+```bash 
+feat: added authentication using supabase auth
+```
+[learn more about semantic commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
 # How to start Frontend (Next.js + TailwindCSS)
 
