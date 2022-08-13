@@ -11,7 +11,7 @@ const Home: NextPage = () => {
 
       <main className="w-full  px-20 text-center">
         <h1 className="text-5xl font-medium">
-        Hello There!  Welcome to Defaang. <br />
+        Hello There!  Welcome to defaang. <br />
         A website that will curate recently-asked interview questions from FAANG+ to help people practice & prep!
         </h1>
         <br />
