@@ -29,24 +29,20 @@ Second, please take a look through [the other issues](https://github.com/ykdojo/
 
 ##### Steps:-
 
-`#1)`  Make sure you have installed  [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) in your local machine where you want to start app
+`#1)`  Make sure you have installed  [npm](https://docs.npmjs.com/cli/init) in your local machine where you want to start app
 
-`#2` Run ```npm install ``` to install all the required packages
+`#2` Run ```npm install``` to install all the required packages
 
-`#3)` Use below commands respective to your node package manager (npm or Yarn) installed on your system
+`#3)` Use below commands
 
 ### To start the application as development server
 ```bash
 npm run dev (in case of npm)
-# or
-yarn run dev (in case of Yarn)
 ```
 
 ### To start the application as a production server
 ```bash
 npm run build && npm run start (in case of npm, it will build for production and start the server on that build)
-# or
-yarn run build && npm run start (in case of Yarn, it will build for production and start the server on that build)
 ```
 
 # How to deploy the application to Vercel
