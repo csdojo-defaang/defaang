@@ -52,11 +52,13 @@ feat: added authentication using supabase auth
 
 ### Steps:
 
-`#1` Make sure you have installed [npm](https://docs.npmjs.com/cli/init) in your local machine where you want to start app
+`#1` Make sure you have installed [npm](https://docs.npmjs.com/cli/init)
 
 `#2` Run `npm install` to install all the required packages
 
-`#3` Use below commands
+`#3` The repository has a `.vscode` folder that contains `settings.json` and `extensions.json`. The `settings.json` file configures your VS Code editor to use `eslint` and `prettier` on every code save action (`ctrl + s`). The `extension.json` file contains a list of VS Code extensions, VS Code will show these extensions as suggestions in the extensions tab. After installing these extensions, auto linting and formatting should start working.
+
+`#4` Use below commands respective
 
 ### To start the application as development server
 
