@@ -89,3 +89,7 @@ For more reference watch the [Next Quickstart for Supabase](https://supabase.com
 # Demo
 
 https://defaang.vercel.app/
+
+# Discord
+
+Join us [here](https://discord.gg/aJp6Fypb).
