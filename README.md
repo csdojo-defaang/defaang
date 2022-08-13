@@ -25,13 +25,13 @@ Second, please take a look through [the other issues](https://github.com/ykdojo/
 
 # How to start Frontend (Next.js + TailwindCSS)
 
-##### Steps:-
+### Steps:
 
-`#1)`  Make sure you have installed  [npm](https://docs.npmjs.com/cli/init) in your local machine where you want to start app
+`#1`  Make sure you have installed  [npm](https://docs.npmjs.com/cli/init) in your local machine where you want to start app
 
 `#2` Run ```npm install``` to install all the required packages
 
-`#3)` Use below commands
+`#3` Use below commands
 
 ### To start the application as development server
 ```bash
@@ -61,7 +61,7 @@ npm run build && npm run start (in case of npm, it will build for production and
 
 `#4` Paste the values in the .env.template at ```NEXT_PUBLIC_SUPABASE_URL``` for the URL and ```NEXT_PUBLIC_SUPABASE_ANON_KEY``` for the anon.
 
-`#5` Go th the [SQL Editor](https://app.supabase.com/project/_/sql) Page inside the Supabase Dashboard
+`#5` Go to the [SQL Editor](https://app.supabase.com/project/_/sql) Page inside the Supabase Dashboard
 
 `#6` Click User Management Starter and then run
 
