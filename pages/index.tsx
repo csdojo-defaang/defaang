@@ -15,7 +15,9 @@ const Home: NextPage = () => {
         A website that will curate recently-asked interview questions from FAANG+ to help people practice & prep!
         </h1>
         <br />
-<p className='font-medium'> If you have any idea about something you want to see in the website, feel free to start an issue or discussion around that <a href="https://github.com/ykdojo/defaang"><i>here.</i></a></p>
+        <p className='font-medium text-teal-500'>This is a brand new website and it something that is being created on the Go</p>
+        <br />
+<p className='font-medium'> If you have any idea about something you want to see in the website, feel free to start an issue or discussion around that <a className='text-red-400' href="https://github.com/ykdojo/defaang"><i>here.</i></a></p>
       
       </main>
 
