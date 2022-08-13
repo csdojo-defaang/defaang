@@ -9,11 +9,9 @@ You can find YK's original tweet [here](https://twitter.com/ykdojo/status/155761
 # Tech stack
 Currently planning to use:
 - frontend: Next.js / React
-- CSS framework: Tailwind - probably?
-- backend: most likely Supabase
+- CSS framework: Tailwind
+- backend: Supabase
 - hosting: Vercel
-
-However, this is by no means set in stone!
 
 # How to contribute
 
