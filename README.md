@@ -24,7 +24,7 @@ Second, please take a look through [the other issues](https://github.com/ykdojo/
 ### Semantic commits
 Please use `Semantic Commits` while you commit your code changes. It helps reviewers to review the code and makes you a **better coder**.
 
-```bash feat: (new feature for the user, not a new feature for build script)
+```feat: (new feature for the user, not a new feature for build script)
 feat: (adding new feature)
 fix: (bug fix for the user, not a fix to a build script)
 docs: (changes to the documentation)
