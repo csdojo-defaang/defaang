@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import GoogleIcon from '@mui/icons-material/Google';
 import { supabase } from '../utils/supabaseClient';
+import Image from 'next/image';
 
 const Login = ({ setchangeComponent }) => {
 	const [email, setEmail] = useState('');
@@ -18,6 +19,7 @@ const Login = ({ setchangeComponent }) => {
 				<p className='p-2 py-4 text-lg font-medium'>See your growth and get consulting support.</p>
 				<div className='flex w-max cursor-pointer items-center space-x-2 rounded-md bg-blue-600 px-5 py-2 text-white hover:bg-blue-500'>
 					<GoogleIcon className='h-5 w-5' color='inherit' />
+
 					<button>Sign in with Google</button>
 				</div>
 				<form
