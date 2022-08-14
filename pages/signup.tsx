@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
-import { NextPage } from 'next';
+import { type NextPage } from 'next';
 import { supabase } from '../utils/supabaseClient';
 import { useRouter } from 'next/router';
 
