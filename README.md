@@ -57,9 +57,11 @@ The repository has a `.vscode` folder that contains `settings.json` and `extensi
 ### Steps:
 
 1. Clone this repo
+
    ```sh
    git clone https://github.com/ykdojo/defaang.git
    ```
+
 2. Go into the project root directory
 
    ```sh
