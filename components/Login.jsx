@@ -60,7 +60,7 @@ const Login = ({ setchangeComponent }) => {
 					Not registered yet ?{' '}
 					<span
 						className='cursor-pointer font-bold text-blue-600 hover:underline'
-						onClick={() => changeComponent(true)}
+						onClick={() => setchangeComponent(true)}
 					>
 						Register here
 					</span>

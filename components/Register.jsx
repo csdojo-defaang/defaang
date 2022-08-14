@@ -81,7 +81,7 @@ function Register({ setchangeComponent }) {
 					Already has an account ?{' '}
 					<span
 						className='cursor-pointer font-bold text-blue-600 hover:underline'
-						onClick={() => changeComponent(false)}
+						onClick={() => setchangeComponent(false)}
 					>
 						Sign in
 					</span>
