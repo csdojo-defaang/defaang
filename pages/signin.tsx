@@ -1,4 +1,3 @@
-import GoogleIcon from '@mui/icons-material/Google';
 import { useState } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -32,8 +31,13 @@ const SignIn: NextPage = () => {
 					<div className='w-full  bg-white p-4 md:shadow-lg lg:h-[500px] lg:w-[400px]'>
 						<h1 className='p-2 text-3xl font-semibold'>Login ⚡</h1>
 						<p className='p-2 py-4 text-lg font-medium'>See your growth and get consulting support.</p>
-						<div className='flex w-max cursor-pointer items-center space-x-2 rounded-md bg-blue-600 px-5 py-2 text-white hover:bg-blue-500'>
-							<GoogleIcon className='h-5 w-5' color='inherit' />
+						<div className=' flex w-[80%] cursor-pointer items-center justify-center space-x-2 rounded-md border-2 border-black bg-white px-5 py-1 text-black '>
+							<Image
+								src='https://cdn-icons-png.flaticon.com/512/300/300221.png'
+								width={17}
+								height={17}
+								alt='google-logo'
+							/>
 
 							<button>Sign in with Google</button>
 						</div>

@@ -1,10 +1,9 @@
-import GoogleIcon from '@mui/icons-material/Google';
 import { useState } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import { NextPage } from 'next';
 import { supabase } from '../utils/supabaseClient';
-import { Router, useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 
 const SignUp: NextPage = () => {
 	const router = useRouter();
@@ -35,9 +34,15 @@ const SignUp: NextPage = () => {
 					<div className='h-full w-full  bg-white p-4 md:shadow-lg lg:h-[650px] lg:w-[450px]'>
 						<h1 className='p-2 text-3xl font-semibold'>Create Account ⚡</h1>
 						<p className='p-2 py-4 text-lg font-medium'>See your growth and get consulting support.</p>
-						<div className='flex w-max cursor-pointer items-center space-x-2 rounded-md bg-blue-600 px-5 py-2 text-white hover:bg-blue-500'>
-							<GoogleIcon className='h-5 w-5' color='inherit' />
-							<button>Create account with Google</button>
+						<div className='flex w-[90%] cursor-pointer items-center justify-center space-x-2 rounded-md border-2 border-black bg-white px-5 py-1 text-black '>
+							<Image
+								src='https://cdn-icons-png.flaticon.com/512/300/300221.png'
+								width={17}
+								height={17}
+								alt='google-logo'
+							/>
+
+							<button>Sign in with Google</button>
 						</div>
 						<form
 							onSubmit={e => {
