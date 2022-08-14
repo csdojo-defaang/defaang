@@ -4,11 +4,11 @@ A website that will curate recently-asked interview questions from FAANG+ to hel
 
 The questions will be submitted anonymously, or at least semi-anonymously. We'll ensure that no matter who submits them, we won't reveal the usernames, emails or any other personal info unless they explicitly choose to do so.
 
-# Resources
+## Resources
 
 You can find YK's original tweet [here](https://twitter.com/ykdojo/status/1557611357251350528).
 
-# Tech stack
+## Tech stack
 
 Currently planning to use:
 
@@ -17,7 +17,7 @@ Currently planning to use:
 - backend: Supabase
 - hosting: Vercel
 
-# How to contribute
+## How to contribute
 
 First, feel free to search for good first issues to tackle: https://github.com/ykdojo/defaang/labels/good%20first%20issue
 
@@ -48,60 +48,68 @@ feat: added authentication using supabase auth
 
 [learn more about semantic commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
-# How to start Frontend (Next.js + TailwindCSS)
+## How to start Frontend (Next.js + TailwindCSS)
+
+Make sure you have [git](https://git-scm.com/) and [npm](https://docs.npmjs.com/cli/init) installed in your local machine.
+
+The repository has a `.vscode` folder that contains `settings.json` and `extensions.json`. The `settings.json` file configures your VS Code editor to use `eslint` and `prettier` on every code save action (`ctrl + s`). The `extension.json` file contains a list of VS Code extensions, VS Code will show these extensions as suggestions in the extensions tab. After installing these extensions, auto linting and formatting should start working.
 
 ### Steps:
 
-`#1` Make sure you have installed [npm](https://docs.npmjs.com/cli/init) in your local machine where you want to start app
+1. Clone this repo
 
-`#2` Run `npm install` to install all the required packages
+   ```sh
+   git clone https://github.com/ykdojo/defaang.git
+   ```
 
-`#3` The repository has a `.vscode` folder that contains `settings.json` and `extensions.json`. The `settings.json` file configures your VS Code editor to use `eslint` and `prettier` on every code save action (`ctrl + s`). The `extension.json` file contains a list of VS Code extensions, VS Code will show these extensions as suggestions in the extensions tab. After installing these extensions, auto linting and formatting should start working.
+2. Go into the project root directory
 
-`#4` Use below commands
+   ```sh
+   cd defaang
+   ```
 
-### To start the application as development server
+3. Install all the dependencies
 
-```bash
-npm run dev
-```
+   ```sh
+   npm install
+   ```
 
-### To start the application as a production server
+4. Start the application development server
 
-```bash
-npm run build && npm run start
-```
+   ```sh
+   npm run dev
+   ```
 
-# How to deploy the application to Vercel
+## How to deploy the application to Vercel
 
-`#1` Ensure you have a vercel account if not signup for one [here](https://vercel.com/).
+1. Ensure you have a vercel account if not signup for one [here](https://vercel.com/).
 
-`#2` Import the project into vercel.
+2. Import the project into vercel.
 
-`#3` Give vercel the nessecary permissions, deploy the projects and voila the deployment is done.
+3. Give vercel the nessecary permissions, deploy the projects and voila the deployment is done.
 
-# How to enable E-Mail auth in Supabase
+## How to enable E-Mail auth in Supabase
 
-`#1` Sign up on Supabase [here](https://supabase.com/).
+1. Sign up on Supabase [here](https://supabase.com/).
 
-`#2` Create a new Project inside Supabase
+2. Create a new Project inside Supabase
 
-`#3` Go to settings -> API and copy the Project `URL` and `Anon/Public`
+3. Go to settings -> API and copy the Project `URL` and `Anon/Public`
 
-`#4` Paste the values in the .env.template at `NEXT_PUBLIC_SUPABASE_URL` for the URL and `NEXT_PUBLIC_SUPABASE_ANON_KEY` for the anon.
+4. Paste the values in the .env.template at `NEXT_PUBLIC_SUPABASE_URL` for the URL and `NEXT_PUBLIC_SUPABASE_ANON_KEY` for the anon.
 
-`#5` Go to the [SQL Editor](https://app.supabase.com/project/_/sql) Page inside the Supabase Dashboard
+5. Go to the [SQL Editor](https://app.supabase.com/project/_/sql) Page inside the Supabase Dashboard
 
-`#6` Click User Management Starter and then run
+6. Click User Management Starter and then run
 
-`#7` Change the .env.template to .env.local and all is done.
+7. Change the .env.template to .env.local and all is done.
 
 For more reference watch the [Next Quickstart for Supabase](https://supabase.com/docs/guides/with-nextjs)
 
-# Demo
+## Demo
 
 https://defaang.vercel.app/
 
-# Discord
+## Discord
 
 Join us [here](https://discord.gg/aJp6Fypb).
