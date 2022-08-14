@@ -1,6 +1,6 @@
-import GoogleIcon from '@mui/icons-material/Google';
 import { useState } from 'react';
 import { supabase } from '../utils/supabaseClient';
+import GoogleIcon from '@mui/icons-material/Google';
 
 function Register({ setchangeComponent }) {
 	const [email, setEmail] = useState('');
