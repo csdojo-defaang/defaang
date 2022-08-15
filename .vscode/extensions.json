@@ -1,8 +1,8 @@
 {
-  "recommendations": [
-    "csstools.postcss",
-    "bradlc.vscode-tailwindcss",
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint"
-  ]
+	"recommendations": [
+		"csstools.postcss",
+		"bradlc.vscode-tailwindcss",
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint"
+	]
 }
