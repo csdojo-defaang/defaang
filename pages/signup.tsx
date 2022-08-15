@@ -93,8 +93,8 @@ const SignUp: NextPage = () => {
             >
               Login
             </button>
-            <p className=' font-semibold'>
-              Already have an account ?
+            <p className='font-semibold'>
+              Already have an account?
               <span
                 className='cursor-pointer font-bold text-blue-600 hover:underline'
                 onClick={() => router.push('/signin')}
