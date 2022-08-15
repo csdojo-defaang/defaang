@@ -1,21 +1,21 @@
 {
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "typescript.preferences.quoteStyle": "single",
-  "javascript.preferences.quoteStyle": "single",
-  "files.eol": "\n",
-  "editor.tabSize": 2,
-  "editor.insertSpaces": false,
-  "editor.detectIndentation": false,
-  "files.insertFinalNewline": true,
-  "eslint.alwaysShowStatus": true,
-  "eslint.validate": ["typescript"],
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.organizeImports": false
-  },
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "typescript.tsdk": "node_modules/typescript/lib"
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"typescript.preferences.quoteStyle": "single",
+	"javascript.preferences.quoteStyle": "single",
+	"files.eol": "\n",
+	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"files.insertFinalNewline": true,
+	"eslint.alwaysShowStatus": true,
+	"eslint.validate": ["typescript"],
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true,
+		"source.organizeImports": false
+	},
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"typescript.tsdk": "node_modules/typescript/lib"
 }
