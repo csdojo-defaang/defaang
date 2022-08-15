@@ -1,6 +1,6 @@
 # Contributing
 
-Defaang lives through contributions from the community, In contributing to this repository, please first discuss the change you wish to make via issue, discord, or any other method with the owners of this repository before making a change.
+defaang lives through contributions from the community. In contributing to this repository, please first discuss the change you wish to make via an issue, discord, or any other method with the maintainers of this repository before making a change.
 
 **Table of Contents**
 
@@ -42,7 +42,7 @@ Second, please take a look through the other issues and discussions to get a bet
 
 ### Issue Labels
 
-There are – broadly speaking – three categories of issues on the Defaang GitHub issue tracker, which you can distinguish with their associated labels.
+There are – broadly speaking – three categories of issues on the defaang GitHub issue tracker, which you can distinguish with their associated labels.
 
 1. **Bugs** come in two flavours: non-critical and critical. Non-critical bugs are those that sometimes can mean a nuisance but that do not seriously affect working with the app. Critical bugs, however, make the app barely or un-usable, and fixes need to be addressed urgently.
 2. **Enhancements** are some small additions that require adding some more functionality to a feature, but that should not evolve into an own distinct feature. Even if the issue description reads like a full feature to you, the "enhancement" label means there is already said functionality, which just needs to be amended. Please ask if you are unsure.
