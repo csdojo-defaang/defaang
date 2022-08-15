@@ -16,7 +16,7 @@ defaang lives through contributions from the community. In contributing to this 
 
 ## Where to Get Help
 
-An active community forms the backbone of every major Open Source project. The community is present on various platforms on the internet, where we actively help each other out – not only with regard to using the application. GitHub is the most tech-focused part of the community, albeit [discussing here](https://github.com/ykdojo/defaang/discussions) is the way to go for more theoretical discussions. Furthermore, we have a [Discord-server](https://discord.gg/aJp6Fypb) where we discuss building the app and help each other out.
+The community is present on various platforms on the internet, where we actively help each other out – not only with regard to using the application. GitHub is the most tech-focused part of the community, albeit [discussing here](https://github.com/ykdojo/defaang/discussions) is the way to go for more theoretical discussions. Furthermore, we have a [Discord-server](https://discord.gg/aJp6Fypb) where we discuss building the app and help each other out.
 
 ### All Communication Channels
 
@@ -25,7 +25,7 @@ An active community forms the backbone of every major Open Source project. The c
 
 ## How to Help
 
-If you have some experience with developing, we would gladly welcome your help in fixing issues and adding features. Even if you just start: There are tons of smaller things and chores to do, so by cleaning up code here and there you can improve your skills and also help the project. Even if it's a minor fix, it is still a fix!
+If you have some experience with developing, we would gladly welcome your help in fixing issues and adding features. Even if you just start: There are tons of smaller things and issues to take on, so by cleaning up code here and there you can improve your skills and also help the project. Even if it's a minor fix, it is still a fix!
 
 First, feel free to search for good first issues to tackle: [check here](https://github.com/ykdojo/defaang/labels/good%20first%20issue)
 
@@ -42,7 +42,7 @@ Second, please take a look through the other issues and discussions to get a bet
 
 ### Issue Labels
 
-There are – broadly speaking – three categories of issues on the defaang GitHub issue tracker, which you can distinguish with their associated labels.
+There are three categories of issues on the defaang GitHub issue tracker:
 
 1. **Bugs** come in two flavours: non-critical and critical. Non-critical bugs are those that sometimes can mean a nuisance but that do not seriously affect working with the app. Critical bugs, however, make the app barely or un-usable, and fixes need to be addressed urgently.
 2. **Enhancements** are some small additions that require adding some more functionality to a feature, but that should not evolve into an own distinct feature. Even if the issue description reads like a full feature to you, the "enhancement" label means there is already said functionality, which just needs to be amended. Please ask if you are unsure.
@@ -73,9 +73,7 @@ chore: (updating grunt tasks etc; no production code change)
 
 #### Commit Example
 
-```bash
 feat: added authentication using supabase auth
-```
 
 [Learn more about semantic commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
