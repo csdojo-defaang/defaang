@@ -29,7 +29,7 @@ const SignIn: NextPage = () => {
         <div className='flex h-screen  w-[100%] flex-col items-center justify-center bg-gray-100 lg:w-[50%]'>
           {/* Now you can decide different login ways - primarily I am giving google and twiiter for more add it yourself. */}
           <div className='w-full  bg-white p-4 md:shadow-lg lg:h-[500px] lg:w-[400px]'>
-            <h1 className='p-2 text-3xl font-semibold'>Login ⚡</h1>
+            <h1 className='p-2 text-3xl font-semibold'>Sign in ⚡</h1>
 
             <form
               className='mt-4 space-y-4'
@@ -84,12 +84,7 @@ const SignIn: NextPage = () => {
 
         <div className='relative hidden w-[50%] lg:inline-flex'>
           <div className='absolute top-0 left-0 h-[100%] w-[100%] bg-black opacity-[0.5]'></div>
-          <Image
-            src='https://images.unsplash.com/photo-1608306448197-e83633f1261c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
-            alt='right-side-image'
-            layout='fill'
-            className='object-cover'
-          />
+          <Image src={require('../public/sidebar.jpg')} alt='right-side-image' layout='fill' className='object-cover' />
         </div>
       </main>
     </>
