@@ -45,7 +45,7 @@ const SignUp: NextPage = () => {
 								<p>Email</p>
 								<input
 									type='text'
-									placeholder='dojo@gmaill.com'
+									placeholder='example@gmail.com'
 									required
 									className='input-field outline-none'
 									value={email}
@@ -56,7 +56,7 @@ const SignUp: NextPage = () => {
 								<p>Username</p>
 								<input
 									type='text'
-									placeholder='Dojo'
+									placeholder='example'
 									required
 									className='input-field outline-none'
 									value={username}
@@ -94,7 +94,7 @@ const SignUp: NextPage = () => {
 							Login
 						</button>
 						<p className='py-2 font-semibold'>
-							Already has an account ?{' '}
+							Already have an account ?
 							<span
 								className='cursor-pointer font-bold text-blue-600 hover:underline'
 								onClick={() => router.push('/signin')}

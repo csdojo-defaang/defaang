@@ -42,7 +42,7 @@ const SignIn: NextPage = () => {
 								<p>Email</p>
 								<input
 									type='text'
-									placeholder='dojo@gmaill.com'
+									placeholder='example@gmail.com'
 									required
 									className='input-field outline-none'
 									value={email}
@@ -69,7 +69,7 @@ const SignIn: NextPage = () => {
 							Login
 						</button>
 						<p className='py-2 font-semibold'>
-							Not registered yet ?{' '}
+							Not registered yet ?
 							<span
 								className='cursor-pointer font-bold text-blue-600 hover:underline'
 								onClick={() => router.push('/signup')}
