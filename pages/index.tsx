@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <div className='flex items-center justify-between py-4 shadow-[rgba(17,17,26,0.1)_0px_1px_0px] lg:pl-[20%] lg:pr-[20%]'>
         <div className='cursor-pointer px-5 text-3xl font-bold text-gray-700'>defaang</div>
         <div className='mx-5 flex w-1/3 items-center justify-between lg:w-1/6'>
-          <Link href='https://github.com' rel='noreferrer'>
+          <Link href='https://github.com/ykdojo/defaang' rel='noreferrer'>
             <Image src='/github.svg' className='cursor-pointer' height={30} width={30} alt='github' />
           </Link>
           <Link href='https://discord.gg/aJp6Fypb' rel='noreferrer'>
