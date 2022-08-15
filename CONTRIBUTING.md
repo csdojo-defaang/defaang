@@ -25,7 +25,7 @@ An active community forms the backbone of every major Open Source project. The c
 
 ## How to Help
 
-If you have some experiences with developing, we would gladly welcome your help in fixing issues and adding features. Even if you just start: There are tons of smaller things and chores to do, so by cleaning up code here and there you can improve your skills and also help the project. Even if it's a minor fix, it is still a fix!
+If you have some experience with developing, we would gladly welcome your help in fixing issues and adding features. Even if you just start: There are tons of smaller things and chores to do, so by cleaning up code here and there you can improve your skills and also help the project. Even if it's a minor fix, it is still a fix!
 
 First, feel free to search for good first issues to tackle: [check here](https://github.com/ykdojo/defaang/labels/good%20first%20issue)
 
