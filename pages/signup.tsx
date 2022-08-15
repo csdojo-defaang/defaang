@@ -11,7 +11,6 @@ const SignUp: NextPage = () => {
   const [confirmPass, setConfirmPass] = useState('');
   const [username, setUsername] = useState('');
   const handleSignup = async () => {
-    console.log('ok');
     const { user, error } = await supabase.auth.signUp({ email, password });
     if (error) alert(error.message);
     else {
