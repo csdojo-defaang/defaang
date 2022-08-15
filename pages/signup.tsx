@@ -107,7 +107,7 @@ const SignUp: NextPage = () => {
 
         <div className='relative hidden w-[50%] lg:inline-flex'>
           <div className='absolute top-0 left-0 h-[100%] w-[100%] bg-black opacity-[0.5]'></div>
-          <Image src={require('../public/sidebar.jpg')} alt='right-side-image' layout='fill' className='object-cover' />
+          <Image src="/sidebar.jpg" alt='right-side-image' layout='fill' className='object-cover' />
         </div>
       </main>
     </>
