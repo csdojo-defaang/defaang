@@ -90,7 +90,7 @@ const SignUp: NextPage = () => {
               onClick={handleSignup}
               className='my-4 flex  w-[90%] cursor-pointer items-center  justify-center rounded-md bg-blue-600 py-2 font-semibold text-white hover:bg-blue-500'
             >
-              Login
+              Sign up
             </button>
             <p className='font-semibold'>
               Already have an account?
