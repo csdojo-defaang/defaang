@@ -1,35 +1,29 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import { Header } from '../components/Header';
 
 const Home: NextPage = () => {
-  return (
-    <div className='flex min-h-screen flex-col items-center justify-center py-2'>
-      <Head>
-        <title>Defaang</title>
-      </Head>
-
-      <main className='w-full  px-20 text-center'>
-        <h1 className='text-5xl font-medium'>
-          Hello There! Welcome to defaang. <br />A website that will curate recently-asked interview questions from
-          FAANG+ to help people practice & prep!
-        </h1>
-        <br />
-        <p className='font-medium text-teal-500'>
-          This is a brand new website and it something that is being created on the Go
-        </p>
-        <br />
-        <p className='font-medium'>
-          {' '}
-          If you have any idea about something you want to see in the website, feel free to start an issue or discussion
-          around that{' '}
-          <a className='text-red-400' href='https://github.com/ykdojo/defaang'>
-            <i>here.</i>
-          </a>
-        </p>
-      </main>
-    </div>
-  );
+	return (
+		<div>
+			<Head>
+				<title>defaang</title>
+			</Head>
+			<Header />
+			<main className='flex h-[calc(100vh-4rem)] w-full flex-col items-center justify-center px-[5%]  text-center lg:h-[calc(100vh-6rem)] lg:px-[20%]'>
+				<h1 className='text-3xl font-bold text-gray-800 lg:text-5xl'>Welcome to defaang 🎉</h1>
+				<h3 className='mt-8 text-xl font-normal leading-7 text-gray-600 lg:text-3xl lg:leading-10'>
+					A website that will curate recently-asked interview questions from FAANG+ to help people practice & prep!
+				</h3>
+				<p className='text-md my-8 font-medium text-teal-600 lg:text-xl'>
+					This is a brand new website and it something that is being created on the Go
+				</p>
+				<p className='lg:text-md text-sm font-medium text-gray-900'>
+					If you have any idea about something you want to see in the website, feel free to start an issue or discussion
+					around that on our discord server or github discussions.
+				</p>
+			</main>
+		</div>
+	);
 };
 
 export default Home;
