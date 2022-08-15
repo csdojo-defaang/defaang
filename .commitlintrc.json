@@ -1,11 +1,11 @@
 {
-  "extends": ["@commitlint/config-angular"],
-  "rules": {
-    "scope-case": [2, "always", ["lower-case", "camel-case", "pascal-case"]],
-    "type-enum": [
-      2,
-      "always",
-      ["feat", "fix", "docs", "style", "refactor", "test", "dx", "chore", "ci", "revert", "types"]
-    ]
-  }
+	"extends": ["@commitlint/config-angular"],
+	"rules": {
+		"scope-case": [2, "always", ["lower-case", "camel-case", "pascal-case"]],
+		"type-enum": [
+			2,
+			"always",
+			["feat", "fix", "docs", "style", "refactor", "test", "dx", "chore", "ci", "revert", "types"]
+		]
+	}
 }
