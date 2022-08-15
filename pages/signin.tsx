@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 const SignIn: NextPage = () => {
-	const router = useRouter();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const handleSignIn = async () => {
