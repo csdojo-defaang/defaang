@@ -1,6 +1,6 @@
 # Contributing
 
-defaang lives through contributions from the community. In contributing to this repository, please first discuss the change you wish to make via an issue, discord, or any other method with the maintainers of this repository before making a change.
+defaang lives through contributions from the community. When contributing to this repository, please first discuss the change you wish to make via an issue, discord, or any other method with the maintainers of this repository before making a change.
 
 **Table of Contents**
 
@@ -50,11 +50,11 @@ There are three categories of issues on the defaang GitHub issue tracker:
 
 If you want to help, make sure to _communicate your intent_, that is:
 
-1. If you want to tackle an issue, comment and say that you want to develop a PR. In the PR, please link the issue.
-2. If you want to tackle an issue, but along the way realize that you ran out of time and can't finish it: _communicate it_! This is an Open Source project, and retracting is no shame, but not communicating that you cannot finish something will hinder all other people involved.
+1. If you want to start working on an issue, comment and say that you want to develop a PR. In the PR, please link the issue.
+2. If you start working on an issue, but along the way realize that you ran out of time and can't finish it: _communicate it_! This is an Open Source project, and retracting is no shame, but not communicating that you cannot finish something will hinder all other people involved.
 3. If you have a PR and are not completely sure about whether it's right, or not, just open the PR and outline your questions there. It is much easier to work with something we can see and improve the PR than if you ask without something concrete.
 
-In any case, just remember to just open PRs and dive in. The worst that could happen is that we ask you to rewrite some file, but that has never happened and is pretty unlikely to happen in the future.
+In any case, just remember to just open PRs and dive in.
 
 ### Semantic commits
 
@@ -79,4 +79,4 @@ feat: added authentication using supabase auth
 
 ## Remarks
 
-If something is missing here, or you feel something is not well described, either directly open a PR or ask one of the community places.
+If something is missing here, or you feel something is not well described, either directly open a PR or ask in one of the community places.
