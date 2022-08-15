@@ -6,6 +6,7 @@ import { supabase } from '../utils/supabaseClient';
 import { useRouter } from 'next/router';
 
 const SignUp: NextPage = () => {
+
 	const router = useRouter();
 	const [email, setEmail] = useState('');
 	const [password, setPassowrd] = useState('');
@@ -118,6 +119,7 @@ const SignUp: NextPage = () => {
 			</main>
 		</>
 	);
+
 };
 
 export default SignUp;

@@ -6,6 +6,7 @@ import { supabase } from '../utils/supabaseClient';
 import { useRouter } from 'next/router';
 
 const SignIn: NextPage = () => {
+
 	const router = useRouter();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
