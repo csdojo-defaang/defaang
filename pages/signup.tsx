@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { type NextPage } from 'next';
 import { supabase } from '../utils/supabaseClient';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 const SignUp: NextPage = () => {
 	const [email, setEmail] = useState('');
@@ -19,6 +18,18 @@ const SignUp: NextPage = () => {
 			setPassowrd('');
 			setConfirmPass('');
 			setUsername('');
+		}
+	};
+	const handleSignUpWithGoogle = async () => {
+		const { user, error } = await supabase.auth.signUp({ provider: 'google' });
+		if (error) {
+			alert(error.message);
+		}
+	};
+	const handleSignUpWithGithub = async () => {
+		const { user, error } = await supabase.auth.signUp({ provider: 'github' });
+		if (error) {
+			alert(error.message);
 		}
 	};
 	return (
@@ -37,7 +48,7 @@ const SignUp: NextPage = () => {
 								e.preventDefault();
 								handleSignup();
 							}}
-							className='mt-4 flex flex-col space-y-4'
+							className='mt-4 flex flex-col space-y-4 pl-2'
 						>
 							<div className='flex w-[90%] flex-col space-y-2'>
 								<p>Email</p>
@@ -87,16 +98,29 @@ const SignUp: NextPage = () => {
 						<button
 							type='submit'
 							onClick={handleSignup}
-							className='my-4 flex  w-[90%] cursor-pointer items-center  justify-center rounded-md bg-blue-600 py-2 font-semibold text-white hover:bg-blue-500'
+							className=' my-4 ml-2  flex w-[87%] cursor-pointer  items-center justify-center rounded-md bg-blue-600 py-2 font-semibold text-white hover:bg-blue-500'
 						>
 							Sign up
 						</button>
-						<p className='font-semibold'>
+						<p className='pl-3 font-semibold'>
 							Already have an account?
 							<Link className='cursor-pointer font-bold' href={'/signin'}>
 								<a className=' text-blue-600 hover:underline'> Sign in</a>
 							</Link>
 						</p>
+						<div className='ml-4 mt-2 flex items-center space-x-4  '>
+							<div className='h-[1px] w-[40%] bg-black' /> <span>or</span>
+							<div className='h-[1px] w-[40%] bg-black' />
+						</div>
+						<p className='my-1 pr-4 text-center font-semibold '>Sign up using other social networks</p>
+						<div className='my-2 flex justify-center space-x-[3rem]'>
+							<div onClick={handleSignUpWithGoogle} className='cursor-pointer'>
+								<Image src={'/google.svg'} alt='google-logo' width={30} height={30} />
+							</div>
+							<div onClick={handleSignUpWithGithub} className='cursor-pointer'>
+								<Image src={'/github.svg'} alt='github-logo' width={30} height={30} />
+							</div>
+						</div>
 					</div>
 				</div>
 				{/* Right Section - Image and just for UI. */}
