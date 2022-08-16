@@ -102,7 +102,7 @@ const SignUp: NextPage = () => {
 						>
 							Sign up
 						</button>
-						<p className='pl-3 font-semibold'>
+						<p className='pl-[0.67em] font-semibold'>
 							Already have an account?
 							<Link className='cursor-pointer font-bold' href={'/signin'}>
 								<a className=' text-blue-600 hover:underline'> Sign in</a>

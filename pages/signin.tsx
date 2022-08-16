@@ -83,7 +83,7 @@ const SignIn: NextPage = () => {
 						>
 							Login
 						</button>
-						<p className='pl-1 font-semibold'>
+						<p className=' font-semibold'>
 							Not registered yet?
 							<Link className='cursor-pointer font-bold' href={'/signup'}>
 								<a className=' text-blue-600 hover:underline'> Sign up</a>
