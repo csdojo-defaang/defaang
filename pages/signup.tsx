@@ -112,8 +112,8 @@ const SignUp: NextPage = () => {
 							<div className='h-[1px] w-[40%] bg-black' /> <span>or</span>
 							<div className='h-[1px] w-[40%] bg-black' />
 						</div>
-						<p className='my-1 pr-4 text-center font-semibold '>Sign up using other social networks</p>
-						<div className='my-2 flex justify-center space-x-[3rem]'>
+						<p className='my-1 mr-[2rem] text-center font-semibold '>Sign up using other social networks</p>
+						<div className='my-2 mr-[2rem] flex justify-center space-x-[3rem]'>
 							<div onClick={handleSignUpWithGoogle} className='cursor-pointer'>
 								<Image src={'/google.svg'} alt='google-logo' width={30} height={30} />
 							</div>
