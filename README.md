@@ -88,7 +88,7 @@ The repository has a `.vscode` folder that contains `settings.json` and `extensi
 
 3. Give vercel the nessecary permissions, deploy the projects and voila the deployment is done.
 
-## How to enable E-Mail auth in Supabase
+## How to enable email auth in Supabase
 
 1. Sign up on Supabase [here](https://supabase.com/).
 
