@@ -48,7 +48,7 @@ feat: added authentication using supabase auth
 
 [learn more about semantic commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
-## How to start Frontend (Next.js + TailwindCSS)
+## How to start frontend (Next.js + Tailwind CSS)
 
 Make sure you have [git](https://git-scm.com/) and [npm](https://docs.npmjs.com/cli/init) installed in your local machine.
 
