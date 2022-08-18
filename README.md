@@ -17,7 +17,7 @@ Currently planning to use:
 - backend: Supabase
 - hosting: Vercel
 
-## Project Board - Road Map
+## Project board - roadmap
 
 You can find the project board [here](https://github.com/users/ykdojo/projects/1/views/1)
 
