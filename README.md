@@ -4,10 +4,6 @@ A website that will curate recently-asked interview questions from FAANG+ to hel
 
 The questions will be submitted anonymously, or at least semi-anonymously. We'll ensure that no matter who submits them, we won't reveal the usernames, emails or any other personal info unless they explicitly choose to do so.
 
-## Resources
-
-You can find YK's original tweet [here](https://twitter.com/ykdojo/status/1557611357251350528).
-
 ## Tech stack
 
 Currently planning to use:
@@ -113,3 +109,7 @@ https://defaang.vercel.app/
 ## Discord
 
 Join us [here](https://discord.gg/aJp6Fypb).
+
+## Resources
+
+You can find YK's original tweet [here](https://twitter.com/ykdojo/status/1557611357251350528).
