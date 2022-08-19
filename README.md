@@ -4,10 +4,6 @@ A website that will curate recently-asked interview questions from FAANG+ to hel
 
 The questions will be submitted anonymously, or at least semi-anonymously. We'll ensure that no matter who submits them, we won't reveal the usernames, emails or any other personal info unless they explicitly choose to do so.
 
-## Resources
-
-You can find YK's original tweet [here](https://twitter.com/ykdojo/status/1557611357251350528).
-
 ## Tech stack
 
 Currently planning to use:
@@ -48,7 +44,7 @@ feat: added authentication using supabase auth
 
 [learn more about semantic commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
-## How to start Frontend (Next.js + TailwindCSS)
+## How to start frontend (Next.js + Tailwind CSS)
 
 Make sure you have [git](https://git-scm.com/) and [npm](https://docs.npmjs.com/cli/init) installed in your local machine.
 
@@ -88,7 +84,7 @@ The repository has a `.vscode` folder that contains `settings.json` and `extensi
 
 3. Give vercel the nessecary permissions, deploy the projects and voila the deployment is done.
 
-## How to enable E-Mail auth in Supabase
+## How to enable email auth in Supabase
 
 1. Sign up on Supabase [here](https://supabase.com/).
 
@@ -112,4 +108,8 @@ https://defaang.vercel.app/
 
 ## Discord
 
-Join us [here](https://discord.gg/aJp6Fypb).
+Join us [here](https://discord.gg/nNtVfKddDD).
+
+## Resources
+
+You can find YK's original tweet [here](https://twitter.com/ykdojo/status/1557611357251350528).
