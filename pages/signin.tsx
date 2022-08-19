@@ -27,8 +27,7 @@ const SignIn: NextPage = () => {
 				{/* Left section - main login  */}
 
 				<div className='flex h-screen  w-[100%] flex-col items-center justify-center bg-gray-100 lg:w-[50%]'>
-					{/* Now you can decide different login ways - primarily I am giving google and twiiter for more add it yourself. */}
-					<div className='w-full  bg-white p-4 md:shadow-lg lg:h-[500px] lg:w-[400px]'>
+					<div className='w-full bg-white p-4 md:shadow-lg lg:h-[500px] lg:w-[400px]'>
 						<h1 className='p-2 text-3xl font-semibold'>Sign in ⚡</h1>
 
 						<form
