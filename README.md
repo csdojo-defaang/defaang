@@ -8,10 +8,10 @@ The questions will be submitted anonymously, or at least semi-anonymously. We'll
 
 Currently planning to use:
 
-- frontend: Next.js / React
-- CSS framework: Tailwind
-- backend: Supabase
-- hosting: Vercel
+- **frontend**: Next.js / React
+- **CSS framework**: Tailwind
+- **backend**: Supabase
+- **hosting**: Vercel
 
 ## How to contribute
 
