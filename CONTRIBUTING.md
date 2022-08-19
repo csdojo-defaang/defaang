@@ -12,6 +12,8 @@ defaang lives through contributions from the community. When contributing to thi
     - [Issue Labels](#issue-labels)
     - [Semantic Commits](#semantic-commits)
     - [Commit Example](#commit-example)
+  - [Making Changes](#making-changes)
+  - [Pushing Changes](#pushing-changes)
   - [Remarks](#remarks)
 
 ## Where to Get Help
@@ -76,6 +78,29 @@ chore: (updating grunt tasks etc; no production code change)
 feat: added authentication using supabase auth
 
 [Learn more about semantic commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+### Making Changes
+
+To make a contribution you will need to make a feature branch. This greatly simplifies adding your code to the official repository, and it ensures the main branch is always working. As a heads up, it's best to let us know what you're working on by commenting on or creating an [issue](https://github.com/ykdojo/defaang/issues), this way we all save time by working on different things.
+
+1. Call `git checkout main`, always make sure you are on main before making a feature branch.
+2. Call `git checkout -b name-of-your-feature` This will create a feature branch and switch to it. Try to be specific in your feature name, this helps track it down in the future if we need to.
+3. Make a meaningful change, you don't want to implement the whole feature in one shot generally. Try to break your task into meaningful (and revertible) chunks, though sometimes one chunk is all it takes like with small bug fixes.
+4. To create a commit, start by verifying with `git status` that only files you wanted to change are effected. If there are unexpected changes, please resolve them before continuing.
+5. Stage all of your changes with `git add -A`.
+6. Create your commit with `git commit -m "Type a precise description of only the changes made with this commit."` Use the format stated above.
+7. Repeat steps 2-5 until the feature is complete.
+
+### Pushing Changes
+
+You are ready for your contribution to be reviewed and merged. There are a few things you can do to make this easier for maintainers to review your code, so please follow all steps.
+
+1. Follow the instructions for Updating Your Repository.
+2. Switch back to your feature branch with `git checkout name-of-your-feature`.
+3. Rebase your branch with `git rebase main`, this will make sure there are no conflicts with other people's contributions.
+4. Rebuild your project to make sure everything still works. If things are now broken, resolve them, making commits along the way. Once resolved, return to step 1 as more changes could have been made in the meantime.
+5. Push your branch to your online fork with `git push origin name-of-your-feature`.
+6. On GitHub, create a pull request for your feature branch.
 
 ## Remarks
 
