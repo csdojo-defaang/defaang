@@ -108,7 +108,7 @@ https://defaang.vercel.app/
 
 ## Discord
 
-Join us [here](https://discord.gg/aJp6Fypb).
+Join us [here](https://discord.gg/nNtVfKddDD).
 
 ## Resources
 
