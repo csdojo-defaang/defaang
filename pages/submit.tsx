@@ -1,15 +1,12 @@
 export default function Submit() {
 	return (
-		<main className='max-w-67xl mx-auto bg-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
-			<div className='bg-white p-4 md:shadow-lg'>
+		<main className='flex justify-center bg-gray-100 py-12 px-3 sm:px-12'>
+			<div className='bg-white p-4 shadow-lg'>
 				<form className='space-y-8 divide-y divide-gray-200'>
 					<div className='space-y-8 divide-y divide-gray-200'>
 						<div>
 							<div>
-								<h3 className='text-lg font-medium leading-6 text-gray-900'>Profile</h3>
-								<p className='mt-1 text-sm text-gray-500'>
-									This information will be displayed publicly so be careful what you share.
-								</p>
+								<h2 className='text-xl font-medium leading-6 text-gray-900'>Submit Question</h2>
 							</div>
 
 							<div className='mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6'>
