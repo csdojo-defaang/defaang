@@ -9,7 +9,7 @@ The questions will be submitted anonymously, or at least semi-anonymously. We'll
 Currently planning to use:
 
 - frontend: Next.js / React
-- CSS framework: Tailwind
+- CSS framework: Tailwind + [Tailwind UI](https://github.com/ykdojo/defaang/discussions/98)
 - backend: Supabase
 - hosting: Vercel
 
