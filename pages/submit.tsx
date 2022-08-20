@@ -6,24 +6,20 @@ export default function Submit() {
 					<div className='space-y-8 divide-y divide-gray-200'>
 						<div>
 							<div>
-								<h2 className='text-xl font-medium leading-6 text-gray-900'>Submit Question</h2>
+								<h2 className='text-xl font-medium leading-6 text-gray-900'>Submit a question</h2>
 							</div>
 
 							<div className='mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6'>
 								<div className='sm:col-span-4'>
-									<label htmlFor='username' className='block text-sm font-medium text-gray-700'>
-										Username
+									<label htmlFor='company' className='block text-sm font-medium text-gray-700'>
+										Company
 									</label>
 									<div className='mt-1 flex rounded-md shadow-sm'>
-										<span className='inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-gray-500 sm:text-sm'>
-											workcation.com/
-										</span>
 										<input
 											type='text'
-											name='username'
-											id='username'
-											autoComplete='username'
-											className='block w-full min-w-0 flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
+											name='Company'
+											id='company'
+											className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 										/>
 									</div>
 								</div>
