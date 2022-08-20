@@ -9,7 +9,6 @@ const SignUp: NextPage = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassowrd] = useState('');
 	const [confirmPass, setConfirmPass] = useState('');
-	const [username, setUsername] = useState('');
 	const handleSignup = async () => {
 		const { user, error } = await supabase.auth.signUp({ email, password });
 		if (error) alert(error.message);
@@ -18,7 +17,6 @@ const SignUp: NextPage = () => {
 			setEmail('');
 			setPassowrd('');
 			setConfirmPass('');
-			setUsername('');
 		}
 	};
 	return (
@@ -84,20 +82,6 @@ const SignUp: NextPage = () => {
 									className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
 									value={email}
 									onChange={e => setEmail(e.target.value)}
-								/>
-							</div>
-							<div className='flex w-full flex-col space-y-2'>
-								<label htmlFor='username' className='text-sm text-gray-600'>
-									Username
-								</label>
-								<input
-									type='text'
-									id='username'
-									placeholder='example'
-									required
-									className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
-									value={username}
-									onChange={e => setUsername(e.target.value)}
 								/>
 							</div>
 							<div className='flex w-full flex-col space-y-2 '>
