@@ -13,6 +13,10 @@ Currently planning to use:
 - backend: Supabase
 - hosting: Vercel
 
+## Project board - roadmap
+
+You can find the project board [here](https://github.com/users/ykdojo/projects/1/views/1)
+
 ## How to contribute
 
 First, feel free to search for good first issues to tackle: https://github.com/ykdojo/defaang/labels/good%20first%20issue
