@@ -32,7 +32,8 @@ const SignUp: NextPage = () => {
 						<div>
 							<h2 className='mt-6 text-start text-3xl font-bold tracking-tight text-gray-900'>Create an account</h2>
 						</div>
-						<div className='mt-6'>
+						{/* TODO: Social signup options */}
+						{/* <div className='mt-6'>
 							<p className='text-sm text-gray-700'>Sign up with</p>
 							<div className='my-2 grid grid-cols-2 gap-4'>
 								<div>
@@ -63,7 +64,7 @@ const SignUp: NextPage = () => {
 									<span className='bg-white px-2 text-gray-500'>Or continue with</span>
 								</div>
 							</div>
-						</div>
+						</div> */}
 						<form
 							onSubmit={e => {
 								e.preventDefault();

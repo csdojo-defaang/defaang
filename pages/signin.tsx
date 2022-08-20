@@ -29,11 +29,10 @@ const SignIn: NextPage = () => {
 				<div className='flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24'>
 					<div className='mx-auto w-full max-w-sm lg:w-96'>
 						<div>
-							<h2 className='mt-6 text-start text-3xl font-bold tracking-tight text-gray-900'>
-								Sign in to your account
-							</h2>
+							<h2 className='mt-6 text-start text-3xl font-bold tracking-tight text-gray-900'>Sign in</h2>
 						</div>
-						<div className='mt-6'>
+						{/* TODO: social sign in options */}
+						{/* <div className='mt-6'>
 							<p className='text-sm text-gray-700'>Sign in with</p>
 							<div className='my-2 grid grid-cols-2 gap-4'>
 								<div>
@@ -64,7 +63,7 @@ const SignIn: NextPage = () => {
 									<span className='bg-white px-2 text-gray-500'>Or continue with</span>
 								</div>
 							</div>
-						</div>
+						</div> */}
 
 						<form
 							className='mt-4 space-y-4'
