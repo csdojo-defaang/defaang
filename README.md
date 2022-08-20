@@ -106,6 +106,13 @@ The repository has a `.vscode` folder that contains `settings.json` and `extensi
 
 For more reference watch the [Next Quickstart for Supabase](https://supabase.com/docs/guides/with-nextjs)
 
+## Setting up analytics (https://plausible.io)
+
+1. Register an account in [plausible](https://flausible.io) by providing email id
+2. Activate the account by providing OTP that you'll receive in your email
+3. Add website domain (app where it's going to be hosted) and reporting timezone
+4. You will get a snippet that needs to be added in the <head/> tag of the html. As we are using nextjs here so the process is different. For that we've added plausible's package [next-plausible](https://www.npmjs.com/package/next-plausible) which is configured to share analytics to the admin dashboard of plausible. For this moment we've added the domain 'https://defaang.vercel.app' but later it will be changed to 'https://deefang.io'
+
 ## Demo
 
 https://defaang.vercel.app/
