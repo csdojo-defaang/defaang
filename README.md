@@ -13,10 +13,6 @@ Currently planning to use:
 - backend: Supabase
 - hosting: Vercel
 
-## Project board - roadmap
-
-You can find the project board [here](https://github.com/users/ykdojo/projects/1/views/1)
-
 ## How to contribute
 
 First, feel free to search for good first issues to tackle: https://github.com/ykdojo/defaang/labels/good%20first%20issue
@@ -24,6 +20,8 @@ First, feel free to search for good first issues to tackle: https://github.com/y
 Even if you're an advanced coder, feel free to take one of them.
 
 Second, please take a look through [the other issues](https://github.com/ykdojo/defaang/issues) and [discussions](https://github.com/ykdojo/defaang/discussions) to get a better idea about our vision, and to get inspired. If you have any idea about something you want to contribute, feel free to start an issue or discussion around that.
+
+You can also find the project board [here](https://github.com/users/ykdojo/projects/1/views/1).
 
 ### Semantic commits
 
