@@ -80,7 +80,7 @@ The repository has a `.vscode` folder that contains `settings.json` and `extensi
 
 ## How to deploy the application to Vercel
 
-1. Ensure you have a vercel account if not signup for one [here](https://vercel.com/).
+1. Ensure you have a vercel account if not sign up for one [here](https://vercel.com/).
 
 2. Import the project into vercel.
 
