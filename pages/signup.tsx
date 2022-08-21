@@ -8,7 +8,6 @@ import Link from 'next/link';
 const SignUp: NextPage = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassowrd] = useState('');
-	const [confirmPass, setConfirmPass] = useState('');
 	const handleSignup = async () => {
 		const { user, error } = await supabase.auth.signUp({ email, password });
 		if (error) alert(error.message);
@@ -16,7 +15,6 @@ const SignUp: NextPage = () => {
 			alert(`Success Register in ${user?.email}`);
 			setEmail('');
 			setPassowrd('');
-			setConfirmPass('');
 		}
 	};
 	return (
@@ -96,20 +94,6 @@ const SignUp: NextPage = () => {
 									placeholder='*****'
 									value={password}
 									onChange={e => setPassowrd(e.target.value)}
-								/>
-							</div>
-							<div className='flex w-full flex-col space-y-2 '>
-								<label htmlFor='confirm-password' className='text-sm text-gray-600'>
-									Confirm Password
-								</label>
-								<input
-									type='password'
-									id='confirm-password'
-									required
-									className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
-									placeholder='*****'
-									value={confirmPass}
-									onChange={e => setConfirmPass(e.target.value)}
 								/>
 							</div>
 							<button
