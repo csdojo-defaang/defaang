@@ -73,7 +73,7 @@ const SignUp: NextPage = () => {
 									Email address
 								</label>
 								<input
-									type='text'
+									type='email'
 									id='email-address'
 									placeholder='example@gmail.com'
 									required

@@ -77,7 +77,7 @@ const SignIn: NextPage = () => {
 									Email address
 								</label>
 								<input
-									type='text'
+									type='email'
 									id='email-address'
 									placeholder='example@gmail.com'
 									required
@@ -148,7 +148,7 @@ const SignIn: NextPage = () => {
 						<p className='my-2 flex w-full justify-center text-sm text-gray-700'>
 							Not registered yet?{' '}
 							<Link className='cursor-pointer font-bold' href={'/signup'}>
-								<a className='mx-1 text-blue-600 hover:underline'> Sign up</a>
+								<a className='mx-1 text-blue-600 hover:underline'>Sign up</a>
 							</Link>
 						</p>
 					</div>
