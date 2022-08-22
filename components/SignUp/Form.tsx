@@ -4,20 +4,20 @@ import { supabase } from '../../utils/supabaseClient';
 export const SignUpForm = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	const handleSignup = async () => {
+	const handleSignUp = async () => {
 		const { user, error } = await supabase.auth.signUp({ email, password });
 		if (error) alert(error.message);
 		else {
 			alert(`Success Register in ${user?.email}`);
 			setEmail('');
-			setPassowrd('');
+			setPassword('');
 		}
 	};
 	return (
 		<form
 			onSubmit={e => {
 				e.preventDefault();
-				handleSignup();
+				handleSignUp();
 			}}
 			className='mt-4 flex flex-col space-y-4'
 		>
@@ -51,7 +51,7 @@ export const SignUpForm = () => {
 			</div>
 			<button
 				type='submit'
-				onClick={handleSignup}
+				onClick={handleSignUp}
 				className='group relative my-4 flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
 			>
 				Sign up
