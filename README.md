@@ -4,48 +4,6 @@ A website that will curate recently-asked interview questions from FAANG+ to hel
 
 The questions will be submitted anonymously, or at least semi-anonymously. We'll ensure that no matter who submits them, we won't reveal the usernames, emails or any other personal info unless they explicitly choose to do so.
 
-## Tech stack
-
-Currently planning to use:
-
-- frontend: Next.js / React
-- CSS framework: Tailwind + [Tailwind UI](https://github.com/ykdojo/defaang/discussions/98)
-- backend: Supabase
-- hosting: Vercel
-
-## How to contribute
-
-First, feel free to search for good first issues to tackle: https://github.com/ykdojo/defaang/labels/good%20first%20issue
-
-Even if you're an advanced coder, feel free to take one of them.
-
-Second, please take a look through [the other issues](https://github.com/ykdojo/defaang/issues) and [discussions](https://github.com/ykdojo/defaang/discussions) to get a better idea about our vision, and to get inspired. If you have any idea about something you want to contribute, feel free to start an issue or discussion around that.
-
-You can also find the project board [here](https://github.com/users/ykdojo/projects/1/views/1).
-
-### Semantic commits
-
-Please use `Semantic Commits` while you commit your code changes. It helps reviewers to review the code and makes you a **better coder**.
-
-```feat: (new feature for the user, not a new feature for build script)
-feat: (adding new feature)
-fix: (bug fix for the user, not a fix to a build script)
-docs: (changes to the documentation)
-style: (formatting, missing semi colons, etc; no production code change)
-refactor: (refactoring production code, eg. renaming a variable)
-test: (adding missing tests, refactoring tests; no production code change)
-dx: (dev experience; anything that helps to improve developers' experience)
-chore: (updating grunt tasks etc; no production code change)
-```
-
-#### Example
-
-```bash
-feat: added authentication using supabase auth
-```
-
-[learn more about semantic commits](https://www.conventionalcommits.org/en/v1.0.0/)
-
 ## How to start frontend (Next.js + Tailwind CSS)
 
 Make sure you have [git](https://git-scm.com/) and [npm](https://docs.npmjs.com/cli/init) installed in your local machine.
@@ -107,6 +65,10 @@ For more reference watch the [Next Quickstart for Supabase](https://supabase.com
 ## Demo
 
 https://defaang.vercel.app/
+
+# Contributing
+
+After you have installed defaang on your local machine, head over to our [CONTRIBUTING.md](https://github.com/ykdojo/defaang/blob/main/CONTRIBUTING.md) guide to assist with all you need to know before getting started with making changes to the codebase.
 
 ## Discord
 
