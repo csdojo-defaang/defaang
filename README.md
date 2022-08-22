@@ -66,7 +66,7 @@ For more reference watch the [Next Quickstart for Supabase](https://supabase.com
 
 https://defaang.vercel.app/
 
-# Contributing
+## Contributing
 
 After you have installed defaang on your local machine, head over to our [CONTRIBUTING.md](https://github.com/ykdojo/defaang/blob/main/CONTRIBUTING.md) guide to assist with all you need to know before getting started with making changes to the codebase.
 
