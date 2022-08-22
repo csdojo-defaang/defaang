@@ -104,6 +104,14 @@ The repository has a `.vscode` folder that contains `settings.json` and `extensi
 
 For more reference watch the [Next Quickstart for Supabase](https://supabase.com/docs/guides/with-nextjs)
 
+## How to enable authentication with Google.
+
+https://user-images.githubusercontent.com/66621672/185837050-8ca53e06-af15-44a7-a20c-4e417e227b1d.mp4
+
+## How to enable authentication with Github.
+
+https://user-images.githubusercontent.com/66621672/185837095-b624f8a6-f19d-433e-80d0-1b416e154733.mp4
+
 ## Demo
 
 https://defaang.vercel.app/
