@@ -106,11 +106,11 @@ For more reference watch the [Next Quickstart for Supabase](https://supabase.com
 
 ## Demo
 
-https://defaang.vercel.app/
+[Under Construction](https://defaang.vercel.app/)
 
-## Discord
+## connect with us ♥️
 
-Join us [here](https://discord.gg/nNtVfKddDD).
+ [<img width="30px" src="https://www.vectorlogo.zone/logos/discordapp/discordapp-tile.svg"/>](https://discord.gg/nNtVfKddDD)
 
 ## Resources
 
