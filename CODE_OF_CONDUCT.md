@@ -1,1 +1,1 @@
-Please suggest additions / changes in [Discord](https://discord.gg/P9Ccdw8Nzj), a [GitHub issue](https://github.com/ykdojo/defaang/issues), or a [GitHub pull request](https://github.com/ykdojo/defaang/pulls).  _Thank you!_
+Please suggest additions / changes in [Discord](https://discord.gg/P9Ccdw8Nzj), a [GitHub issue](https://github.com/ykdojo/defaang/issues), or a [GitHub pull request](https://github.com/ykdojo/defaang/pulls). _Thank you!_
