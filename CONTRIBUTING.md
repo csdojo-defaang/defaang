@@ -56,7 +56,7 @@ If you want to help, make sure to _communicate your intent_, that is:
 2. If you want to tackle an issue, but along the way realize that you ran out of time and can't finish it: _communicate it_! This is an Open Source project, and retracting is no shame, but not communicating that you cannot finish something will hinder all other people involved.
 3. If you have a PR and are not completely sure about whether it's right, or not, just open the PR and outline your questions there. It is much easier to work with something we can see and improve the PR than if you ask without something concrete.
 
-In any case, just remember to just open PRs and dive in.
+In any case, remember to just open PRs and dive in.
 
 ### Semantic commits
 
