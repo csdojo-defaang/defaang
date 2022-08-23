@@ -11,7 +11,7 @@ defaang lives through contributions from the community. When contributing to thi
     - [Our Stack](#our-stack)
     - [Project Board](#project-board)
     - [Issue Labels](#issue-labels)
-    - [Semantic commits](#semantic-commits)
+    - [Semantic Commits](#semantic-commits)
       - [Commit Example](#commit-example)
     - [Making Changes](#making-changes)
     - [Pushing Changes](#pushing-changes)
@@ -63,7 +63,7 @@ If you want to help, make sure to _communicate your intent_, that is:
 
 In any case, remember to just open PRs and dive in.
 
-### Semantic commits
+### Semantic Commits
 
 Please use `Semantic Commits` while you commit your code changes. It helps reviewers to review the code and makes you a **better programmer**.
 
