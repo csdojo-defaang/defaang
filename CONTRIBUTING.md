@@ -8,12 +8,13 @@ defaang lives through contributions from the community. When contributing to thi
   - [Where to Get Help](#where-to-get-help)
     - [All Communication Channels](#all-communication-channels)
   - [How to Help](#how-to-help)
-    - [Our Stack (with linked documentation)](#our-stack)
+    - [Our Stack](#our-stack)
+    - [Project Board](#project-board)
     - [Issue Labels](#issue-labels)
-    - [Semantic Commits](#semantic-commits)
-    - [Commit Example](#commit-example)
-  - [Making Changes](#making-changes)
-  - [Pushing Changes](#pushing-changes)
+    - [Semantic commits](#semantic-commits)
+      - [Commit Example](#commit-example)
+    - [Making Changes](#making-changes)
+    - [Pushing Changes](#pushing-changes)
   - [Remarks](#remarks)
 
 ## Where to Get Help
@@ -41,6 +42,10 @@ Second, please take a look through the other issues and discussions to get a bet
 - CSS framework: [Tailwind](https://tailwindcss.com/)
 - Backend: [Supabase](https://supabase.com/)
 - Hosting: [Vercel](https://vercel.com/)
+
+### Project Board
+
+You can find the project board [here](https://github.com/users/ykdojo/projects/1/views/1).
 
 ### Issue Labels
 
