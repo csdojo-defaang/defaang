@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { type NextPage } from 'next';
 import { SignUpForm } from '../components/SignUp/Form';
-import { SignUpSocial } from '../components/SignUp/Social';
+// import { SignUpSocial } from '../components/SignUp/Social';
 
 const SignUp: NextPage = () => {
 	return (
