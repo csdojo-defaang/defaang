@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { type NextPage } from 'next';
 
-const confirmEmail: NextPage = () => {
+const ConfirmEmail: NextPage = () => {
 	return (
 		<>
 			<Head>
@@ -21,4 +21,4 @@ const confirmEmail: NextPage = () => {
 		</>
 	);
 };
-export default confirmEmail;
+export default ConfirmEmail;
