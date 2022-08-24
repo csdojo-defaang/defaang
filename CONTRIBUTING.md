@@ -19,7 +19,7 @@ defaang lives through contributions from the community. When contributing to thi
 
 ## Where to Get Help
 
-The community is present on various platforms on the internet, where we actively help each other out – not only about using the application. GitHub is the most tech-focused part of the community, albeit [discussing here](https://github.com/ykdojo/defaang/discussions) is the way to go for more theoretical discussions. Furthermore, we have a [Discord-server](https://discord.gg/aJp6Fypb) where we discuss building the app and help each other out.
+The community is present on various platforms on the internet, where we actively help each other out – not only with using the application. GitHub is the most tech-focused part of the community, albeit [discussing here](https://github.com/ykdojo/defaang/discussions) is the way to go for more theoretical discussions. Furthermore, we have a [Discord-server](https://discord.gg/aJp6Fypb) where we discuss building the app and help each other out.
 
 ### All Communication Channels
 
@@ -34,7 +34,7 @@ First, feel free to search for good first issues to tackle: [check here](https:/
 
 Even if you're an advanced coder, feel free to take one of them :)
 
-Second, please look through the other issues and discussions to get a better idea about our vision and get inspired. If you have any idea about something you want to contribute, feel free to start an issue or discussion around that.
+Second, please look through the other issues and discussions to get a better idea of our vision and get inspired. If you have any idea about something you want to contribute, feel free to start an issue or discussion around that.
 
 ### Our Stack
 
@@ -83,7 +83,7 @@ feat: added authentication using supabase auth
 To contribute, you will need to make a feature branch. This dramatically simplifies adding your code to the official repository and ensures the main branch is always working. As a heads up, it's best to let us know what you're working on by commenting on or creating an [issue](https://github.com/ykdojo/defaang/issues). This way, we all save time by working on different things.
 
 1. Call `git checkout main`. Always ensure you are on main before making a feature branch.
-2. Call `git checkout -b name-of-your-feature`. This will create a feature branch and switch to it. Try to be specific in your feature name, which helps track it down in the future if we need to.
+2. Call `git checkout -b name-of-your-feature`. This will create a feature branch and switch to it. Try to be specific in your feature name, which helps us track it down in the future if we need to.
 3. Make a meaningful change. You don't want to implement the whole feature in one shot. Try to break your task into meaningful (and revertible) chunks, though sometimes one chunk is all it takes, like minor bug fixes.
 4. To create a commit, start by verifying with `git status` that only files you wanted to change are affected. If there are unexpected changes, please resolve them before continuing.
 5. Stage all of your changes with `git add -A`.
