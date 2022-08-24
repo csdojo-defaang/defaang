@@ -2,15 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { type NextPage } from 'next';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const ConfirmEmail: NextPage = () => {
-=======
-const confirmEmail: NextPage = () => {
->>>>>>> bcd78f7 (feat: better signup flow)
-=======
-const ConfirmEmail: NextPage = () => {
->>>>>>> f4d1bc6 (fix: use pascal case for page component)
 	return (
 		<>
 			<Head>
@@ -29,12 +21,5 @@ const ConfirmEmail: NextPage = () => {
 		</>
 	);
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 export default ConfirmEmail;
-=======
-export default confirmEmail;
->>>>>>> bcd78f7 (feat: better signup flow)
-=======
-export default ConfirmEmail;
->>>>>>> f4d1bc6 (fix: use pascal case for page component)
