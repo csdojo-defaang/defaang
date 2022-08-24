@@ -1,16 +1,16 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { supabase } from '../../utils/supabaseClient';
 
 export const SignUpForm = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const router = useRouter();
 	const handleSignUp = async () => {
 		const { user, error } = await supabase.auth.signUp({ email, password });
 		if (error) alert(error.message);
 		else {
-			alert(`Success Register in ${user?.email}`);
-			setEmail('');
-			setPassword('');
+			router.push('/confirm-email');
 		}
 	};
 	return (
@@ -28,6 +28,7 @@ export const SignUpForm = () => {
 				<input
 					type='email'
 					id='email-address'
+					autoComplete='username'
 					placeholder='example@gmail.com'
 					required
 					className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
@@ -42,6 +43,7 @@ export const SignUpForm = () => {
 				<input
 					type='password'
 					id='password'
+					autoComplete='new-password'
 					required
 					className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
 					placeholder='*****'
