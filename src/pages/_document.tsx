@@ -5,6 +5,7 @@ export default function Document() {
 		<Html lang='en'>
 			<Head>
 				<link rel='icon' href='/favicon.ico' />
+				<link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
 				<meta name='description' content='// TODO: website description' />
 				{/* Open Graph Meta Tags */}
 				<meta property='og:title' content='Defaang' />
