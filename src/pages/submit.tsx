@@ -25,6 +25,20 @@ export default function Submit() {
 								</div>
 
 								<div className='sm:col-span-4'>
+									<label htmlFor='position' className='block text-sm font-medium text-gray-700'>
+										Position
+									</label>
+									<div className='mt-1 flex rounded-md shadow-sm'>
+										<input
+											type='text'
+											name='Position'
+											id='position'
+											className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
+										/>
+									</div>
+								</div>
+
+								<div className='sm:col-span-4'>
 									<label htmlFor='location' className='block text-sm font-medium text-gray-700'>
 										Location
 									</label>
@@ -55,6 +69,20 @@ export default function Submit() {
 											<option>7-12 months ago</option>
 											<option>1+ year ago</option>
 										</select>
+									</div>
+								</div>
+
+								<div className='sm:col-span-6'>
+									<label htmlFor='question' className='block text-sm font-medium text-gray-700'>
+										Question
+									</label>
+									<div className='mt-1 flex rounded-md shadow-sm'>
+										<input
+											type='text'
+											name='Question'
+											id='question'
+											className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
+										/>
 									</div>
 								</div>
 
