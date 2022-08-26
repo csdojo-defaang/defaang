@@ -4,7 +4,7 @@ export default function Submit() {
 	return (
 		<>
 			<Head>
-				<title>New Question · Defaang</title>
+				<title>New Question · defaang</title>
 			</Head>
 			<main className='flex justify-center py-10 px-4 pt-10 sm:px-12'>
 				<div className='w-full bg-white p-4 shadow-lg sm:w-4/5 md:w-2/3 lg:w-1/2'>

@@ -9,7 +9,7 @@ const SignIn: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>Sign in to Defaang · Defaang</title>
+				<title>Sign in to defaang · defaang</title>
 			</Head>
 			<main className='flex h-full min-h-screen bg-white'>
 				<div className='flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24'>
