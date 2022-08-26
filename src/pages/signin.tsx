@@ -3,13 +3,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { type NextPage } from 'next';
 import { SignInForm } from '../components/SignIn/Form';
-import { type User } from '@supabase/gotrue-js/src/lib/types';
 import { useEffect } from 'react';
 import Router from 'next/router';
-
-type UserProps = {
-	user: User;
-};
+import { type UserProps } from '../lib/types';
 
 const SignIn: NextPage<UserProps> = (props: UserProps) => {
 	const user = props.user;

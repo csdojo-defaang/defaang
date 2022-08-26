@@ -3,9 +3,21 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { type NextPage } from 'next';
 import { SignUpForm } from '../components/SignUp/Form';
-// import { SignUpSocial } from '../components/SignUp/Social';
+import { type UserProps } from '../lib/types';
+import { useEffect } from 'react';
+import Router from 'next/router';
 
-const SignUp: NextPage = () => {
+const SignUp: NextPage<UserProps> = (props: UserProps) => {
+	const user = props.user;
+
+	// If the user is already logged in, then
+	// redirect them to home.
+	useEffect(() => {
+		if (user) {
+			Router.push('/');
+		}
+	});
+
 	return (
 		<>
 			<Head>
