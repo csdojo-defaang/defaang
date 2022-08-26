@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	html {
+		font-feature-settings: 'cv03', 'cv04', 'cv11';
+	}
+}
+
 .input-field {
 	@apply rounded-md border border-black p-2;
 }
