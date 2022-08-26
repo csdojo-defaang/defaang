@@ -4,7 +4,6 @@ export default function Document() {
 	return (
 		<Html lang='en'>
 			<Head>
-				<title>welcome to defaang</title>
 				<link rel='icon' href='/favicon.ico' />
 				<link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
 				<meta name='description' content='// TODO: website description' />

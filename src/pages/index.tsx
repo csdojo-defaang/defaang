@@ -6,7 +6,7 @@ const Home: NextPage = () => {
 	return (
 		<div>
 			<Head>
-				<title>defaang</title>
+				<title>Defaang: Insert tagline here</title>
 			</Head>
 			<Header />
 			<main className='flex h-[calc(100vh-4rem)] w-full flex-col items-center justify-center px-[5%]  text-center lg:h-[calc(100vh-6rem)] lg:px-[20%]'>
