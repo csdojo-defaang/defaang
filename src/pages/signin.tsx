@@ -3,9 +3,25 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { type NextPage } from 'next';
 import { SignInForm } from '../components/SignIn/Form';
-// import { SignInSocial } from '../components/SignIn/Social';
+import { type User } from '@supabase/gotrue-js/src/lib/types';
+import { useEffect } from 'react';
+import Router from 'next/router';
 
-const SignIn: NextPage = () => {
+type UserProps = {
+	user: User;
+};
+
+const SignIn: NextPage<UserProps> = (props: UserProps) => {
+	const user = props.user;
+
+	// If the user is already logged in, then
+	// redirect them to home.
+	useEffect(() => {
+		if (user) {
+			Router.push('/');
+		}
+	});
+
 	return (
 		<>
 			<Head>
