@@ -8,10 +8,7 @@ import { SignUpForm } from '../components/SignUp/Form';
 const SignUp: NextPage = () => {
 	return (
 		<>
-			<Head>
-				<title>Defaang / Welcome</title>
-			</Head>
-			<main className='flex h-full min-h-screen'>
+			<main className='flex h-full min-h-screen bg-white'>
 				<div className='flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24'>
 					<div className='mx-auto w-full max-w-sm lg:w-96'>
 						<div>

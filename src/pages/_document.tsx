@@ -4,7 +4,9 @@ export default function Document() {
 	return (
 		<Html lang='en'>
 			<Head>
+				<title>welcome to defaang</title>
 				<link rel='icon' href='/favicon.ico' />
+				<link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
 				<meta name='description' content='// TODO: website description' />
 				{/* Open Graph Meta Tags */}
 				<meta property='og:title' content='Defaang' />
@@ -19,7 +21,7 @@ export default function Document() {
 				<meta name='twitter:image' content='// TODO: https://root-domain-name/logo.png' />
 				<meta name='twitter:card' content='summary' />
 			</Head>
-			<body>
+			<body className='bg-gray-100'>
 				<Main />
 				<NextScript />
 			</body>
