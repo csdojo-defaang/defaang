@@ -18,9 +18,24 @@ const Submit: NextPage<UserProps> = ({ session }) => {
 		formState: { errors },
 	} = useForm();
 
-	const onSubmit = (data: any) => {
+	const onSubmit = async (data: any) => {
 		console.log(data);
-		console.log(session.access_token);
+
+		let result;
+		try {
+			result = await fetch('/api/submit_question', {
+				headers: {
+					Authentication: session.access_token,
+				},
+				method: 'POST',
+				body: JSON.stringify(data),
+			});
+		} catch (err) {
+			console.log(err);
+		}
+
+		console.log(result);
+
 		reset();
 	};
 
