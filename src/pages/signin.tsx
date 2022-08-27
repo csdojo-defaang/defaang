@@ -7,9 +7,7 @@ import { useEffect } from 'react';
 import Router from 'next/router';
 import { type UserProps } from '../lib/types';
 
-const SignIn: NextPage<UserProps> = (props: UserProps) => {
-	const user = props.user;
-
+const SignIn: NextPage<UserProps> = ({ user }) => {
 	// If the user is already logged in, then
 	// redirect them to home.
 	useEffect(() => {

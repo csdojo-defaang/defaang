@@ -18,10 +18,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 			const supabaseSession = await supabase.auth.session();
 
 			// only update the react state if the component is still mounted
-			if (mounted) {
-				if (supabaseSession) {
-					setSession(supabaseSession);
-				}
+			if (mounted && supabaseSession) {
+				setSession(supabaseSession);
 			}
 		}
 
