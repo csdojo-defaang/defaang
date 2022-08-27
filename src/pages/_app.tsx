@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 		};
 	}, []);
 
-	return <Component {...pageProps} user={session?.user} />;
+	return <Component {...pageProps} session={session} user={session?.user} />;
 }
 
 export default MyApp;

@@ -1,5 +1,6 @@
-import { type User } from '@supabase/gotrue-js/src/lib/types';
+import { type User, Session } from '@supabase/gotrue-js/src/lib/types';
 
 export type UserProps = {
 	user: User;
+	session: Session;
 };
