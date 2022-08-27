@@ -1,6 +1,15 @@
 import Head from 'next/head';
 
-export default function Submit() {
+import { type UserProps } from '../lib/types';
+import Router from 'next/router';
+import { NextPage } from 'next';
+
+const Submit: NextPage<UserProps> = ({ user }) => {
+	// If the user is not logged in, redirect them to the signup page
+	if (typeof localStorage !== 'undefined' && !localStorage['supabase.auth.token']) {
+		Router.push('/signup');
+	}
+
 	return (
 		<>
 			<Head>
@@ -140,4 +149,6 @@ export default function Submit() {
 			</main>
 		</>
 	);
-}
+};
+
+export default Submit;
