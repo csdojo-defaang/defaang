@@ -162,3 +162,5 @@ const Submit: NextPage<UserProps> = ({ user }) => {
 		</>
 	);
 };
+
+export default Submit;

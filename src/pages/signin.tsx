@@ -3,9 +3,19 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { type NextPage } from 'next';
 import { SignInForm } from '../components/SignIn/Form';
-// import { SignInSocial } from '../components/SignIn/Social';
+import { useEffect } from 'react';
+import Router from 'next/router';
+import { type UserProps } from '../lib/types';
 
-const SignIn: NextPage = () => {
+const SignIn: NextPage<UserProps> = ({ user }) => {
+	// If the user is already logged in, then
+	// redirect them to home.
+	useEffect(() => {
+		if (user) {
+			Router.push('/');
+		}
+	});
+
 	return (
 		<>
 			<Head>
