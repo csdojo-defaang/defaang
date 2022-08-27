@@ -132,7 +132,7 @@ const Submit: NextPage<UserProps> = ({ user }) => {
 									<div className='flex h-5 items-center'>
 										<input
 											id='stay-anonymous'
-											{...register('stay-anonymous')}
+											{...(register('stay-anonymous'), { required: true })}
 											type='checkbox'
 											className='h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500'
 										/>
