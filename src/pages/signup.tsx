@@ -7,7 +7,7 @@ import { type UserProps } from '../lib/types';
 import { useEffect } from 'react';
 import Router from 'next/router';
 
-const SignUp: NextPage<UserProps> = (props: UserProps) => {
+const SignUp: NextPage<UserProps> = (props) => {
 	const user = props.user;
 
 	// If the user is already logged in, then
