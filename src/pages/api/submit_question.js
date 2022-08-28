@@ -1,19 +1,14 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-type Data = {
-	temp_message: string;
-};
-
 // TODO: move the following somewhere else.
-const supabaseUrl: string = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseAnonKey: string = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-const supabaseServiceKey: string = process.env.NEXT_PUBLIC_SUPABASE_SERVICE_KEY || '';
-const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey);
-const supabaseSecret: SupabaseClient = createClient(supabaseUrl, supabaseServiceKey);
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+const supabaseServiceKey = process.env.NEXT_PUBLIC_SUPABASE_SERVICE_KEY || '';
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+const supabaseSecret = createClient(supabaseUrl, supabaseServiceKey);
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+export default async function handler(req, res) {
 	// data format:
 	// {
 	// 	company: "a",
