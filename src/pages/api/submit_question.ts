@@ -1,21 +1,17 @@
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
-
-const supabaseUrl: string = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseAnonKey: string = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-const supabaseServiceKey: string = process.env.NEXT_PUBLIC_SUPABASE_SERVICE_KEY || '';
-
-export const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey);
-export const supabaseSecret: SupabaseClient = createClient(supabaseUrl, supabaseServiceKey);
-
-// TODO: working on this now.
-// Next: try service role: https://github.com/ykdojo/defaang/issues/108
-
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 type Data = {
 	temp_message: string;
 };
+
+// TODO: move the following somewhere else.
+const supabaseUrl: string = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseAnonKey: string = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+const supabaseServiceKey: string = process.env.NEXT_PUBLIC_SUPABASE_SERVICE_KEY || '';
+const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey);
+const supabaseSecret: SupabaseClient = createClient(supabaseUrl, supabaseServiceKey);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
 	// data format:
@@ -35,19 +31,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 	input_data['asked_date'] = asked_date;
 	delete input_data['recency-weeks'];
 
-	const response = await supabase.auth.api.getUserByCookie(req);
-	debugger;
+	const { data: user, userError } = await supabase.auth.api.getUser(jwt);
+	const id = user.identities[0]['id'];
+
+	input_data['created_by'] = id;
 
 	const { data, error } = await supabaseSecret.from('questions').insert([input_data]);
 
-	console.log('input_data');
-	console.log(input_data);
-	console.log('data');
-	console.log(data);
-	console.log('error');
-	console.log(error);
-
-	// debugger;
+	// TODO: send back a proper reseponse here.
 
 	res.status(200).json({ temp_message: 'hello' });
 }
