@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
 	// 	position: "b",
 	// 	question: "a",
 	// 	question-details: "",
-	// 	recency: "Within the past week",
+	// 	recency-weeks: "2",
 	// 	stay-anonymous: false
 	// }
 	const data = JSON.parse(req.body);
