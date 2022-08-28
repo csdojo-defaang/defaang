@@ -132,13 +132,13 @@ const Submit: NextPage<UserProps> = ({ session }) => {
 									</div>
 
 									<div className='sm:col-span-6'>
-										<label htmlFor='question-details' className='block text-sm font-medium text-gray-700'>
+										<label htmlFor='question_details' className='block text-sm font-medium text-gray-700'>
 											Question details
 										</label>
 										<div className='mt-1'>
 											<textarea
-												id='question-details'
-												{...register('question-details')}
+												id='question_details'
+												{...register('question_details')}
 												rows={3}
 												className='block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 												defaultValue={''}
@@ -149,14 +149,14 @@ const Submit: NextPage<UserProps> = ({ session }) => {
 								<div className='relative mt-6 flex'>
 									<div className='flex h-5 items-center'>
 										<input
-											id='stay-anonymous'
-											{...register('stay-anonymous')}
+											id='stay_anonymous'
+											{...register('stay_anonymous')}
 											type='checkbox'
 											className='h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500'
 										/>
 									</div>
 									<div className='ml-3 text-sm'>
-										<label htmlFor='stay-anonymous' className='font-medium text-gray-700'>
+										<label htmlFor='stay_anonymous' className='font-medium text-gray-700'>
 											Stay anonymous
 										</label>
 									</div>
