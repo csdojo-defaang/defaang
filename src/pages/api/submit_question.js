@@ -4,7 +4,7 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 // TODO: move the following somewhere else.
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-const supabaseServiceKey = process.env.NEXT_PUBLIC_SUPABASE_SERVICE_KEY || '';
+const supabaseServiceKey = process.env.NEXT_PRIVATE_SUPABASE_SERVICE_KEY || '';
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 const supabaseSecret = createClient(supabaseUrl, supabaseServiceKey);
 
