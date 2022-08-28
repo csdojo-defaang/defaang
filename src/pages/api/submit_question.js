@@ -33,7 +33,9 @@ export default async function handler(req, res) {
 
 	const { data, error } = await supabaseSecret.from('questions').insert([input_data]);
 
-	// TODO: send back a proper reseponse here.
-
-	res.status(200).json({ temp_message: 'hello' });
+	if (error) {
+		res.status(500).json({ error });
+	} else {
+		res.status(200).json({ message: 'success!' });
+	}
 }
