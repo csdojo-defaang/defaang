@@ -1,14 +1,26 @@
 import Head from 'next/head';
-
 import { type UserProps } from '../lib/types';
 import Router from 'next/router';
 import { NextPage } from 'next';
+import { useForm } from 'react-hook-form';
 
 const Submit: NextPage<UserProps> = ({ user }) => {
 	// If the user is not logged in, redirect them to the signup page
 	if (typeof localStorage !== 'undefined' && !localStorage['supabase.auth.token']) {
 		Router.push('/signup');
 	}
+
+	// reference: https://react-hook-form.com/get-started#Quickstart
+	const {
+		register,
+		handleSubmit,
+		reset,
+		formState: { errors },
+	} = useForm();
+	const onSubmit = (data: any) => {
+		console.log(data);
+		reset();
+	};
 
 	return (
 		<>
@@ -17,7 +29,7 @@ const Submit: NextPage<UserProps> = ({ user }) => {
 			</Head>
 			<main className='flex justify-center py-10 px-4 pt-10 sm:px-12'>
 				<div className='w-full bg-white p-4 shadow-lg sm:w-4/5 md:w-2/3 lg:w-1/2'>
-					<form className='space-y-8 divide-y divide-gray-200'>
+					<form className='space-y-8 divide-y divide-gray-200' onSubmit={handleSubmit(onSubmit)}>
 						<div className='space-y-8 divide-y divide-gray-200'>
 							<div>
 								<div>
@@ -32,9 +44,9 @@ const Submit: NextPage<UserProps> = ({ user }) => {
 										<div className='mt-1 flex rounded-md shadow-sm'>
 											<input
 												type='text'
-												name='Company'
 												id='company'
 												className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
+												{...register('company', { required: true })}
 											/>
 										</div>
 									</div>
@@ -46,7 +58,7 @@ const Submit: NextPage<UserProps> = ({ user }) => {
 										<div className='mt-1 flex rounded-md shadow-sm'>
 											<input
 												type='text'
-												name='Position'
+												{...register('position', { required: true })}
 												id='position'
 												className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 											/>
@@ -60,7 +72,7 @@ const Submit: NextPage<UserProps> = ({ user }) => {
 										<div className='mt-1 flex rounded-md shadow-sm'>
 											<input
 												type='text'
-												name='Location'
+												{...register('location', { required: true })}
 												id='location'
 												className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 											/>
@@ -74,7 +86,7 @@ const Submit: NextPage<UserProps> = ({ user }) => {
 										<div className='mt-1'>
 											<select
 												id='recency'
-												name='recency'
+												{...register('recency', { required: true })}
 												className='block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 											>
 												<option>Within the past week</option>
@@ -94,7 +106,7 @@ const Submit: NextPage<UserProps> = ({ user }) => {
 										<div className='mt-1 flex rounded-md shadow-sm'>
 											<input
 												type='text'
-												name='Question'
+												{...register('question', { required: true })}
 												id='question'
 												className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 											/>
@@ -108,7 +120,7 @@ const Submit: NextPage<UserProps> = ({ user }) => {
 										<div className='mt-1'>
 											<textarea
 												id='question-details'
-												name='question-details'
+												{...register('question-details')}
 												rows={3}
 												className='block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 												defaultValue={''}
@@ -119,14 +131,14 @@ const Submit: NextPage<UserProps> = ({ user }) => {
 								<div className='relative mt-6 flex'>
 									<div className='flex h-5 items-center'>
 										<input
-											id='offers'
-											name='offers'
+											id='stay-anonymous'
+											{...register('stay-anonymous')}
 											type='checkbox'
 											className='h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500'
 										/>
 									</div>
 									<div className='ml-3 text-sm'>
-										<label htmlFor='offers' className='font-medium text-gray-700'>
+										<label htmlFor='stay-anonymous' className='font-medium text-gray-700'>
 											Stay anonymous
 										</label>
 									</div>
