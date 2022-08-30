@@ -1,12 +1,14 @@
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { HiBell, HiMenu, HiX } from 'react-icons/hi';
 import { Fragment } from 'react';
+import type { UserProps } from '../lib/types';
+import Link from 'next/link';
 
 function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');
 }
 
-export function Header() {
+export function Header({ user }: UserProps) {
 	return (
 		<Disclosure as='nav' className='bg-gray-800'>
 			{({ open }) => (
@@ -52,89 +54,100 @@ export function Header() {
 									</div>
 								</div>
 							</div>
-							<div className='hidden sm:ml-6 sm:block'>
-								<div className='flex items-center'>
-									<button
-										type='button'
-										className='rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
-									>
-										<span className='sr-only'>View notifications</span>
-										<HiBell className='h-6 w-6' aria-hidden='true' />
-									</button>
+							{!user && (
+								<Link href='/signin'>
+									<a className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'>
+										Sign In
+									</a>
+								</Link>
+							)}
+							{user && (
+								<>
+									<div className='hidden sm:ml-6 sm:block'>
+										<div className='flex items-center'>
+											<button
+												type='button'
+												className='rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
+											>
+												<span className='sr-only'>View notifications</span>
+												<HiBell className='h-6 w-6' aria-hidden='true' />
+											</button>
 
-									{/* Profile dropdown */}
-									<Menu as='div' className='relative ml-3'>
-										<div>
-											<Menu.Button className='focus:underline-2 focus:underline-none flex rounded-full bg-gray-800 text-sm'>
-												<span className='sr-only'>Open user menu</span>
-												<div className='text-base font-medium text-gray-300 hover:text-white'>Tom Cook</div>
-											</Menu.Button>
+											{/* Profile dropdown */}
+											<Menu as='div' className='relative ml-3'>
+												<div>
+													<Menu.Button className='focus:underline-2 focus:underline-none flex rounded-full bg-gray-800 text-sm'>
+														<span className='sr-only'>Open user menu</span>
+														<div className='text-base font-medium text-gray-300 hover:text-white'>Tom Cook</div>
+													</Menu.Button>
+												</div>
+												<Transition
+													as={Fragment}
+													enter='transition ease-out duration-100'
+													enterFrom='transform opacity-0 scale-95'
+													enterTo='transform opacity-100 scale-100'
+													leave='transition ease-in duration-75'
+													leaveFrom='transform opacity-100 scale-100'
+													leaveTo='transform opacity-0 scale-95'
+												>
+													<Menu.Items className='absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
+														<Menu.Item>
+															{({ active }) => (
+																<a
+																	href='#'
+																	className={classNames(
+																		active ? 'bg-gray-100' : '',
+																		'block px-4 py-2 text-sm text-gray-700',
+																	)}
+																>
+																	Your Profile
+																</a>
+															)}
+														</Menu.Item>
+														<Menu.Item>
+															{({ active }) => (
+																<a
+																	href='#'
+																	className={classNames(
+																		active ? 'bg-gray-100' : '',
+																		'block px-4 py-2 text-sm text-gray-700',
+																	)}
+																>
+																	Settings
+																</a>
+															)}
+														</Menu.Item>
+														<Menu.Item>
+															{({ active }) => (
+																<a
+																	href='#'
+																	className={classNames(
+																		active ? 'bg-gray-100' : '',
+																		'block px-4 py-2 text-sm text-gray-700',
+																	)}
+																>
+																	Sign out
+																</a>
+															)}
+														</Menu.Item>
+													</Menu.Items>
+												</Transition>
+											</Menu>
 										</div>
-										<Transition
-											as={Fragment}
-											enter='transition ease-out duration-100'
-											enterFrom='transform opacity-0 scale-95'
-											enterTo='transform opacity-100 scale-100'
-											leave='transition ease-in duration-75'
-											leaveFrom='transform opacity-100 scale-100'
-											leaveTo='transform opacity-0 scale-95'
-										>
-											<Menu.Items className='absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
-												<Menu.Item>
-													{({ active }) => (
-														<a
-															href='#'
-															className={classNames(
-																active ? 'bg-gray-100' : '',
-																'block px-4 py-2 text-sm text-gray-700',
-															)}
-														>
-															Your Profile
-														</a>
-													)}
-												</Menu.Item>
-												<Menu.Item>
-													{({ active }) => (
-														<a
-															href='#'
-															className={classNames(
-																active ? 'bg-gray-100' : '',
-																'block px-4 py-2 text-sm text-gray-700',
-															)}
-														>
-															Settings
-														</a>
-													)}
-												</Menu.Item>
-												<Menu.Item>
-													{({ active }) => (
-														<a
-															href='#'
-															className={classNames(
-																active ? 'bg-gray-100' : '',
-																'block px-4 py-2 text-sm text-gray-700',
-															)}
-														>
-															Sign out
-														</a>
-													)}
-												</Menu.Item>
-											</Menu.Items>
-										</Transition>
-									</Menu>
-								</div>
-							</div>
-							<div className='-mr-2 flex sm:hidden'>
-								{/* Mobile menu button */}
-								<Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
-									<span className='sr-only'>Open main menu</span>
-									{open ? (
-										<HiX className='block h-6 w-6' aria-hidden='true' />
-									) : (
-										<HiMenu className='block h-6 w-6' aria-hidden='true' />
-									)}
-								</Disclosure.Button>
-							</div>
+									</div>
+									<div className='-mr-2 flex sm:hidden'>
+										{/* Mobile menu button */}
+										<Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
+											<span className='sr-only'>Open main menu</span>
+											{open ? (
+												<HiX className='block h-6 w-6' aria-hidden='true' />
+											) : (
+												<HiMenu className='block h-6 w-6' aria-hidden='true' />
+											)}
+										</Disclosure.Button>
+									</div>
+								</>
+							)}
 						</div>
 					</div>
 
