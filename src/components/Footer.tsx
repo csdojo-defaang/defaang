@@ -15,11 +15,6 @@ export function Footer() {
 						<FaDiscord className='h-7 w-7' title='Discord' />
 					</a>
 				</Link>
-				<Link href='https://twitter.com/ykdojo'>
-					<a target='_blank' rel='noopener noreferrer'>
-						<FaTwitter className='h-7 w-7' title='Twitter' />
-					</a>
-				</Link>
 			</div>
 		</footer>
 	);
