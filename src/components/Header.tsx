@@ -3,12 +3,18 @@ import { HiBell, HiMenu, HiX } from 'react-icons/hi';
 import { Fragment } from 'react';
 import type { UserProps } from '../lib/types';
 import Link from 'next/link';
+import { supabase } from '../utils/supabaseClient';
 
 function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');
 }
 
 export function Header({ user }: UserProps) {
+	async function signOut() {
+		const { error } = await supabase.auth.signOut();
+		if (error) alert(error.message);
+	}
+
 	return (
 		<Disclosure as='nav' className='bg-gray-800'>
 			{({ open }) => (
@@ -119,15 +125,15 @@ export function Header({ user }: UserProps) {
 														</Menu.Item>
 														<Menu.Item>
 															{({ active }) => (
-																<a
-																	href='#'
+																<button
+																	onClick={signOut}
 																	className={classNames(
 																		active ? 'bg-gray-100' : '',
-																		'block px-4 py-2 text-sm text-gray-700',
+																		'block w-full px-4 py-2 text-left text-sm text-gray-700',
 																	)}
 																>
 																	Sign out
-																</a>
+																</button>
 															)}
 														</Menu.Item>
 													</Menu.Items>
@@ -212,9 +218,9 @@ export function Header({ user }: UserProps) {
 									Settings
 								</Disclosure.Button>
 								<Disclosure.Button
-									as='a'
-									href='#'
-									className='block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white'
+									onClick={signOut}
+									as='button'
+									className='block w-full rounded-md px-3 py-2 text-left text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white'
 								>
 									Sign out
 								</Disclosure.Button>
