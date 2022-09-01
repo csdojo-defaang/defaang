@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { supabase } from '../../utils/supabaseClient';
 import { FaLock } from 'react-icons/fa';
 
-export const SignInForm = () => {
+export function SignInForm() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+
 	const handleSignIn = async () => {
 		const { user, error } = await supabase.auth.signIn({ email, password });
 		if (error) alert(error.message);
@@ -14,6 +15,7 @@ export const SignInForm = () => {
 			setPassword('');
 		}
 	};
+
 	return (
 		<form
 			className='mt-4 space-y-4'
@@ -22,6 +24,7 @@ export const SignInForm = () => {
 				handleSignIn();
 			}}
 		>
+			{/* TODO: allow both username and email in this input */}
 			<div className='flex w-full flex-col space-y-3'>
 				<label htmlFor='email-address' className='text-sm text-gray-600'>
 					Email address
@@ -29,7 +32,6 @@ export const SignInForm = () => {
 				<input
 					type='email'
 					id='email-address'
-					placeholder='example@gmail.com'
 					required
 					className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
 					value={email}
@@ -45,7 +47,6 @@ export const SignInForm = () => {
 					id='password'
 					required
 					className='relative flex w-full appearance-none justify-center rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
-					placeholder='*****'
 					value={password}
 					onChange={e => setPassword(e.target.value)}
 				/>
@@ -83,4 +84,4 @@ export const SignInForm = () => {
 			</button>
 		</form>
 	);
-};
+}
