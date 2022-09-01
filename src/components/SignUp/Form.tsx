@@ -9,7 +9,14 @@ export function SignUpForm() {
 	const router = useRouter();
 
 	const handleSignUp = async () => {
-		const { error } = await supabase.auth.signUp({ email, password });
+		const { error } = await supabase.auth.signUp(
+			{ email, password },
+			{
+				data: {
+					username,
+				},
+			},
+		);
 		if (error) alert(error.message);
 		else {
 			router.push('/confirm-email');
@@ -25,13 +32,13 @@ export function SignUpForm() {
 			className='mt-4 flex flex-col space-y-4'
 		>
 			<div className='flex w-full flex-col space-y-2'>
-				<label htmlFor='email-address' className='text-sm text-gray-600'>
+				<label htmlFor='email' className='text-sm text-gray-600'>
 					Email address
 				</label>
 				<input
 					type='email'
-					id='email-address'
-					autoComplete='username'
+					id='email'
+					autoComplete='email'
 					required
 					className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
 					value={email}

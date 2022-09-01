@@ -26,12 +26,13 @@ export function SignInForm() {
 		>
 			{/* TODO: allow both username and email in this input */}
 			<div className='flex w-full flex-col space-y-3'>
-				<label htmlFor='email-address' className='text-sm text-gray-600'>
+				<label htmlFor='email' className='text-sm text-gray-600'>
 					Email address
 				</label>
 				<input
 					type='email'
-					id='email-address'
+					id='email'
+					autoComplete='email'
 					required
 					className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
 					value={email}
@@ -45,6 +46,7 @@ export function SignInForm() {
 				<input
 					type='password'
 					id='password'
+					autoComplete='current-password'
 					required
 					className='relative flex w-full appearance-none justify-center rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
 					value={password}
