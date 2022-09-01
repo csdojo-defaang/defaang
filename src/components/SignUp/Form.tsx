@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '../../utils/supabaseClient';
+import { HiEye, HiEyeOff } from 'react-icons/hi';
 
 export function SignUpForm() {
 	const [email, setEmail] = useState('');
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
+	const [showPassword, setShowPassword] = useState(false);
 	const router = useRouter();
 
 	const handleSignUp = async () => {
@@ -63,15 +65,28 @@ export function SignUpForm() {
 				<label htmlFor='password' className='text-sm text-gray-600'>
 					Password
 				</label>
-				<input
-					type='password'
-					id='password'
-					autoComplete='new-password'
-					required
-					className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
-					value={password}
-					onChange={e => setPassword(e.target.value)}
-				/>
+				<div className='flex'>
+					<input
+						type={showPassword ? 'text' : 'password'}
+						id='password'
+						autoComplete='new-password'
+						required
+						className='relative block w-full appearance-none rounded-l-md border border-r-0 border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
+						value={password}
+						onChange={e => setPassword(e.target.value)}
+					/>
+					<button
+						className='rounded-r-md border border-l-0 border-gray-300 px-2 focus:outline-none'
+						type='button'
+						onClick={() => setShowPassword(!showPassword)}
+					>
+						{showPassword ? (
+							<HiEye className='h-4 w-4' title='hide password' />
+						) : (
+							<HiEyeOff className='h-4 w-4' title='show password' />
+						)}
+					</button>
+				</div>
 			</div>
 			<button
 				type='submit'
