@@ -84,7 +84,9 @@ export function Header({ user }: UserProps) {
 												<div>
 													<Menu.Button className='focus:underline-2 focus:underline-none flex rounded-full bg-gray-800 text-sm'>
 														<span className='sr-only'>Open user menu</span>
-														<div className='text-base font-medium text-gray-300 hover:text-white'>Tom Cook</div>
+														<div className='text-base font-medium capitalize text-gray-300 hover:text-white'>
+															{user?.email?.slice(0, user.email?.indexOf('@'))}
+														</div>
 													</Menu.Button>
 												</div>
 												<Transition
@@ -100,7 +102,7 @@ export function Header({ user }: UserProps) {
 														<Menu.Items>
 															<Menu.Item>
 																<span className='block cursor-default px-4 py-2 text-sm text-gray-700'>
-																	Signed in as <b>tom@example.com</b>
+																	Signed in as <b>{user.email}</b>
 																</span>
 															</Menu.Item>
 														</Menu.Items>
@@ -202,8 +204,10 @@ export function Header({ user }: UserProps) {
 						<div className='border-t border-gray-700 pt-4 pb-3'>
 							<div className='flex items-center px-5'>
 								<div className='ml-3'>
-									<div className='text-base font-medium text-white'>Tom Cook</div>
-									<div className='text-sm font-medium text-gray-400'>tom@example.com</div>
+									<div className='text-base font-medium capitalize text-white'>
+										{user?.email?.slice(0, user.email?.indexOf('@'))}
+									</div>
+									<div className='text-sm font-medium text-gray-400'>{user?.email}</div>
 								</div>
 								<button
 									type='button'
