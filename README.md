@@ -60,6 +60,53 @@ The repository has a `.vscode` folder that contains `settings.json` and `extensi
 
 7. Change the .env.template to .env.local and all is done.
 
+## How to create a profile table in Supabase
+
+1. Go to `SQL Editor` tab in your Supabase project
+
+2. Click on `New Query` and paste the following SQL queries:
+
+```SQL
+create table public.profiles (
+  id uuid references auth.users not null,
+  username text unique,
+
+  primary key (id)
+);
+
+alter table public.profiles enable row level security;
+
+create policy "Public profiles are viewable by everyone."
+  on profiles for select
+  using ( true );
+
+create policy "Users can insert their own profile."
+  on profiles for insert
+  with check ( auth.uid() = id );
+
+create policy "Users can update own profile."
+  on profiles for update
+  using ( auth.uid() = id );
+
+create function public.handle_new_user()
+returns trigger
+language plpgsql
+security definer set search_path = public
+as $$
+begin
+  insert into public.profiles (id, username)
+  values (new.id, new.raw_user_meta_data->>'username');
+  return new;
+end;
+$$;
+
+create trigger on_auth_user_created
+  after insert on auth.users
+  for each row execute procedure public.handle_new_user();
+```
+
+3. Click on `RUN`
+
 For more reference watch the [Next Quickstart for Supabase](https://supabase.com/docs/guides/with-nextjs)
 
 ## Demo
