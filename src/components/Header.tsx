@@ -86,9 +86,7 @@ export function Header({ user }: UserProps) {
 												<div>
 													<Menu.Button className='focus:underline-2 focus:underline-none flex rounded-full bg-gray-800 text-sm'>
 														<span className='sr-only'>Open user menu</span>
-														<div className='text-base font-medium capitalize text-gray-300 hover:text-white'>
-															{userName}
-														</div>
+														<div className='text-base font-medium text-gray-300 hover:text-white'>{userName}</div>
 													</Menu.Button>
 												</div>
 												<Transition
@@ -206,7 +204,7 @@ export function Header({ user }: UserProps) {
 						<div className='border-t border-gray-700 pt-4 pb-3'>
 							<div className='flex items-center px-5'>
 								<div className='ml-3'>
-									<div className='text-base font-medium capitalize text-white'>{userName}</div>
+									<div className='text-base font-medium text-white'>{userName}</div>
 									<div className='text-sm font-medium text-gray-400'>{user?.email}</div>
 								</div>
 								<button
