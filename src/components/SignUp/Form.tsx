@@ -7,7 +7,7 @@ export const SignUpForm = () => {
 	const [password, setPassword] = useState('');
 	const router = useRouter();
 	const handleSignUp = async () => {
-		const { user, error } = await supabase.auth.signUp({ email, password });
+		const { error } = await supabase.auth.signUp({ email, password });
 		if (error) alert(error.message);
 		else {
 			router.push('/confirm-email');
