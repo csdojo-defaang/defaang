@@ -81,9 +81,9 @@ export function SignUpForm() {
 						onClick={() => setShowPassword(!showPassword)}
 					>
 						{showPassword ? (
-							<HiEye className='h-4 w-4' title='hide password' />
+							<HiEye className='h-4 w-4 fill-gray-500' title='hide password' />
 						) : (
-							<HiEyeOff className='h-4 w-4' title='show password' />
+							<HiEyeOff className='h-4 w-4 fill-gray-500' title='show password' />
 						)}
 					</button>
 				</div>
