@@ -4,7 +4,7 @@
 		"dev": "cross-env NODE_OPTIONS='--inspect' next dev",
 		"build": "next build",
 		"start": "next start",
-		"type-check": "tsc --noEmit",
+		"type:check": "tsc --noEmit",
 		"lint:check": "next lint",
 		"lint:fix": "next lint --fix",
 		"format:check": "prettier . --check",

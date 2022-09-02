@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"target": "esnext",
+		"target": "es5",
 		"module": "esnext",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"allowJs": true,
@@ -15,12 +15,9 @@
 		"jsx": "preserve",
 		"incremental": true,
 		"noImplicitReturns": true,
-		"noImplicitThis": true,
-		"noImplicitAny": true,
-		"strictNullChecks": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true
 	},
-	"include": ["next-env.d.ts", "src/**/*", "src/**/*", "*"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./*"],
 	"exclude": ["node_modules"]
 }
