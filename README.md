@@ -44,7 +44,7 @@ The repository has a `.vscode` folder that contains `settings.json` and `extensi
 
 3. Give vercel the nessecary permissions, deploy the projects and voila the deployment is done.
 
-## How to setup Supabase
+## How to set up Supabase
 
 1. Sign up on Supabase [here](https://supabase.com/).
 
