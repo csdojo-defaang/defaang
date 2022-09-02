@@ -44,47 +44,23 @@ The repository has a `.vscode` folder that contains `settings.json` and `extensi
 
 3. Give vercel the nessecary permissions, deploy the projects and voila the deployment is done.
 
-## How to enable email auth in Supabase
+## How to setup Supabase
 
 1. Sign up on Supabase [here](https://supabase.com/).
 
-2. Create a new Project inside Supabase
+2. Create a new Project inside Supabase.
 
-3. Go to settings -> API and copy the Project `URL` and `Anon/Public`
+3. Go to settings -> API and copy the Project `URL` and `Anon/Public`.
 
-4. Paste the values in the .env.template at `NEXT_PUBLIC_SUPABASE_URL` for the URL and `NEXT_PUBLIC_SUPABASE_ANON_KEY` for the anon.
+4. Paste the values in the `.env.template` at `NEXT_PUBLIC_SUPABASE_URL` for the URL and `NEXT_PUBLIC_SUPABASE_ANON_KEY` for the anon.
 
-5. Go to the [SQL Editor](https://app.supabase.com/project/_/sql) Page inside the Supabase Dashboard
+5. Change the name of `.env.template` to `.env.local`.
 
-6. Click User Management Starter and then run
+6. Go to the [SQL Editor](https://app.supabase.com/project/_/sql) tab inside the Supabase dashboard.
 
-7. Change the .env.template to .env.local and all is done.
+7. Copy the SQL queries from [here](supabase.sql) and paste them in the SQL Editor.
 
-## How to store additional metadata sent during Signup into the profiles table:
-
-1. Go to `SQL Editor` tab in your Supabase project
-
-2. Click on `New Query` and paste the following SQL queries:
-
-```SQL
-create function public.handle_new_user()
-returns trigger
-language plpgsql
-security definer set search_path = public
-as $$
-begin
-  insert into public.profiles (id, username)
-  values (new.id, new.raw_user_meta_data->>'username');
-  return new;
-end;
-$$;
-
-create trigger on_auth_user_created
-  after insert on auth.users
-  for each row execute procedure public.handle_new_user();
-```
-
-3. Click on `RUN`
+8. Run the queries and you're done.
 
 For more reference watch the [Next Quickstart for Supabase](https://supabase.com/docs/guides/with-nextjs)
 
