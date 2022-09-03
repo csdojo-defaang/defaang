@@ -50,11 +50,16 @@ The repository has a `.vscode` folder that contains `settings.json` and `extensi
 
 2. Create a new Project inside Supabase.
 
-3. Go to settings -> API and copy the Project `URL` and `Anon/Public`.
+3. Go to `Settings` -> `API` and copy the Project `URL` and `anon`.
 
-4. Paste the values in the `.env.template` at `NEXT_PUBLIC_SUPABASE_URL` for the URL and `NEXT_PUBLIC_SUPABASE_ANON_KEY` for the anon.
+4. Create a new file named `.env.local` in the root directory.
 
-5. Change the name of `.env.template` to `.env.local`.
+5. Paste the `URL` and `annon` in the `.env.local` file like so:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+```
 
 6. Go to the [SQL Editor](https://app.supabase.com/project/_/sql) tab inside the Supabase dashboard.
 
