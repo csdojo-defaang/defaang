@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaGithub, FaDiscord, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaDiscord } from 'react-icons/fa';
 
 export function Footer() {
 	return (

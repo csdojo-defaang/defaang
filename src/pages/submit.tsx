@@ -4,19 +4,14 @@ import Router from 'next/router';
 import { NextPage } from 'next';
 import { useForm } from 'react-hook-form';
 
-const Submit: NextPage<UserProps> = ({ user }) => {
+const Submit: NextPage<UserProps> = () => {
 	// If the user is not logged in, redirect them to the signup page
 	if (typeof localStorage !== 'undefined' && !localStorage['supabase.auth.token']) {
 		Router.push('/signup');
 	}
 
 	// reference: https://react-hook-form.com/get-started#Quickstart
-	const {
-		register,
-		handleSubmit,
-		reset,
-		formState: { errors },
-	} = useForm();
+	const { register, handleSubmit, reset } = useForm();
 	const onSubmit = (data: any) => {
 		console.log(data);
 		reset();
