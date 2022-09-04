@@ -5,7 +5,7 @@ import type { UserProps } from '../lib/types';
 import Link from 'next/link';
 import { supabase } from '../utils/supabaseClient';
 
-function classNames(...classes: string[]) {
+function classNames(...classes: Array<string>) {
 	return classes.filter(Boolean).join(' ');
 }
 
