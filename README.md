@@ -44,21 +44,28 @@ The repository has a `.vscode` folder that contains `settings.json` and `extensi
 
 3. Give vercel the nessecary permissions, deploy the projects and voila the deployment is done.
 
-## How to enable email auth in Supabase
+## How to set up Supabase
 
 1. Sign up on Supabase [here](https://supabase.com/).
 
-2. Create a new Project inside Supabase
+2. Create a new Project inside Supabase.
 
-3. Go to settings -> API and copy the Project `URL` and `Anon/Public`
+3. Go to `Settings` -> `API` and copy the Project `URL` and `anon`.
 
-4. Paste the values in the .env.template at `NEXT_PUBLIC_SUPABASE_URL` for the URL and `NEXT_PUBLIC_SUPABASE_ANON_KEY` for the anon.
+4. Create a new file named `.env.local` in the root directory.
 
-5. Go to the [SQL Editor](https://app.supabase.com/project/_/sql) Page inside the Supabase Dashboard
+5. Paste the `URL` and `annon` in the `.env.local` file like so:
 
-6. Click User Management Starter and then run
+```
+NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+```
 
-7. Change the .env.template to .env.local and all is done.
+6. Go to the [SQL Editor](https://app.supabase.com/project/_/sql) tab inside the Supabase dashboard.
+
+7. Copy the SQL queries from [here](supabase.sql) and paste them in the SQL Editor.
+
+8. Run the queries and you're done.
 
 For more reference watch the [Next Quickstart for Supabase](https://supabase.com/docs/guides/with-nextjs)
 
