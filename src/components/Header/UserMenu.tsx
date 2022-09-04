@@ -2,14 +2,13 @@ import { Fragment } from 'react';
 import { HiUser } from 'react-icons/hi';
 import { Menu, Transition } from '@headlessui/react';
 import { type User } from '@supabase/gotrue-js/src/lib/types';
-import cn from 'classnames';
+import clsx from 'clsx';
+import { signOut } from '../../utils/auth';
 
-import { useSignOut } from './hooks';
-
-export type UserMenuPros = {
+export interface UserMenuProps {
 	user: User;
 	className?: string;
-};
+}
 
 type MenuLink = {
 	label: string;
@@ -17,14 +16,12 @@ type MenuLink = {
 };
 
 const itemDefaultClassName = 'block px-4 py-2 text-sm text-gray-700';
-const menuLinks: MenuLink[] = [
+const menuLinks: Array<MenuLink> = [
 	{ label: 'Profile', to: '#' },
 	{ label: 'Settings', to: '#' },
 ];
 
-export function UserMenu({ user, className = '' }: UserMenuPros) {
-	const signOut = useSignOut();
-
+export function UserMenu({ user, className = '' }: UserMenuProps) {
 	return (
 		<Menu as='div' className={className}>
 			<Menu.Button className='rounded-full bg-gray-800 p-2 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
@@ -43,7 +40,7 @@ export function UserMenu({ user, className = '' }: UserMenuPros) {
 				<Menu.Items className='absolute right-0 mt-2 w-48 origin-top-right divide-y rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
 					<Menu.Items>
 						<Menu.Item>
-							<span className={cn(itemDefaultClassName, 'cursor-default')}>
+							<span className={clsx(itemDefaultClassName, 'cursor-default')}>
 								Signed in as <b>{user.email}</b>
 							</span>
 						</Menu.Item>
@@ -52,7 +49,7 @@ export function UserMenu({ user, className = '' }: UserMenuPros) {
 						{menuLinks.map(({ label, to }: MenuLink) => (
 							<Menu.Item key={`${label}-${to}`}>
 								{({ active }) => (
-									<a href={to} className={cn(itemDefaultClassName, { 'bg-gray-100': active })}>
+									<a href={to} className={clsx(itemDefaultClassName, { 'bg-gray-100': active })}>
 										{label}
 									</a>
 								)}
@@ -64,7 +61,7 @@ export function UserMenu({ user, className = '' }: UserMenuPros) {
 							{({ active }) => (
 								<button
 									onClick={signOut}
-									className={cn(itemDefaultClassName, 'w-full text-left', { 'bg-gray-100': active })}
+									className={clsx(itemDefaultClassName, 'w-full text-left', { 'bg-gray-100': active })}
 								>
 									Sign out
 								</button>

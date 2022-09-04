@@ -1,14 +1,12 @@
 import Link from 'next/link';
 import { HiBell, HiMenu, HiX } from 'react-icons/hi';
 import { Disclosure } from '@headlessui/react';
-
 import type { UserProps } from '../../lib/types';
+import { signOut } from '../../utils/auth';
 import { UserMenu } from './UserMenu';
-import { useSignOut } from './hooks';
 
 export function Header({ user }: UserProps) {
 	const userName = user?.email?.split('@')[0];
-	const signOut = useSignOut();
 
 	return (
 		<Disclosure as='nav' className='bg-gray-800'>
