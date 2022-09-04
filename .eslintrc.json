@@ -6,5 +6,9 @@
 		},
 		"project": "./tsconfig.json"
 	},
-	"extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"]
+	"extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
+	"rules": {
+		"@typescript-eslint/array-type": ["error", { "default": "generic" }],
+		"@typescript-eslint/consistent-type-definitions": "error"
+	}
 }
