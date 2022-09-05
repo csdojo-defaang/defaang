@@ -10,10 +10,10 @@ export interface UserMenuProps {
 	className?: string;
 }
 
-type MenuLink = {
+interface MenuLink {
 	label: string;
 	to: string;
-};
+}
 
 const itemDefaultClassName = 'block px-4 py-2 text-sm text-gray-700';
 const menuLinks: Array<MenuLink> = [
@@ -40,8 +40,8 @@ export function UserMenu({ user, className = '' }: UserMenuProps) {
 				<Menu.Items className='absolute right-0 mt-2 w-48 origin-top-right divide-y rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
 					<Menu.Items>
 						<Menu.Item>
-							<span className={clsx(itemDefaultClassName, 'cursor-default')}>
-								Signed in as <b>{user.email}</b>
+							<span className={clsx(itemDefaultClassName, 'cursor-default truncate')}>
+								Signed in as <br /> <b>{user.email}</b>
 							</span>
 						</Menu.Item>
 					</Menu.Items>
