@@ -1,11 +1,10 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Header } from '../components/Header';
-import type { UserProps } from '../lib/types';
+import type { PageProps } from '../lib/types';
 import { PlaceHolder } from '../components/PlaceHolder';
 import { Footer } from '../components/Footer';
 
-const Home: NextPage<UserProps> = ({ user }) => {
+export default function Home({ user }: PageProps) {
 	return (
 		<>
 			<Head>
@@ -19,6 +18,4 @@ const Home: NextPage<UserProps> = ({ user }) => {
 			<Footer />
 		</>
 	);
-};
-
-export default Home;
+}

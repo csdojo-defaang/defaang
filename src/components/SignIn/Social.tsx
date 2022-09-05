@@ -1,6 +1,6 @@
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 
-export const SignInSocial = () => {
+export function SignInSocial() {
 	return (
 		<div className='mt-6'>
 			<p className='text-sm text-gray-700'>Sign in with</p>
@@ -35,4 +35,4 @@ export const SignInSocial = () => {
 			</div>
 		</div>
 	);
-};
+}

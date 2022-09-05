@@ -3,9 +3,10 @@ import type { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
 import { supabase } from '../utils/supabaseClient';
 import { type Session } from '@supabase/gotrue-js/src/lib/types';
+import type { PageProps } from '../lib/types';
 
 // reference: https://supabase.com/docs/guides/with-nextjs
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps<PageProps>) {
 	const [session, setSession] = useState<Session | null>(null);
 
 	useEffect(() => {
@@ -14,14 +15,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 		let mounted = true;
 
-		async function getInitialSession() {
-			const supabaseSession = await supabase.auth.session();
-
+		const getInitialSession = () => {
+			const supabaseSession = supabase.auth.session();
 			// only update the react state if the component is still mounted
 			if (mounted && supabaseSession) {
 				setSession(supabaseSession);
 			}
-		}
+		};
 
 		getInitialSession();
 
@@ -31,12 +31,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 		return () => {
 			mounted = false;
-
 			data?.unsubscribe();
 		};
 	}, []);
 
 	return <Component {...pageProps} user={session?.user} />;
 }
-
-export default MyApp;

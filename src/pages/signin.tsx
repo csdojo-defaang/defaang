@@ -1,18 +1,18 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import Link from 'next/link';
-import { type NextPage } from 'next';
 import { SignInForm } from '../components/SignIn/Form';
 import { useEffect } from 'react';
-import Router from 'next/router';
-import { type UserProps } from '../lib/types';
+import { useRouter } from 'next/router';
+import type { PageProps } from '../lib/types';
 
-const SignIn: NextPage<UserProps> = ({ user }) => {
-	// If the user is already logged in, then
-	// redirect them to home.
+export default function SignIn({ user }: PageProps) {
+	const router = useRouter();
+
+	// If the user is already logged in, redirect them to home page
 	useEffect(() => {
 		if (user) {
-			Router.push('/');
+			router.push('/');
 		}
 	});
 
@@ -21,6 +21,7 @@ const SignIn: NextPage<UserProps> = ({ user }) => {
 			<Head>
 				<title>Sign in to defaang · defaang</title>
 			</Head>
+
 			<main className='flex h-full min-h-screen bg-white'>
 				<div className='flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24'>
 					<div className='mx-auto w-full max-w-sm lg:w-96'>
@@ -49,6 +50,4 @@ const SignIn: NextPage<UserProps> = ({ user }) => {
 			</main>
 		</>
 	);
-};
-
-export default SignIn;
+}
