@@ -1,21 +1,16 @@
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { HiBell, HiMenu, HiX } from 'react-icons/hi';
-import { Fragment } from 'react';
-import type { UserProps } from '../lib/types';
 import Link from 'next/link';
-import { supabase } from '../utils/supabaseClient';
+import { HiBell, HiMenu, HiX } from 'react-icons/hi';
+import { Disclosure } from '@headlessui/react';
+import { type User } from '@supabase/gotrue-js/src/lib/types';
+import { signOut } from '../../utils/auth';
+import { UserMenu } from './UserMenu';
 
-function classNames(...classes: Array<string>) {
-	return classes.filter(Boolean).join(' ');
+export interface HeaderProps {
+	user: User;
 }
 
-export function Header({ user }: UserProps) {
+export function Header({ user }: HeaderProps) {
 	const userName = user?.email?.split('@')[0];
-
-	async function signOut() {
-		const { error } = await supabase.auth.signOut();
-		if (error) alert(error.message);
-	}
 
 	return (
 		<Disclosure as='nav' className='bg-gray-800'>
@@ -62,100 +57,10 @@ export function Header({ user }: UserProps) {
 									</div>
 								</div>
 							</div>
-							{!user && (
-								<Link href='/signin'>
-									<a className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'>
-										Sign In
-									</a>
-								</Link>
-							)}
-							{user && (
+							{user ? (
 								<>
-									<div className='hidden sm:ml-6 sm:block'>
-										<div className='flex items-center'>
-											<button
-												type='button'
-												className='rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
-											>
-												<span className='sr-only'>View notifications</span>
-												<HiBell className='h-6 w-6' aria-hidden='true' />
-											</button>
-
-											{/* Profile dropdown */}
-											<Menu as='div' className='relative ml-3'>
-												<div>
-													<Menu.Button className='focus:underline-2 focus:underline-none flex rounded-full bg-gray-800 text-sm'>
-														<span className='sr-only'>Open user menu</span>
-														<div className='text-base font-medium text-gray-300 hover:text-white'>{userName}</div>
-													</Menu.Button>
-												</div>
-												<Transition
-													as={Fragment}
-													enter='transition ease-out duration-100'
-													enterFrom='transform opacity-0 scale-95'
-													enterTo='transform opacity-100 scale-100'
-													leave='transition ease-in duration-75'
-													leaveFrom='transform opacity-100 scale-100'
-													leaveTo='transform opacity-0 scale-95'
-												>
-													<Menu.Items className='absolute right-0 mt-2 w-48 origin-top-right divide-y rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
-														<Menu.Items>
-															<Menu.Item>
-																<span className='block cursor-default px-4 py-2 text-sm text-gray-700'>
-																	Signed in as <b>{user.email}</b>
-																</span>
-															</Menu.Item>
-														</Menu.Items>
-														<Menu.Items>
-															<Menu.Item>
-																{({ active }) => (
-																	<a
-																		href='#'
-																		className={classNames(
-																			active ? 'bg-gray-100' : '',
-																			'block px-4 py-2 text-sm text-gray-700',
-																		)}
-																	>
-																		Your Profile
-																	</a>
-																)}
-															</Menu.Item>
-															<Menu.Item>
-																{({ active }) => (
-																	<a
-																		href='#'
-																		className={classNames(
-																			active ? 'bg-gray-100' : '',
-																			'block px-4 py-2 text-sm text-gray-700',
-																		)}
-																	>
-																		Settings
-																	</a>
-																)}
-															</Menu.Item>
-														</Menu.Items>
-														<Menu.Items>
-															<Menu.Item>
-																{({ active }) => (
-																	<button
-																		onClick={signOut}
-																		className={classNames(
-																			active ? 'bg-gray-100' : '',
-																			'block w-full px-4 py-2 text-left text-sm text-gray-700',
-																		)}
-																	>
-																		Sign out
-																	</button>
-																)}
-															</Menu.Item>
-														</Menu.Items>
-													</Menu.Items>
-												</Transition>
-											</Menu>
-										</div>
-									</div>
+									{/* Mobile View */}
 									<div className='-mr-2 flex sm:hidden'>
-										{/* Mobile menu button */}
 										<Disclosure.Button className='inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
 											<span className='sr-only'>Open main menu</span>
 											{open ? (
@@ -165,7 +70,27 @@ export function Header({ user }: UserProps) {
 											)}
 										</Disclosure.Button>
 									</div>
+
+									{/* Desktop View */}
+									<div className='hidden sm:ml-6 sm:block'>
+										<div className='flex items-center'>
+											<button
+												type='button'
+												className='rounded-full bg-gray-800 p-2 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
+											>
+												<span className='sr-only'>View notifications</span>
+												<HiBell className='h-6 w-6' aria-hidden='true' />
+											</button>
+											<UserMenu user={user} className='relative ml-2' />
+										</div>
+									</div>
 								</>
+							) : (
+								<Link href='/signin'>
+									<a className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white'>
+										Sign In
+									</a>
+								</Link>
 							)}
 						</div>
 					</div>
