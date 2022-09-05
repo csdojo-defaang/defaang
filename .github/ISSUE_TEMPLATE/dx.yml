@@ -1,12 +1,4 @@
-name: DX - Developer Experience
+name: 👨‍💻 Developer Experience
 description: Report an issue to help improve the developer experience.
-title: '[DX] <description>'
+title: '[DX] Description'
 labels: ['dx']
-body:
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      description: A brief description of the improvement / feature suggestion
-    validations:
-      required: true
