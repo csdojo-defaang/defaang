@@ -2,3 +2,11 @@ name: 💡 General Feature Request
 description: Have a new idea/feature for this project? Please suggest!
 title: '[FEATURE] Description'
 labels: ['feat']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Description of the enhancement you propose, also include what you tried and what worked.
+    validations:
+      required: true
