@@ -1,11 +1,15 @@
 import Link from 'next/link';
 import { HiBell, HiMenu, HiX } from 'react-icons/hi';
 import { Disclosure } from '@headlessui/react';
-import type { UserProps } from '../../lib/types';
+import { type User } from '@supabase/gotrue-js/src/lib/types';
 import { signOut } from '../../utils/auth';
 import { UserMenu } from './UserMenu';
 
-export function Header({ user }: UserProps) {
+export interface HeaderProps {
+	user: User;
+}
+
+export function Header({ user }: HeaderProps) {
 	const userName = user?.email?.split('@')[0];
 
 	return (
