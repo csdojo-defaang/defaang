@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/future/image';
 import { HiBell, HiMenu, HiX } from 'react-icons/hi';
 import { Disclosure } from '@headlessui/react';
 import { type User } from '@supabase/gotrue-js/src/lib/types';
@@ -6,7 +7,7 @@ import { signOut } from '../../utils/auth';
 import { UserMenu } from './UserMenu';
 
 export interface HeaderProps {
-	user: User;
+	user: User | null | undefined;
 }
 
 export function Header({ user }: HeaderProps) {
@@ -20,16 +21,7 @@ export function Header({ user }: HeaderProps) {
 						<div className='flex h-16 items-center justify-between'>
 							<div className='flex items-center'>
 								<div className='flex-shrink-0'>
-									<img
-										className='block h-8 w-auto lg:hidden'
-										src='https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500'
-										alt='Workflow'
-									/>
-									<img
-										className='hidden h-8 w-auto lg:block'
-										src='https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500'
-										alt='Workflow'
-									/>
+									<Image src='/logo.svg' alt='defaang logo' width='32' height='32' className='block h-8 w-auto' />
 								</div>
 								<div className='hidden sm:ml-6 sm:block'>
 									<div className='flex space-x-4'>
@@ -76,7 +68,7 @@ export function Header({ user }: HeaderProps) {
 										<div className='flex items-center'>
 											<button
 												type='button'
-												className='rounded-full bg-gray-800 p-2 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
+												className='rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
 											>
 												<span className='sr-only'>View notifications</span>
 												<HiBell className='h-6 w-6' aria-hidden='true' />
