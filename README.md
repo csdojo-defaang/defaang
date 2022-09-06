@@ -67,7 +67,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 
 8. Run the queries and you're done.
 
-For more reference watch the [Next Quickstart for Supabase](https://supabase.com/docs/guides/with-nextjs)
+For more reference, read the [Next Quickstart for Supabase](https://supabase.com/docs/guides/with-nextjs)
 
 ## Demo
 
