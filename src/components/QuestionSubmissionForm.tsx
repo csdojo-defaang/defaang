@@ -4,10 +4,10 @@ interface QuestionSubmissionFormInputs {
 	company: string;
 	position: string;
 	location: string;
-	recency: string;
+	asked_date: Date;
 	question: string;
-	'question-details': string;
-	'stay-anonymous': boolean;
+	question_details: string;
+	stay_anonymous: boolean;
 }
 
 export function QuestionSubmissionForm() {
@@ -72,22 +72,16 @@ export function QuestionSubmissionForm() {
 							</div>
 
 							<div className='sm:col-span-3'>
-								<label htmlFor='recency' className='block text-sm font-medium text-gray-700'>
-									How recently was this asked?
+								<label htmlFor='asked-date' className='block text-sm font-medium text-gray-700'>
+									When was this asked?
 								</label>
 								<div className='mt-1'>
-									<select
-										id='recency'
-										{...register('recency', { required: true })}
-										className='block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
-									>
-										<option>Within the past week</option>
-										<option>Within the past month</option>
-										<option>1-2 months ago</option>
-										<option>3-6 months ago</option>
-										<option>7-12 months ago</option>
-										<option>1+ year ago</option>
-									</select>
+									<input
+										type='date'
+										{...register('asked_date', { required: true })}
+										id='asked-date'
+										className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
+									/>
 								</div>
 							</div>
 
@@ -112,7 +106,7 @@ export function QuestionSubmissionForm() {
 								<div className='mt-1'>
 									<textarea
 										id='question-details'
-										{...register('question-details')}
+										{...register('question_details')}
 										rows={3}
 										className='block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 										defaultValue={''}
@@ -124,7 +118,7 @@ export function QuestionSubmissionForm() {
 							<div className='flex h-5 items-center'>
 								<input
 									id='stay-anonymous'
-									{...register('stay-anonymous')}
+									{...register('stay_anonymous')}
 									type='checkbox'
 									className='h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500'
 								/>
