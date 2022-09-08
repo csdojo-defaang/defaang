@@ -24,7 +24,7 @@ const menuLinks: Array<MenuLink> = [
 export function UserMenu({ user, className = '' }: UserMenuProps) {
 	return (
 		<Menu as='div' className={className}>
-			<Menu.Button className='rounded-full bg-gray-800 p-2 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
+			<Menu.Button className='rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
 				<span className='sr-only'>Open user menu</span>
 				<HiUser className='h-6 w-6' aria-hidden='true' />
 			</Menu.Button>
