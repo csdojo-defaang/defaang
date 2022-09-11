@@ -1,18 +1,19 @@
 import Image from 'next/future/image';
 import Head from 'next/head';
 import Link from 'next/link';
-import { SignInForm } from '../components/SignIn/Form';
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import type { PageProps } from '../lib/types';
+import { useEffect } from 'react';
 import bg_img from '../../public/bg_img.webp';
+import { SignInForm } from '../components/SignIn/Form';
+import { useTypedSelector } from '../store';
 
-export default function SignIn({ user }: PageProps) {
+export default function SignIn() {
 	const router = useRouter();
+	const { session } = useTypedSelector(state => state.auth);
 
 	// If the user is already logged in, redirect them to home page
 	useEffect(() => {
-		if (user) {
+		if (session?.user) {
 			router.push('/');
 		}
 	});

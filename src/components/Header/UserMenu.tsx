@@ -1,8 +1,8 @@
-import { Fragment } from 'react';
-import { HiUser } from 'react-icons/hi';
 import { Menu, Transition } from '@headlessui/react';
 import { type User } from '@supabase/gotrue-js/src/lib/types';
 import clsx from 'clsx';
+import { Fragment } from 'react';
+import { HiUser } from 'react-icons/hi';
 import { signOut } from '../../utils/auth';
 
 export interface UserMenuProps {

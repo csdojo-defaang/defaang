@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import { MdOutlineMarkEmailRead } from 'react-icons/md';
-import type { PageProps } from '../lib/types';
 
-export default function ConfirmEmail({}: PageProps) {
+export default function ConfirmEmail() {
 	return (
 		<>
 			<Head>

@@ -1,15 +1,19 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import type { PageProps } from '../../lib/types';
+import { useEffect } from 'react';
 import { QuestionSubmissionForm } from '../../components/QuestionSubmissionForm';
+import { useTypedSelector } from '../../store';
 
-export default function SubmitQuestion({}: PageProps) {
+export default function SubmitQuestion() {
 	const router = useRouter();
+	const { session } = useTypedSelector(state => state.auth);
 
 	// If the user is not logged in, redirect them to the signin page
-	if (typeof localStorage !== 'undefined' && !localStorage['supabase.auth.token']) {
-		router.push('/signin');
-	}
+	useEffect(() => {
+		if (!session?.user) {
+			router.push('/signin');
+		}
+	});
 
 	return (
 		<>

@@ -1,17 +1,14 @@
-import Link from 'next/link';
-import Image from 'next/future/image';
-import { HiBell, HiMenu, HiX } from 'react-icons/hi';
 import { Disclosure } from '@headlessui/react';
-import { type User } from '@supabase/gotrue-js/src/lib/types';
+import Image from 'next/future/image';
+import Link from 'next/link';
+import { HiBell, HiMenu, HiX } from 'react-icons/hi';
+import { useTypedSelector } from '../../store';
 import { signOut } from '../../utils/auth';
 import { UserMenu } from './UserMenu';
 
-export interface HeaderProps {
-	user: User | null | undefined;
-}
-
-export function Header({ user }: HeaderProps) {
-	const userName = user?.email?.split('@')[0];
+export function Header() {
+	const { session } = useTypedSelector(state => state.auth);
+	const userName = session?.user?.email?.split('@')[0];
 
 	return (
 		<Disclosure as='nav' className='bg-gray-800'>
@@ -49,7 +46,7 @@ export function Header({ user }: HeaderProps) {
 									</div>
 								</div>
 							</div>
-							{user ? (
+							{session?.user ? (
 								<>
 									{/* Mobile View */}
 									<div className='-mr-2 flex sm:hidden'>
@@ -73,7 +70,7 @@ export function Header({ user }: HeaderProps) {
 												<span className='sr-only'>View notifications</span>
 												<HiBell className='h-6 w-6' aria-hidden='true' />
 											</button>
-											<UserMenu user={user} className='relative ml-2' />
+											<UserMenu user={session.user} className='relative ml-2' />
 										</div>
 									</div>
 								</>
@@ -122,7 +119,7 @@ export function Header({ user }: HeaderProps) {
 							<div className='flex items-center px-5'>
 								<div className='ml-3'>
 									<div className='text-base font-medium text-white'>{userName}</div>
-									<div className='text-sm font-medium text-gray-400'>{user?.email}</div>
+									<div className='text-sm font-medium text-gray-400'>{session?.user?.email}</div>
 								</div>
 								<button
 									type='button'
