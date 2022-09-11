@@ -1,6 +1,9 @@
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl: string = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseAnonKey: string = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-export const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey);
+if (!supabaseUrl) throw new Error('Supabase URL not found.');
+if (!supabaseAnonKey) throw new Error('Supabase Anon key not found.');
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);

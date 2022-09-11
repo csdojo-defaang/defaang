@@ -21,7 +21,7 @@ export function Header({ user }: HeaderProps) {
 						<div className='flex h-16 items-center justify-between'>
 							<div className='flex items-center'>
 								<div className='flex-shrink-0'>
-									<Image src='/logo.svg' alt='defaang logo' width='32' height='32' className='block h-8 w-auto' />
+									<Image src='/logo.svg' alt='defaang logo' width='32' height='32' className='block h-8 w-8' />
 								</div>
 								<div className='hidden sm:ml-6 sm:block'>
 									<div className='flex space-x-4'>
