@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import type { PageProps } from '../../lib/types';
 import { QuestionSubmissionForm } from '../../components/QuestionSubmissionForm';
 
-export default function SubmitQuestion({}: PageProps) {
+export default function SubmitQuestion(pageProps: PageProps) {
 	const router = useRouter();
 
 	// If the user is not logged in, redirect them to the signin page
@@ -18,7 +18,7 @@ export default function SubmitQuestion({}: PageProps) {
 			</Head>
 
 			<main className='flex justify-center py-10 px-4 pt-10 sm:px-12'>
-				<QuestionSubmissionForm />
+				<QuestionSubmissionForm {...pageProps} />
 			</main>
 		</>
 	);

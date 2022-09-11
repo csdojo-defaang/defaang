@@ -1,21 +1,39 @@
-import { type SubmitHandler, useForm } from 'react-hook-form';
+import { type SubmitHandler, useForm, FieldValues } from 'react-hook-form';
+import type { PageProps } from '../lib/types';
 
-interface QuestionSubmissionFormInputs {
-	company: string;
-	position: string;
-	location: string;
-	recency: string;
-	question: string;
-	'question-details': string;
-	'stay-anonymous': boolean;
-}
-
-export function QuestionSubmissionForm() {
+export function QuestionSubmissionForm({ session }: PageProps) {
 	// reference: https://react-hook-form.com/get-started#Quickstart
-	const { register, handleSubmit, reset } = useForm<QuestionSubmissionFormInputs>();
+	const {
+		register,
+		handleSubmit,
+		reset,
+		// formState: { errors },
+	} = useForm();
 
-	const onSubmit: SubmitHandler<QuestionSubmissionFormInputs> = data => {
+	const onSubmit: SubmitHandler<FieldValues> = async data => {
 		console.log(data);
+
+		if (session === undefined || session === null) {
+			console.log('user not logged in.');
+
+			return;
+		}
+
+		let result;
+		try {
+			result = await fetch('/api/submit_question', {
+				headers: {
+					Authentication: session.access_token,
+				},
+				method: 'POST',
+				body: JSON.stringify(data),
+			});
+		} catch (err) {
+			console.log(err);
+		}
+
+		console.log(result);
+
 		reset();
 	};
 
@@ -106,13 +124,13 @@ export function QuestionSubmissionForm() {
 							</div>
 
 							<div className='sm:col-span-6'>
-								<label htmlFor='question-details' className='block text-sm font-medium text-gray-700'>
+								<label htmlFor='question_details' className='block text-sm font-medium text-gray-700'>
 									Question details
 								</label>
 								<div className='mt-1'>
 									<textarea
-										id='question-details'
-										{...register('question-details')}
+										id='question_details'
+										{...register('question_details')}
 										rows={3}
 										className='block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 										defaultValue={''}
@@ -123,14 +141,14 @@ export function QuestionSubmissionForm() {
 						<div className='relative mt-6 flex'>
 							<div className='flex h-5 items-center'>
 								<input
-									id='stay-anonymous'
-									{...register('stay-anonymous')}
+									id='stay_anonymous'
+									{...register('stay_anonymous')}
 									type='checkbox'
 									className='h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500'
 								/>
 							</div>
 							<div className='ml-3 text-sm'>
-								<label htmlFor='stay-anonymous' className='font-medium text-gray-700'>
+								<label htmlFor='stay_anonymous' className='font-medium text-gray-700'>
 									Stay anonymous
 								</label>
 							</div>
