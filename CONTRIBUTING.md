@@ -19,11 +19,11 @@ defaang lives through contributions from the community. When contributing to thi
 
 ## Where to Get Help
 
-The community is present on various platforms on the internet, where we actively help each other out – not only with using the application. GitHub is the most tech-focused part of the community, albeit [discussing here](https://github.com/ykdojo/defaang/discussions) is the way to go for more theoretical discussions. Furthermore, we have a [Discord-server](https://discord.gg/aJp6Fypb) where we discuss building the app and help each other out.
+The community is present on various platforms on the internet, where we actively help each other out – not only with using the application. GitHub is the most tech-focused part of the community, albeit [discussing here](https://github.com/ykdojo/defaang/discussions) is the way to go for more theoretical discussions. Furthermore, we have a [Discord-server](https://discord.gg/nNtVfKddDD) where we discuss building the app and help each other out.
 
 ### All Communication Channels
 
-- [Discord](https://discord.gg/aJp6Fypb)
+- [Discord](https://discord.gg/nNtVfKddDD)
 - [GitHub](https://github.com/ykdojo/defaang/discussions)
 
 ## How to Help
