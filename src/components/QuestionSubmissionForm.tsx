@@ -4,7 +4,7 @@ interface QuestionSubmissionFormInputs {
 	company: string;
 	position: string;
 	location: string;
-	asked_month: string;
+	asked_month: number;
 	asked_year: number;
 	question: string;
 	question_details: string;
@@ -99,15 +99,15 @@ export function QuestionSubmissionForm() {
 										</label>
 										<div className='mt-1 flex flex-col gap-y-1'>
 											<select
-												{...register('asked_month', { required: true })}
+												{...register('asked_month', { required: true, valueAsNumber: true })}
 												id='asked-month'
+												defaultValue={new Date().getMonth()}
 												className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 											>
-												<option hidden={true} value=''>
-													Select
-												</option>
-												{months.map(m => (
-													<option key={m}>{m}</option>
+												{months.map((month, index) => (
+													<option key={month} value={index}>
+														{month}
+													</option>
 												))}
 											</select>
 											{formState.errors.asked_month && <span className='text-xs text-red-500'>Month is required</span>}
@@ -120,14 +120,25 @@ export function QuestionSubmissionForm() {
 										<div className='mt-1 flex flex-col gap-y-1'>
 											<input
 												type='tel'
-												{...register('asked_year', { required: true, pattern: /^\d{4}$/, valueAsNumber: true })}
+												defaultValue={new Date().getFullYear()}
+												{...register('asked_year', {
+													required: true,
+													validate: value => {
+														const valueAsString = value.toString();
+														if (!valueAsString) return false;
+														const matches = valueAsString.match(/^\d{4}$/);
+														if (!matches) return false;
+														return matches.length > 0;
+													},
+													valueAsNumber: true,
+												})}
 												id='asked-year'
 												className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 											/>
 											{formState.errors.asked_year && formState.errors.asked_year.type === 'required' && (
 												<span className='text-xs text-red-500'>Year is required</span>
 											)}
-											{formState.errors.asked_year && formState.errors.asked_year.type === 'pattern' && (
+											{formState.errors.asked_year && formState.errors.asked_year.type === 'validate' && (
 												<span className='text-xs text-red-500'>Not a valid year</span>
 											)}
 										</div>
