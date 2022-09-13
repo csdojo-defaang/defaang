@@ -31,7 +31,7 @@ export function QuestionSubmissionForm() {
 	const { register, handleSubmit, reset, formState } = useForm<QuestionSubmissionFormInputs>();
 
 	const onSubmit: SubmitHandler<QuestionSubmissionFormInputs> = data => {
-		console.log(data);
+		console.log({ computed_asked_date: new Date(data.asked_year, data.asked_month, 1), ...data });
 		reset();
 	};
 
