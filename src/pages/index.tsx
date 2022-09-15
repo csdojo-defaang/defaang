@@ -11,10 +11,12 @@ export default function Home() {
 				<title>{'defaang: recently-asked interview questions at FAANG+, collected & curated'}</title>
 			</Head>
 
-			<Header2 />
-			<main>
-				<Hero />
-			</main>
+			<div className="bg-[url('/hero-background.jpg')] bg-top">
+				<Header2 />
+				<main>
+					<Hero />
+				</main>
+			</div>
 			{/* <main className='flex min-h-screen flex-col items-center justify-center px-[5%] text-center lg:px-[20%]'>
 				<PlaceHolder />
 			</main>
