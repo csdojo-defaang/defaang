@@ -21,7 +21,7 @@ export function CallToAction() {
 					<p className='mt-4 text-lg tracking-tight text-white'>
 						Before we officially launch the site, feel free to join us on Discord.
 					</p>
-					<Button href='/register' color='white' className='mt-10'>
+					<Button href='https://discord.com/invite/nNtVfKddDD' target='_blank' color='white' className='mt-10'>
 						<span className='text-blue-600'>Join us on Discord</span>
 					</Button>
 				</div>

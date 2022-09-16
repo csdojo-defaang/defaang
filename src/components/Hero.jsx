@@ -24,14 +24,10 @@ export function Hero() {
 					Recently asked MANGA+ interview questions, carefully curated.
 				</p>
 				<div className='mt-10 flex justify-center gap-x-6'>
-					<Button color='blue' href='/register'>
+					<Button color='blue' href='https://discord.com/invite/nNtVfKddDD' target='_blank'>
 						Join us on Discord
 					</Button>
-					<Button
-					// href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-					// className="bg-white"
-					// variant="outline"
-					>
+					<Button href='https://github.com/ykdojo/defaang' target='_blank'>
 						<span>Join us on GitHub</span>
 					</Button>
 				</div>
