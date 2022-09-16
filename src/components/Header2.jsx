@@ -99,7 +99,7 @@ export function Header2() {
 						{/* <div className="hidden md:block">
               <NavLink href="/login">Sign in</NavLink>
             </div> */}
-						<Button href='/register' color='blue'>
+						<Button href='/signup' color='blue'>
 							<span>
 								Sign up <span className='hidden lg:inline'>today</span>
 							</span>
