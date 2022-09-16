@@ -1,10 +1,8 @@
 import Head from 'next/head';
 import { Header2 } from '../components/Header2';
 import { CallToAction } from '../components/CallToAction';
-import { SecondaryFeatures } from '../components/SecondaryFeatures';
+import { Features } from '../components/Features';
 import { Hero } from '../components/hero';
-// import { PlaceHolder } from '../components/PlaceHolder';
-// import { Footer } from '../components/Footer';
 
 export default function Home() {
 	return (
@@ -18,13 +16,9 @@ export default function Home() {
 				<main>
 					<Hero />
 					<CallToAction />
-					<SecondaryFeatures />
+					<Features />
 				</main>
 			</div>
-			{/* <main className='flex min-h-screen flex-col items-center justify-center px-[5%] text-center lg:px-[20%]'>
-				<PlaceHolder />
-			</main>
-			<Footer /> */}
 		</>
 	);
 }
