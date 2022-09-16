@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import { Header2 } from '../components/Header2';
+import { CallToAction } from '../components/CallToAction';
+import { SecondaryFeatures } from '../components/SecondaryFeatures';
 import { Hero } from '../components/hero';
 // import { PlaceHolder } from '../components/PlaceHolder';
 // import { Footer } from '../components/Footer';
@@ -15,6 +17,8 @@ export default function Home() {
 				<Header2 />
 				<main>
 					<Hero />
+					<CallToAction />
+					<SecondaryFeatures />
 				</main>
 			</div>
 			{/* <main className='flex min-h-screen flex-col items-center justify-center px-[5%] text-center lg:px-[20%]'>
