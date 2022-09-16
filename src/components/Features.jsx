@@ -7,8 +7,7 @@ const features = [
 	{
 		name: 'Contribute',
 		summary: 'Contribute interview questions anonymously.',
-		description:
-			'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
+		description: "Submit recently asked interview questions, and you'll get access to other questions.",
 		icon: function ReportingIcon() {
 			let id = useId();
 			return (
@@ -138,9 +137,6 @@ export function Features() {
 			<Container>
 				<div className='mx-auto max-w-2xl md:text-center'>
 					<h2 className='font-display text-3xl tracking-tight text-slate-900 sm:text-4xl'>How it works</h2>
-					{/* <p className="mt-4 text-lg tracking-tight text-slate-700">
-            We're going to officially launch the site when we have 100 approved questions.
-          </p> */}
 				</div>
 				<FeaturesMobile />
 				<FeaturesDesktop />
