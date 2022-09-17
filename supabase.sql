@@ -61,7 +61,7 @@ create table questions (
   location text,
   asked_month smallint,
 	asked_year smallint,
-	computed_asked_date date,
+	estimated_asked_date date,
   question text,
   question_details text,
   stay_anonymous boolean,
