@@ -59,8 +59,6 @@ create table questions (
   created_by uuid references auth.users(id) not null,
   company text,
   location text,
-  asked_month smallint,
-	asked_year smallint,
 	estimated_asked_date date,
   question text,
   question_details text,
