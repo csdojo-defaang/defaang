@@ -6,13 +6,13 @@ interface QuestionSubmissionFormInputs {
 	location: string;
 	recency: string;
 	question: string;
-	'question-details': string;
-	'stay-anonymous': boolean;
+	question_details: string;
+	stay_anonymous: boolean;
 }
 
 export function QuestionSubmissionForm() {
 	// reference: https://react-hook-form.com/get-started#Quickstart
-	const { register, handleSubmit, reset } = useForm<QuestionSubmissionFormInputs>();
+	const { register, handleSubmit, reset, formState } = useForm<QuestionSubmissionFormInputs>();
 
 	const onSubmit: SubmitHandler<QuestionSubmissionFormInputs> = data => {
 		console.log(data);
@@ -20,7 +20,7 @@ export function QuestionSubmissionForm() {
 	};
 
 	return (
-		<div className='w-full bg-white p-4 shadow-lg sm:w-4/5 md:w-2/3 lg:w-1/2'>
+		<div className='w-full rounded-md bg-white p-4 shadow-md sm:w-4/5 md:w-2/3 lg:w-1/2'>
 			<form className='space-y-8 divide-y divide-gray-200' onSubmit={handleSubmit(onSubmit)}>
 				<div className='space-y-8 divide-y divide-gray-200'>
 					<div>
@@ -29,49 +29,52 @@ export function QuestionSubmissionForm() {
 						</div>
 
 						<div className='mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6'>
-							<div className='sm:col-span-4'>
+							<div className='sm:col-span-6'>
 								<label htmlFor='company' className='block text-sm font-medium text-gray-700'>
 									Company
 								</label>
-								<div className='mt-1 flex rounded-md shadow-sm'>
+								<div className='mt-1 flex flex-col gap-y-1'>
 									<input
 										type='text'
 										id='company'
 										className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 										{...register('company', { required: true })}
 									/>
+									{formState.errors.company && <span className='text-xs text-red-500'>Company is required</span>}
 								</div>
 							</div>
 
-							<div className='sm:col-span-4'>
+							<div className='sm:col-span-6'>
 								<label htmlFor='position' className='block text-sm font-medium text-gray-700'>
 									Position
 								</label>
-								<div className='mt-1 flex rounded-md shadow-sm'>
+								<div className='mt-1 flex flex-col gap-y-1'>
 									<input
 										type='text'
 										{...register('position', { required: true })}
 										id='position'
 										className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 									/>
+									{formState.errors.position && <span className='text-xs text-red-500'>Position is required</span>}
 								</div>
 							</div>
 
-							<div className='sm:col-span-4'>
+							<div className='sm:col-span-6'>
 								<label htmlFor='location' className='block text-sm font-medium text-gray-700'>
 									Location
 								</label>
-								<div className='mt-1 flex rounded-md shadow-sm'>
+								<div className='mt-1 flex flex-col gap-y-1'>
 									<input
 										type='text'
 										{...register('location', { required: true })}
 										id='location'
 										className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 									/>
+									{formState.errors.location && <span className='text-xs text-red-500'>Location is required</span>}
 								</div>
 							</div>
 
-							<div className='sm:col-span-3'>
+							<div className='sm:col-span-6'>
 								<label htmlFor='recency' className='block text-sm font-medium text-gray-700'>
 									How recently was this asked?
 								</label>
@@ -95,13 +98,14 @@ export function QuestionSubmissionForm() {
 								<label htmlFor='question' className='block text-sm font-medium text-gray-700'>
 									Question
 								</label>
-								<div className='mt-1 flex rounded-md shadow-sm'>
+								<div className='mt-1 flex flex-col gap-y-1'>
 									<input
 										type='text'
 										{...register('question', { required: true })}
 										id='question'
 										className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 									/>
+									{formState.errors.question && <span className='text-xs text-red-500'>Question is required</span>}
 								</div>
 							</div>
 
@@ -112,7 +116,7 @@ export function QuestionSubmissionForm() {
 								<div className='mt-1'>
 									<textarea
 										id='question-details'
-										{...register('question-details')}
+										{...register('question_details')}
 										rows={3}
 										className='block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 										defaultValue={''}
@@ -124,7 +128,7 @@ export function QuestionSubmissionForm() {
 							<div className='flex h-5 items-center'>
 								<input
 									id='stay-anonymous'
-									{...register('stay-anonymous')}
+									{...register('stay_anonymous')}
 									type='checkbox'
 									className='h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500'
 								/>
