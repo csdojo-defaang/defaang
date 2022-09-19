@@ -16,7 +16,11 @@
 		"incremental": true,
 		"noImplicitReturns": true,
 		"noUnusedLocals": true,
-		"noUnusedParameters": true
+		"noUnusedParameters": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"]
+		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./*", "./src/lib/images.d.ts"],
 	"exclude": ["node_modules"]

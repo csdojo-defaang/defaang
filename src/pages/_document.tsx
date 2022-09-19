@@ -6,6 +6,12 @@ export default function Document() {
 			<Head>
 				<link rel='icon' href='/favicon.ico' />
 				<link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
+				<link rel='preconnect' href='https://fonts.googleapis.com' />
+				<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
+				<link
+					rel='stylesheet'
+					href='https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@400;500&display=swap'
+				/>
 				<meta name='description' content='// TODO: website description' />
 				{/* Open Graph Meta Tags */}
 				<meta property='og:title' content='defaang' />
@@ -20,7 +26,7 @@ export default function Document() {
 				<meta name='twitter:image' content='// TODO: https://root-domain-name/logo.png' />
 				<meta name='twitter:card' content='summary' />
 			</Head>
-			<body className='bg-gray-100'>
+			<body className='flex h-full flex-col bg-gray-100'>
 				<Main />
 				<NextScript />
 			</body>
