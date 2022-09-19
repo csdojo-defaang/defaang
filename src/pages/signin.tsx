@@ -5,6 +5,7 @@ import { SignInForm } from '../components/SignIn/Form';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import type { PageProps } from '../lib/types';
+import bg_img from '../../public/bg_img.webp';
 
 export default function SignIn({ user }: PageProps) {
 	const router = useRouter();
@@ -42,9 +43,9 @@ export default function SignIn({ user }: PageProps) {
 				<div className='relative hidden w-0 flex-1 lg:block'>
 					<Image
 						className='absolute inset-0 h-full w-full object-cover'
-						src='/bg_img.webp'
+						src={bg_img}
 						alt='signin page background'
-						fill={true}
+						placeholder='blur'
 					/>
 				</div>
 			</main>

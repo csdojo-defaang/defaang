@@ -1,21 +1,24 @@
 import Head from 'next/head';
-import { Header } from '../components/Header';
-import type { PageProps } from '../lib/types';
-import { PlaceHolder } from '../components/PlaceHolder';
-import { Footer } from '../components/Footer';
+import { Header2 } from '../components/Header2';
+import { CallToAction } from '../components/CallToAction';
+import { Features } from '../components/Features';
+import { Hero } from '../components/Hero';
 
-export default function Home({ user }: PageProps) {
+export default function Home() {
 	return (
 		<>
 			<Head>
 				<title>{'defaang: recently-asked interview questions at FAANG+, collected & curated'}</title>
 			</Head>
 
-			<Header user={user} />
-			<main className='flex min-h-screen flex-col items-center justify-center px-[5%] text-center lg:px-[20%]'>
-				<PlaceHolder />
-			</main>
-			<Footer />
+			<div className="bg-[url('/hero-background.jpg')] bg-top">
+				<Header2 />
+				<main>
+					<Hero />
+					<CallToAction />
+					<Features />
+				</main>
+			</div>
 		</>
 	);
 }

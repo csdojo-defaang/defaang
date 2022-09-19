@@ -5,6 +5,7 @@ import { SignUpForm } from '../components/SignUp/Form';
 import type { PageProps } from '../lib/types';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import bg_img from '../../public/bg_img.webp';
 
 export default function SignUp({ user }: PageProps) {
 	const router = useRouter();
@@ -42,9 +43,9 @@ export default function SignUp({ user }: PageProps) {
 				<div className='relative hidden w-0 flex-1 lg:block'>
 					<Image
 						className='absolute inset-0 h-full w-full object-cover'
-						src='/bg_img.webp'
+						src={bg_img}
 						alt='signup page background'
-						fill={true}
+						placeholder='blur'
 					/>
 				</div>
 			</main>

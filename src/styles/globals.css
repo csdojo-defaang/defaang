@@ -11,3 +11,7 @@
 .input-field {
 	@apply rounded-md border border-black p-2;
 }
+
+#__next {
+	min-height: 100%;
+}

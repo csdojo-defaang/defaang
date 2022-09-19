@@ -51,3 +51,18 @@ $$;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
+
+-- Create a table for questions
+create table questions (
+  id uuid default uuid_generate_v4() primary key,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
+  created_by uuid references auth.users(id) not null,
+  company text,
+  location text,
+	estimated_asked_date date,
+  question text,
+  question_details text,
+  stay_anonymous boolean,
+  position text,
+  is_approved boolean default false
+);
