@@ -11,7 +11,7 @@ interface QuestionSubmissionFormInputs {
 	stay_anonymous: boolean;
 }
 
-export function QuestionSubmissionForm() {
+export function QuestionSubmissionForm({ session }: PageProps) {
 	// reference: https://react-hook-form.com/get-started#Quickstart
 	const { register, handleSubmit, reset, formState } = useForm<QuestionSubmissionFormInputs>();
 
