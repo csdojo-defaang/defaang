@@ -4,6 +4,10 @@ A website that will curate recently-asked interview questions from FAANG+ to hel
 
 The questions will be submitted anonymously, or at least semi-anonymously. We'll ensure that no matter who submits them, we won't reveal the usernames, emails or any other personal info unless they explicitly choose to do so.
 
+## Demo
+
+https://defaang.vercel.app/
+
 ![image](https://user-images.githubusercontent.com/1811651/190090988-bd062b3d-635b-4ce1-ac15-81d3c9edcb91.png)
 ![image](https://user-images.githubusercontent.com/1811651/190091032-73164fed-e5d9-4614-a2a1-2c2d144ebbaa.png)
 
@@ -72,9 +76,6 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 
 For more reference, read the [Next Quickstart for Supabase](https://supabase.com/docs/guides/with-nextjs)
 
-## Demo
-
-https://defaang.vercel.app/
 
 ## Contributing
 
