@@ -5,6 +5,7 @@
 @layer base {
 	html {
 		font-feature-settings: 'cv03', 'cv04', 'cv11';
+		scroll-behavior: smooth;
 	}
 }
 
