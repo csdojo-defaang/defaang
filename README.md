@@ -76,7 +76,6 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
 
 For more reference, read the [Next Quickstart for Supabase](https://supabase.com/docs/guides/with-nextjs)
 
-
 ## Contributing
 
 After you have installed defaang on your local machine, head over to our [CONTRIBUTING.md](https://github.com/ykdojo/defaang/blob/main/CONTRIBUTING.md) guide to assist with all you need to know before getting started with making changes to the codebase.
