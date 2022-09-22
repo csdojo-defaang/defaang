@@ -7,7 +7,8 @@ const features = [
 	{
 		name: 'Contribute',
 		summary: 'Contribute interview questions anonymously.',
-		description: "Submit recently asked interview questions, and you'll get access to other questions.",
+		description:
+			"Submit recently asked interview questions, and you'll get access to other questions. We'll officially launch the site once we have 100 approved questions.",
 		icon: function ReportingIcon() {
 			let id = useId();
 			return (
