@@ -5,7 +5,7 @@ interface QuestionSubmissionFormInputs {
 	company: string;
 	position: string;
 	location: string;
-	recency: string;
+	recency_weeks: string;
 	question: string;
 	question_details: string;
 	stay_anonymous: boolean;
@@ -98,21 +98,21 @@ export function QuestionSubmissionForm({ session }: PageProps) {
 							</div>
 
 							<div className='sm:col-span-6'>
-								<label htmlFor='recency' className='block text-sm font-medium text-gray-700'>
+								<label htmlFor='recency_weeks' className='block text-sm font-medium text-gray-700'>
 									How recently was this asked?
 								</label>
 								<div className='mt-1'>
 									<select
-										id='recency'
-										{...register('recency', { required: true })}
+										id='recency_weeks'
+										{...register('recency_weeks', { required: true })}
 										className='block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
 									>
-										<option>Within the past week</option>
-										<option>Within the past month</option>
-										<option>1-2 months ago</option>
-										<option>3-6 months ago</option>
-										<option>7-12 months ago</option>
-										<option>1+ year ago</option>
+										<option value='1'>Within the past week</option>
+										<option value='2'>Within the past month</option>
+										<option value='6'>1-2 months ago</option>
+										<option value='18'>3-6 months ago</option>
+										<option value='38'>7-12 months ago</option>
+										<option value='60'>1+ year ago</option>
 									</select>
 								</div>
 							</div>
