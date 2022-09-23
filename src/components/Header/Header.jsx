@@ -73,7 +73,7 @@ function MobileNavigation() {
 	);
 }
 
-export function Header2() {
+export function Header() {
 	return (
 		<header className='py-10'>
 			<Container>
