@@ -1,7 +1,7 @@
 import Head from 'next/head';
+import { Header2 } from '../components/Header2';
 import { CallToAction } from '../components/CallToAction';
 import { Features } from '../components/Features';
-import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
 			</Head>
 
 			<div className="bg-[url('/hero-background.jpg')] bg-top">
-				<Header />
+				<Header2 />
 				<main>
 					<Hero />
 					<CallToAction />
