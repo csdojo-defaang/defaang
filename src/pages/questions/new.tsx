@@ -6,7 +6,7 @@ import { QuestionSubmissionForm } from '../../components/QuestionSubmissionForm'
 export default function SubmitQuestion(pageProps: PageProps) {
 	const router = useRouter();
 
-	// If the user is not logged in, redirect them to the signin page
+	// If the user is not logged in, redirect them to the signup page
 	if (typeof localStorage !== 'undefined' && !localStorage['supabase.auth.token']) {
 		router.push('/signup');
 	}
