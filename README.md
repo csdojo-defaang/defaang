@@ -86,7 +86,7 @@ Join us [here](https://discord.gg/nNtVfKddDD).
 
 ## Twitch
 
-Streaming videos about this project on Twitch at [here](https://twitch.tv/ykdojo).
+I (YK) stream almost every day showing my progress on this project on Twitch [here](https://twitch.tv/ykdojo).
 
 ## Resources
 
