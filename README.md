@@ -84,7 +84,7 @@ After you have installed defaang on your local machine, head over to our [CONTRI
 
 Join us [here](https://discord.gg/nNtVfKddDD).
 
-## Twitch
+## Streaming
 
 I (YK) stream almost every day showing my progress on this project on Twitch [here](https://twitch.tv/ykdojo).
 
