@@ -34,8 +34,8 @@ export default function SignIn({ user }: PageProps) {
 						<SignInForm />
 						<p className='my-2 flex w-full justify-center text-sm text-gray-700'>
 							Not registered yet?{' '}
-							<Link className='cursor-pointer font-bold' href={'/signup'}>
-								<a className='mx-1 text-blue-600 hover:underline'>Sign up</a>
+							<Link className='mx-1 cursor-pointer font-bold text-blue-600 hover:underline' href={'/signup'}>
+								Sign up
 							</Link>
 						</p>
 					</div>
