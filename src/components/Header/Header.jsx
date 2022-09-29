@@ -73,7 +73,7 @@ function MobileNavigation() {
 	);
 }
 
-export function Header() {
+export function Header({ session }) {
 	return (
 		<header className='py-10'>
 			<Container>
@@ -90,9 +90,13 @@ export function Header() {
 					</div>
 					<div className='flex items-center gap-x-5 md:gap-x-8'>
 						<Button href='/signup' color='blue'>
-							<span>
-								Sign up <span className='hidden lg:inline'>today</span>
-							</span>
+							{session ? (
+								<span>Submit a question</span>
+							) : (
+								<span>
+									Sign up <span className='hidden lg:inline'>today</span>
+								</span>
+							)}
 						</Button>
 						<div className='-mr-1 md:hidden'>
 							<MobileNavigation />
