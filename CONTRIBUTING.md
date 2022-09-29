@@ -49,7 +49,7 @@ You can find the project board [here](https://github.com/users/ykdojo/projects/1
 
 ### Contributor Guidelines
 
-If you want to help, make yoy _communicate your intent_, that is:
+If you want to help, make sure you _communicate your intent_, that is:
 
 1. If you want to start working on an issue, comment and say that you want to create a PR. Please link the issue in the PR.
 2. If you want to tackle an issue but, along the way, realize that you ran out of time and can't finish it: _communicate it_! This is an Open Source project, and retracting is no shame, but not expressing that you cannot finish something will hinder all other people involved.
