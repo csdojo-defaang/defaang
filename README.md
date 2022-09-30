@@ -6,7 +6,7 @@ The questions will be submitted anonymously, or at least semi-anonymously. We'll
 
 ## Demo
 
-https://defaang.vercel.app/
+https://defaang.io/
 
 ![image](https://user-images.githubusercontent.com/1811651/190090988-bd062b3d-635b-4ce1-ac15-81d3c9edcb91.png)
 ![image](https://user-images.githubusercontent.com/1811651/190091032-73164fed-e5d9-4614-a2a1-2c2d144ebbaa.png)
