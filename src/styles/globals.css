@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-	html {
-		font-feature-settings: 'cv03', 'cv04', 'cv11';
-		scroll-behavior: smooth;
-	}
+  html {
+    font-feature-settings: 'cv03', 'cv04', 'cv11';
+    scroll-behavior: smooth;
+  }
 }
 
 .input-field {
-	@apply rounded-md border border-black p-2;
+  @apply rounded-md border border-black p-2;
 }
 
 #__next {
-	min-height: 100%;
+  min-height: 100%;
 }

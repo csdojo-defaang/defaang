@@ -7,21 +7,21 @@ import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
 
 export default function Home({ session }: PageProps) {
-	return (
-		<>
-			<Head>
-				<title>{'defaang: recently-asked interview questions at FAANG+, collected & curated'}</title>
-			</Head>
+  return (
+    <>
+      <Head>
+        <title>{'defaang: recently-asked interview questions at FAANG+, collected & curated'}</title>
+      </Head>
 
-			<div className="bg-[url('/hero-background.jpg')] bg-top">
-				<Header session={session} />
-				<main>
-					<Hero />
-					<CallToAction />
-					<Features />
-					<CallToAction2 />
-				</main>
-			</div>
-		</>
-	);
+      <div className="bg-[url('/hero-background.jpg')] bg-top">
+        <Header session={session} />
+        <main>
+          <Hero />
+          <CallToAction />
+          <Features />
+          <CallToAction2 />
+        </main>
+      </div>
+    </>
+  );
 }
