@@ -9,36 +9,36 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 const supabaseSecret = createClient(supabaseUrl, supabaseServiceKey);
 
 export default async function handler(req, res) {
-	// input_data format:
-	// {
-	// 	company: "a",
-	// 	location: "a",
-	// 	position: "b",
-	// 	question: "a",
-	// 	question-details: "",
-	// 	recency_weeks: "2",
-	// 	stay-anonymous: false
-	// }
+  // input_data format:
+  // {
+  // 	company: "a",
+  // 	location: "a",
+  // 	position: "b",
+  // 	question: "a",
+  // 	question-details: "",
+  // 	recency_weeks: "2",
+  // 	stay-anonymous: false
+  // }
 
-	// NOTE: recency_weeks: "2" means we estimate this question was asked about 2 weeks ago.
+  // NOTE: recency_weeks: "2" means we estimate this question was asked about 2 weeks ago.
 
-	const input_data = JSON.parse(req.body);
-	const jwt = req.headers.authentication;
-	const asked_date = new Date(new Date().setDate(new Date().getDate() - Number(input_data['recency_weeks']) * 7));
+  const input_data = JSON.parse(req.body);
+  const jwt = req.headers.authentication;
+  const asked_date = new Date(new Date().setDate(new Date().getDate() - Number(input_data['recency_weeks']) * 7));
 
-	input_data['asked_date'] = asked_date;
-	delete input_data['recency_weeks'];
+  input_data['asked_date'] = asked_date;
+  delete input_data['recency_weeks'];
 
-	const { data: user } = await supabase.auth.api.getUser(jwt);
-	const id = user.identities[0]['id'];
+  const { data: user } = await supabase.auth.api.getUser(jwt);
+  const id = user.identities[0]['id'];
 
-	input_data['created_by'] = id;
+  input_data['created_by'] = id;
 
-	const { data, error } = await supabaseSecret.from('questions').insert([input_data]);
+  const { data, error } = await supabaseSecret.from('questions').insert([input_data]);
 
-	if (error) {
-		res.status(500).json({ error });
-	} else {
-		res.status(200).json({ message: 'success!' });
-	}
+  if (error) {
+    res.status(500).json({ error });
+  } else {
+    res.status(200).json({ message: 'success!' });
+  }
 }
