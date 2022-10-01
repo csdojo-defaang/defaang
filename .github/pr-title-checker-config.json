@@ -5,7 +5,7 @@
 	},
 	"CHECKS": {
 		"prefixes": [],
-		"regexp": "^(feat|fix|docs|style|refactor|test|dx|chore){1}(\\([\\w\\-\\.]+\\))?(!)?: ([\\w ])+([\\s\\S]*)",
+		"regexp": "^(feat|fix|docs|style|refactor|test|dx|chore|perf){1}(\\([\\w\\-\\.]+\\))?(!)?: ([\\w ])+([\\s\\S]*)",
 		"regexpFlags": "i",
 		"ignoreLabels": []
 	},
