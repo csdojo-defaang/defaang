@@ -80,15 +80,16 @@ feat: added authentication using supabase auth
 
 ### Making Changes
 
-To contribute, you will need to make a feature branch. This dramatically simplifies adding your code to the official repository and ensures the main branch is always working. As a heads up, it's best to let us know what you're working on by commenting on or creating an [issue](https://github.com/ykdojo/defaang/issues). This way, we all save time by working on different things.
+To contribute, you will need to make a feature branch. This simplifies adding your code to the official repository and ensures the main branch is always working. As a heads up, it's best to let us know what you're working on by commenting on or creating an [issue](https://github.com/ykdojo/defaang/issues). This way, we all save time by working on different things.
+Follow the steps below to make changes:
 
-1. Call `git checkout main`. Always ensure you are on main before making a feature branch.
-2. Call `git checkout -b name-of-your-feature`. This will create a feature branch and switch to it. Try to be specific in your feature name, which helps us track it down in the future if we need to.
-3. Make a meaningful change. You don't want to implement the whole feature in one shot. Try to break your task into meaningful (and revertible) chunks, though sometimes one chunk is all it takes, like minor bug fixes.
-4. To create a commit, start by verifying with `git status` that only files you wanted to change are affected. If there are unexpected changes, please resolve them before continuing.
-5. Stage all of your changes with `git add -A`.
-6. Create your commit with `git commit -m "Type a precise description of only the changes made with this commit."` Use the format stated above.
-7. Repeat steps 2-5 until the feature is complete.
+1. In terminal, `cd` into defaang.
+2. Run `git checkout main`. Always ensure you are on main before creating a feature branch.
+3. Run `git checkout -b name-of-your-feature`. This will create a feature branch and switch to it. Use a self-descriptive name for your feature branch (e.g `feature-featureName`, `bugFix-bugName`, `patch-patchName`). This helps us track it down in the future if we need to.
+4. Make a meaningful change. You don't want to implement the whole feature in one shot. Try to break your task into meaningful (and revertible) chunks, though sometimes one chunk is all it takes, like minor bug fixes.
+5. To create a commit, run `git status` to verify that only the files you want to change are affected. If there are unexpected changes, please resolve them before proceeding.
+6. Stage all of your changes with `git add .` or `git add -A`.
+7. Create your commit with `git commit -m "Type a precise description of only the changes made with this commit."` Use the format described in the [Semantic Commits](#semantic-commits) section above.
 
 ### Pushing Changes
 
