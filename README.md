@@ -92,6 +92,3 @@ Join us [here](https://discord.gg/nNtVfKddDD).
 
 I (YK) stream almost every day showing my progress on this project on Twitch [here](https://twitch.tv/ykdojo).
 
-## Resources
-
-You can find YK's original tweet [here](https://twitter.com/ykdojo/status/1557611357251350528).
