@@ -19,7 +19,7 @@ export function CallToAction() {
         <div className='mx-auto max-w-lg text-center'>
           <h2 className='font-display text-3xl tracking-tight text-white sm:text-4xl'>Join our conversation</h2>
           <p className='mt-4 text-lg tracking-tight text-white'>
-            Before we officially launch the site, feel free to join us on Discord.
+            Before we officially launch the site, feel free to join us on Discord and Twitch.
           </p>
           <div className='mt-10 flex justify-center gap-x-6'>
             <Button href='https://discord.com/invite/nNtVfKddDD' target='_blank' color='white'>
