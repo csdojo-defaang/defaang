@@ -21,9 +21,14 @@ export function CallToAction() {
           <p className='mt-4 text-lg tracking-tight text-white'>
             Before we officially launch the site, feel free to join us on Discord.
           </p>
-          <Button href='https://discord.com/invite/nNtVfKddDD' target='_blank' color='white' className='mt-10'>
-            <span className='text-blue-600'>Join us on Discord</span>
-          </Button>
+          <div className='mt-10 flex justify-center gap-x-6'>
+            <Button href='https://discord.com/invite/nNtVfKddDD' target='_blank' color='white'>
+              <span className='text-blue-600'>Join us on Discord</span>
+            </Button>
+            <Button href='https://www.twitch.tv/ykdojo' target='_blank' color='white'>
+              <span className='text-violet-800'>Join us on Twitch</span>
+            </Button>
+          </div>
         </div>
       </Container>
     </section>
