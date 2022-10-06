@@ -12,19 +12,36 @@ export default function Document() {
           rel='stylesheet'
           href='https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@400;500&display=swap'
         />
-        <meta name='description' content='// TODO: website description' />
+        <meta
+          name='description'
+          content='A website that will curate recently-asked interview questions from FAANG+ to help people practice and prep!'
+        />
         {/* Open Graph Meta Tags */}
         <meta property='og:title' content='defaang' />
-        <meta property='og:description' content='// TODO: website description' />
+        <meta
+          property='og:description'
+          content='A website that will curate recently-asked interview questions from FAANG+ to help people practice and prep!'
+        />
         <meta property='og:type' content='website' />
-        <meta property='og:image' content='// TODO: logo.png' />
+        <meta property='og:url' content='https://defaang.io/' />
+        <meta
+          property='og:image'
+          content='https://user-images.githubusercontent.com/1811651/190090988-bd062b3d-635b-4ce1-ac15-81d3c9edcb91.png'
+        />
         {/* Theme Color Meta Tags */}
-        <meta name='theme-color' content='// TODO: color' />
+        <meta name='theme-color' content='#2d7af0' />
         {/* Twitter Meta Tags  */}
-        <meta name='twitter:title' content='defaang' />
-        <meta name='twitter:description' content='// TODO: website description' />
-        <meta name='twitter:image' content='// TODO: https://root-domain-name/logo.png' />
-        <meta name='twitter:card' content='summary' />
+        <meta property='twitter:title' content='defaang' />
+        <meta
+          property='twitter:description'
+          content='A website that will curate recently-asked interview questions from FAANG+ to help people practice and prep!'
+        />
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://defaang.io/' />
+        <meta
+          property='twitter:image'
+          content='https://user-images.githubusercontent.com/1811651/190090988-bd062b3d-635b-4ce1-ac15-81d3c9edcb91.png'
+        />
       </Head>
       <body className='flex h-full flex-col bg-gray-100'>
         <Main />
