@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang='en'>
       <Head>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/dflogo.svg' />
         <link rel='stylesheet' href='https://rsms.me/inter/inter.css' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
