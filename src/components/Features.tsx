@@ -10,7 +10,7 @@ const features = [
     description:
       "Submit recently asked interview questions, and you'll get access to other questions. We'll officially launch the site once we have 100 approved questions.",
     icon: function ReportingIcon() {
-      let id = useId();
+      const id = useId();
       return (
         <>
           <defs>
@@ -67,7 +67,19 @@ const features = [
   },
 ];
 
-function Feature({ feature, isActive, className, ...props }) {
+interface props {
+  feature: {
+    name: React.ReactNode;
+    summary: string;
+    description: string;
+    icon: () => JSX.Element;
+  };
+  isActive: boolean;
+  className: string;
+  [key: string]: any;
+}
+
+function Feature({ feature, isActive, className, ...props }: props) {
   return (
     <div className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')} {...props}>
       <div className={clsx('w-9 rounded-lg', isActive ? 'bg-blue-600' : 'bg-slate-500')}>
