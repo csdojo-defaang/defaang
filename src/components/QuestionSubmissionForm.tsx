@@ -1,5 +1,6 @@
 import { type SubmitHandler, useForm, FieldValues } from 'react-hook-form';
-import type { PageProps } from '../lib/types';
+import { useUser } from '@supabase/auth-helpers-react';
+import { supabaseClient } from '@supabase/auth-helpers-nextjs';
 
 interface QuestionSubmissionFormInputs {
   company: string;
@@ -11,30 +12,29 @@ interface QuestionSubmissionFormInputs {
   stay_anonymous: boolean;
 }
 
-export function QuestionSubmissionForm({ session }: PageProps) {
+export function QuestionSubmissionForm() {
   // reference: https://react-hook-form.com/get-started#Quickstart
   const { register, handleSubmit, reset, formState } = useForm<QuestionSubmissionFormInputs>();
+  const { user } = useUser();
 
   const onSubmit: SubmitHandler<FieldValues> = async data => {
     console.log(data);
 
-    if (session === undefined || session === null) {
+    if (!user) {
       console.log('user not logged in.');
 
       return;
     }
 
-    let result;
-    try {
-      result = await fetch('/api/submit_question', {
-        headers: {
-          Authentication: session.access_token,
-        },
-        method: 'POST',
-        body: JSON.stringify(data),
-      });
-    } catch (err) {
-      console.log(err);
+    const asked_date = new Date(new Date().setDate(new Date().getDate() - Number(data['recency_weeks']) * 7));
+
+    data['asked_date'] = asked_date;
+    delete data['recency_weeks'];
+
+    const { data: result, error } = await supabaseClient.from('questions').insert([data]);
+
+    if (error) {
+      console.log(error);
     }
 
     console.log(result);

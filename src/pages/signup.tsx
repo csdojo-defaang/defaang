@@ -2,21 +2,10 @@ import Image from 'next/future/image';
 import Head from 'next/head';
 import Link from 'next/link';
 import { SignUpForm } from '../components/SignUp/Form';
-import type { PageProps } from '../lib/types';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import bg_img from '../../public/bg_img.webp';
+import { onlyUnauthenticated } from '@/lib/middlewares';
 
-export default function SignUp({ user }: PageProps) {
-  const router = useRouter();
-
-  // If the user is already logged in, redirect them to home page
-  useEffect(() => {
-    if (user) {
-      router.push('/');
-    }
-  });
-
+export default function SignUp() {
   return (
     <>
       <Head>
@@ -52,3 +41,5 @@ export default function SignUp({ user }: PageProps) {
     </>
   );
 }
+
+export const getServerSideProps = onlyUnauthenticated();

@@ -1,16 +1,8 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import type { PageProps } from '../../lib/types';
 import { QuestionSubmissionForm } from '../../components/QuestionSubmissionForm';
+import { withPageAuth } from '@supabase/auth-helpers-nextjs';
 
-export default function SubmitQuestion(pageProps: PageProps) {
-  const router = useRouter();
-
-  // If the user is not logged in, redirect them to the signup page
-  if (typeof localStorage !== 'undefined' && !localStorage['supabase.auth.token']) {
-    router.push('/signup');
-  }
-
+export default function SubmitQuestion() {
   return (
     <>
       <Head>
@@ -18,8 +10,10 @@ export default function SubmitQuestion(pageProps: PageProps) {
       </Head>
 
       <main className='flex justify-center py-10 px-4 pt-10 sm:px-12'>
-        <QuestionSubmissionForm {...pageProps} />
+        <QuestionSubmissionForm />
       </main>
     </>
   );
 }
+
+export const getServerSideProps = withPageAuth({ redirectTo: '/signup' });

@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { NavLink } from '@/components/NavLink';
+import { useUser } from '@supabase/auth-helpers-react';
 
 function MobileNavLink({ href, children }) {
   return (
@@ -73,7 +74,8 @@ function MobileNavigation() {
   );
 }
 
-export function Header({ session }) {
+export function Header() {
+  const { user } = useUser();
   return (
     <header className='py-10'>
       <Container>
@@ -89,7 +91,7 @@ export function Header({ session }) {
             </div>
           </div>
           <div className='flex items-center gap-x-5 md:gap-x-8'>
-            {session ? (
+            {user ? (
               <Button href='/questions/new' color='blue'>
                 <span>Submit a question</span>
               </Button>
