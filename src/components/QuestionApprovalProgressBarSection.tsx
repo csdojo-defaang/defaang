@@ -1,23 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { supabase } from '@/utils/supabaseClient';
+import React from 'react';
 import { Container } from './Container';
 
 const QUESTION_COUNT_LIMIT = 100;
 
 export function QuestionApprovalProgressBarSection() {
-  const [approvedQuestionCount, setApprovedQuestionCount] = useState(0);
-
-  useEffect(() => {
-    const getApproveQuestionCount = async () => {
-      const { count, error } = await supabase
-        .from('questions')
-        .select('*', { count: 'exact', head: true })
-        .filter('is_approved', 'is', true);
-
-      setApprovedQuestionCount(error ? 0 : count ?? 0);
-    };
-    getApproveQuestionCount();
-  }, []);
+  const approvedQuestionCount = 3;
 
   const progressBarPercentage = Math.floor((approvedQuestionCount / QUESTION_COUNT_LIMIT) * 100);
 
