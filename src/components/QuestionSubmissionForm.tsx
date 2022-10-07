@@ -228,10 +228,7 @@ export function QuestionSubmissionForm({ session }: PageProps) {
                     Question submitted successfully!
                   </Dialog.Title>
                   <div className='mt-2'>
-                    <p className='text-sm text-gray-500'>
-                      Your question has been successfully submitted. We will approve your qustion shortly. Thanks for
-                      your contribution.
-                    </p>
+                    <p className='text-sm text-gray-500'>Thank you! We will review the question as soon as possible.</p>
                   </div>
 
                   <div className='mt-4'>
