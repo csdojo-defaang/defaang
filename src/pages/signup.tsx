@@ -13,7 +13,7 @@ export default function SignUp({ user }: PageProps) {
   // If the user is already logged in, redirect them to home page
   useEffect(() => {
     if (user) {
-      router.push('/');
+      router.replace('/');
     }
   });
 
