@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import { ReactNode } from 'react';
 
 export function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
