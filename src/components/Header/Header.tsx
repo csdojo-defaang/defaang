@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import  { ReactNode, Fragment } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import clsx from 'clsx';
