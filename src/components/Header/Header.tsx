@@ -8,7 +8,7 @@ import { Container } from '@/components/Container';
 import { NavLink } from '@/components/NavLink';
 import { Session } from '@supabase/supabase-js';
 
-function MobileNavLink({ href, children }: { href: string; children: React.ReactNode }) {
+function MobileNavLink({ href, children }: { href: string; children: ReactNode }) {
   return (
     <Popover.Button as={Link} href={href} className='block w-full p-2'>
       {children}
