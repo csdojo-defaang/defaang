@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { ReactNode, Fragment } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import clsx from 'clsx';
@@ -6,8 +6,9 @@ import clsx from 'clsx';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { NavLink } from '@/components/NavLink';
+import { Session } from '@supabase/supabase-js';
 
-function MobileNavLink({ href, children }) {
+function MobileNavLink({ href, children }: { href: string; children: ReactNode }) {
   return (
     <Popover.Button as={Link} href={href} className='block w-full p-2'>
       {children}
@@ -15,7 +16,7 @@ function MobileNavLink({ href, children }) {
   );
 }
 
-function MobileNavIcon({ open }) {
+function MobileNavIcon({ open }: { open: boolean }) {
   return (
     <svg
       aria-hidden='true'
@@ -73,7 +74,7 @@ function MobileNavigation() {
   );
 }
 
-export function Header({ session }) {
+export function Header({ session }: { session: Session | null | undefined }) {
   return (
     <header className='py-10'>
       <Container>

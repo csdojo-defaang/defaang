@@ -20,10 +20,19 @@ const variantStyles = {
       'ring-slate-200 text-slate-700 hover:text-slate-900 hover:ring-slate-300 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300',
     white:
       'ring-slate-700 text-white hover:ring-slate-500 active:ring-slate-700 active:text-slate-400 focus-visible:outline-white',
+    blue: '',
   },
 };
 
-export function Button({ variant = 'solid', color = 'slate', className, href, ...props }) {
+interface props {
+  variant?: 'solid' | 'outline';
+  color?: 'slate' | 'blue' | 'white';
+  className?: string;
+  href: string;
+  [key: string]: any;
+}
+
+export function Button({ variant = 'solid', color = 'slate', className, href, ...props }: props) {
   className = clsx(baseStyles[variant], variantStyles[variant][color], className);
   return href ? <Link href={href} className={className} {...props} /> : <button className={className} {...props} />;
 }
