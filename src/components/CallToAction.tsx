@@ -2,14 +2,13 @@ import Image from 'next/future/image';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import backgroundImage from '@/images/background-call-to-action.jpg';
 
 export function CallToAction() {
   return (
     <section id='join-conversation' className='relative overflow-hidden bg-blue-600 py-32'>
       <Image
         className='absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2'
-        src={backgroundImage}
+        src='./images/background-call-to-action.jpg'
         alt=''
         width={2347}
         height={1244}
