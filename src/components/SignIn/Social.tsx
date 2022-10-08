@@ -1,11 +1,19 @@
-import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { supabase } from '../../utils/supabaseClient';
+import { FaGithub } from 'react-icons/fa';
 
 export function SignInSocial() {
+  const handleGitHubSignIn = async () => {
+    const { error } = await supabase.auth.signIn({
+      provider: 'github',
+    });
+    if (error) alert(error.message);
+  };
+
   return (
     <div className='mt-6'>
       <p className='text-sm text-gray-700'>Sign in with</p>
       <div className='my-2 grid grid-cols-2 gap-4'>
-        <div>
+        {/* <div>
           <a
             href='#'
             className='inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50'
@@ -13,16 +21,16 @@ export function SignInSocial() {
             <span className='sr-only'>Sign in with Google</span>
             <FaGoogle className='text-xl text-gray-500' />
           </a>
-        </div>
+        </div> */}
 
         <div>
-          <a
-            href='#'
+          <button
+            onClick={handleGitHubSignIn}
             className='inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50'
           >
             <span className='sr-only'>Sign in with GitHub</span>
             <FaGithub className='text-xl text-gray-500' />
-          </a>
+          </button>
         </div>
       </div>
       <div className='relative mt-6'>

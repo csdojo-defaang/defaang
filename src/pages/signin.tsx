@@ -2,6 +2,7 @@ import Image from 'next/future/image';
 import Head from 'next/head';
 import Link from 'next/link';
 import { SignInForm } from '../components/SignIn/Form';
+import { SignInSocial } from '../components/SignIn/Social';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import type { PageProps } from '../lib/types';
@@ -30,7 +31,7 @@ export default function SignIn({ user }: PageProps) {
               <h2 className='mt-6 text-start text-3xl font-bold tracking-tight text-gray-900'>Sign in</h2>
             </div>
             {/* TODO: social sign in options */}
-            {/* <SignInSocial /> */}
+            <SignInSocial />
             <SignInForm />
             <p className='my-2 flex w-full justify-center text-sm text-gray-700'>
               Not registered yet?{' '}
