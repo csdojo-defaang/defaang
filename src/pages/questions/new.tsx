@@ -8,7 +8,7 @@ export default function SubmitQuestion(pageProps: PageProps) {
 
   // If the user is not logged in, redirect them to the signup page
   if (typeof localStorage !== 'undefined' && !localStorage['supabase.auth.token']) {
-    router.push('/signup');
+    router.replace('/signup');
   }
 
   return (
