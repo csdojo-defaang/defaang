@@ -22,10 +22,10 @@ export function CallToAction() {
           </p>
           <div className='mt-10 flex justify-center gap-x-6'>
             <Button href='https://discord.com/invite/nNtVfKddDD' target='_blank' color='white'>
-              <span className='text-blue-600'>Join us on Discord</span>
+              <span className='text-[#7289DA]'>Join us on Discord</span>
             </Button>
             <Button href='https://www.twitch.tv/ykdojo' target='_blank' color='white'>
-              <span className='text-purple-600'>Join us on Twitch</span>
+              <span className='text-[#9146FF]'>Join us on Twitch</span>
             </Button>
           </div>
         </div>
