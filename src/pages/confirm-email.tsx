@@ -16,10 +16,11 @@ export default function ConfirmEmail({}: PageProps) {
           <p className='text-center text-gray-700'>
             Thanks for signing up! We&#39;ve sent you an email to confirm your account.
           </p>
-          <Link href='/signin'>
-            <a className='group relative my-4 flex w-full justify-center rounded-md border border-transparent bg-blue-500 py-2 px-4 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'>
-              Go to Sign in
-            </a>
+          <Link
+            href='/signin'
+            className='flex justify-center rounded-md border bg-blue-500 py-2 px-4 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none'
+          >
+            Go to Sign in
           </Link>
         </div>
       </main>
