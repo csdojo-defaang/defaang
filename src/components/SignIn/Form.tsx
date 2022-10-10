@@ -35,10 +35,13 @@ export function SignInForm() {
           id='email'
           autoComplete='email'
           required
-          className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
+          className='peer relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 invalid:text-pink-600 focus:z-10 focus:border-indigo-500 focus:outline-none  focus:ring-indigo-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 sm:text-sm'
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
+        <p className={`invisible mt-2 text-sm text-pink-600 ${email.length > 0 ? 'peer-invalid:visible' : ''}`}>
+          Please provide a valid email address.
+        </p>
       </div>
       <div className='flex w-full flex-col space-y-2 '>
         <label htmlFor='password' className='text-sm text-gray-600'>
