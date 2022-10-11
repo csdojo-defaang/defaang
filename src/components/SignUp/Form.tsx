@@ -8,6 +8,7 @@ export function SignUpForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
   const router = useRouter();
 
   const handleSignUp = async () => {
@@ -44,9 +45,17 @@ export function SignUpForm() {
           required
           className='peer relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 invalid:text-pink-600 focus:z-10 focus:border-indigo-500 focus:outline-none  focus:ring-indigo-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 sm:text-sm'
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={e => {
+            setEmail(e.target.value);
+            setShowEmailError(false);
+          }}
+          onBlur={_ => setShowEmailError(true)}
         />
-        <p className={`invisible mt-2 text-sm text-pink-600 ${email.length > 0 ? 'peer-invalid:visible' : ''}`}>
+        <p
+          className={`invisible mt-2 text-sm text-pink-600 ${
+            email.length > 0 && showEmailError ? 'peer-invalid:visible' : ''
+          }`}
+        >
           Please provide a valid email address.
         </p>
       </div>
