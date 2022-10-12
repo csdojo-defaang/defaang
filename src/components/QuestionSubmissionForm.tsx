@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { type SubmitHandler, useForm, FieldValues } from 'react-hook-form';
 import type { PageProps } from '../lib/types';
+import Notification from './UI/Notification';
 
 interface QuestionSubmissionFormInputs {
   company: string;
@@ -14,32 +16,33 @@ interface QuestionSubmissionFormInputs {
 export function QuestionSubmissionForm({ session }: PageProps) {
   // reference: https://react-hook-form.com/get-started#Quickstart
   const { register, handleSubmit, reset, formState } = useForm<QuestionSubmissionFormInputs>();
+  const [successNotification, setSuccessNotification] = useState(false);
 
   const onSubmit: SubmitHandler<FieldValues> = async data => {
     console.log(data);
 
     if (session === undefined || session === null) {
-      console.log('user not logged in.');
-
+      console.error('User is not logged in');
       return;
     }
 
-    let result;
     try {
-      result = await fetch('/api/submit_question', {
+      await fetch('/api/submit_question', {
         headers: {
           Authentication: session.access_token,
         },
         method: 'POST',
         body: JSON.stringify(data),
+      }).then(res => {
+        if (res && res.ok) {
+          setSuccessNotification(true);
+          reset();
+          // TODO: decide what to after it, maybe redirect to homepage
+        }
       });
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
-
-    console.log(result);
-
-    reset();
   };
 
   return (
@@ -176,6 +179,13 @@ export function QuestionSubmissionForm({ session }: PageProps) {
           </div>
         </div>
       </form>
+
+      <Notification
+        show={successNotification}
+        close={() => setSuccessNotification(false)}
+        message='Thanks for your submission.'
+        title='Successfully saved!'
+      />
     </div>
   );
 }
