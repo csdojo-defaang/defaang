@@ -80,7 +80,12 @@ export function Header({ session }) {
         <nav className='relative z-50 flex justify-between'>
           <div className='flex items-center md:gap-x-12'>
             <Link href='#' aria-label='Home'>
-              <span className='font-serif text-xl font-medium text-blue-600'>defaang</span>
+              <img
+                className='logo'
+                style={{ width: '80px' }}
+                src='https://res.cloudinary.com/dxctpvd8v/image/upload/v1665547484/defaang-Logo-DF-Horizontal_hcctxh.svg'
+              ></img>
+              <span className='font-serif text-xl font-medium text-blue-600'></span>
             </Link>
             <div className='hidden md:flex md:gap-x-6'>
               <NavLink href='#join-conversation'>Join conversation</NavLink>
