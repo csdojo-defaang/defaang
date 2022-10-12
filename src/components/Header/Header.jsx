@@ -82,8 +82,8 @@ export function Header({ session }) {
             <Link href='#' aria-label='Home'>
               <img
                 className='logo'
-                style={{ width: '80px' }}
-                src='https://res.cloudinary.com/dxctpvd8v/image/upload/v1665547484/defaang-Logo-DF-Horizontal_hcctxh.svg'
+                style={{ width: '200px' }}
+                src='https://res.cloudinary.com/dxctpvd8v/image/upload/v1665550289/defaangV9_Horizontal_GrBlue_otmfco.png'
               ></img>
               <span className='font-serif text-xl font-medium text-blue-600'></span>
             </Link>
