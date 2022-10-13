@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { ReactNode, Fragment } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import clsx from 'clsx';
@@ -6,8 +6,9 @@ import clsx from 'clsx';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { NavLink } from '@/components/NavLink';
+import { Session } from '@supabase/supabase-js';
 
-function MobileNavLink({ href, children }) {
+function MobileNavLink({ href, children }: { href: string; children: ReactNode }) {
   return (
     <Popover.Button as={Link} href={href} className='block w-full p-2'>
       {children}
@@ -15,7 +16,7 @@ function MobileNavLink({ href, children }) {
   );
 }
 
-function MobileNavIcon({ open }) {
+function MobileNavIcon({ open }: { open: boolean }) {
   return (
     <svg
       aria-hidden='true'
@@ -66,6 +67,8 @@ function MobileNavigation() {
           >
             <MobileNavLink href='#join-conversation'>Join conversation</MobileNavLink>
             <MobileNavLink href='#how-it-works'>How it works</MobileNavLink>
+            <MobileNavLink href='/signin'>Sign in</MobileNavLink>
+            <MobileNavLink href='/signup'>Sign up</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -73,7 +76,7 @@ function MobileNavigation() {
   );
 }
 
-export function Header({ session }) {
+export function Header({ session }: { session: Session | null | undefined }) {
   return (
     <header className='py-10'>
       <Container>
@@ -88,17 +91,22 @@ export function Header({ session }) {
               <NavLink href='#submit-question'>Submit question</NavLink>
             </div>
           </div>
-          <div className='flex items-center gap-x-5 md:gap-x-8'>
+          <div className='flex items-center gap-x-2'>
             {session ? (
               <Button href='/questions/new' color='blue'>
                 <span>Submit a question</span>
               </Button>
             ) : (
-              <Button href='/signup' color='blue'>
-                <span>
-                  Sign up <span className='hidden lg:inline'>today</span>
-                </span>
-              </Button>
+              <div className='hidden items-center gap-x-2 xxs:flex'>
+                <NavLink href='/signin'>
+                  <span>Sign in</span>
+                </NavLink>
+                <Button href='/signup' color='blue'>
+                  <span>
+                    Sign up <span className='hidden lg:inline'>today</span>
+                  </span>
+                </Button>
+              </div>
             )}
             <div className='-mr-1 md:hidden'>
               <MobileNavigation />
