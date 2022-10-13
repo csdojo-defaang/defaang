@@ -67,6 +67,8 @@ function MobileNavigation() {
           >
             <MobileNavLink href='#join-conversation'>Join conversation</MobileNavLink>
             <MobileNavLink href='#how-it-works'>How it works</MobileNavLink>
+            <MobileNavLink href='/signin'>Sign in</MobileNavLink>
+            <MobileNavLink href='/signup'>Sign up</MobileNavLink>
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -89,17 +91,22 @@ export function Header({ session }: { session: Session | null | undefined }) {
               <NavLink href='#submit-question'>Submit question</NavLink>
             </div>
           </div>
-          <div className='flex items-center gap-x-5 md:gap-x-8'>
+          <div className='flex items-center gap-x-2'>
             {session ? (
               <Button href='/questions/new' color='blue'>
                 <span>Submit a question</span>
               </Button>
             ) : (
-              <Button href='/signup' color='blue'>
-                <span>
-                  Sign up <span className='hidden lg:inline'>today</span>
-                </span>
-              </Button>
+              <div className='hidden items-center gap-x-2 xxs:flex'>
+                <NavLink href='/signin'>
+                  <span>Sign in</span>
+                </NavLink>
+                <Button href='/signup' color='blue'>
+                  <span>
+                    Sign up <span className='hidden lg:inline'>today</span>
+                  </span>
+                </Button>
+              </div>
             )}
             <div className='-mr-1 md:hidden'>
               <MobileNavigation />
