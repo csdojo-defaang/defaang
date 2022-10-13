@@ -89,17 +89,22 @@ export function Header({ session }: { session: Session | null | undefined }) {
               <NavLink href='#submit-question'>Submit question</NavLink>
             </div>
           </div>
-          <div className='flex items-center gap-x-5 md:gap-x-8'>
+          <div className='flex items-center gap-x-1'>
             {session ? (
               <Button href='/questions/new' color='blue'>
                 <span>Submit a question</span>
               </Button>
             ) : (
-              <Button href='/signup' color='blue'>
-                <span>
-                  Sign up <span className='hidden lg:inline'>today</span>
-                </span>
-              </Button>
+              <>
+                <NavLink href='/signin'>
+                  <span>Sign in</span>
+                </NavLink>
+                <Button href='/signup' color='blue'>
+                  <span>
+                    Sign up <span className='hidden lg:inline'>today</span>
+                  </span>
+                </Button>
+              </>
             )}
             <div className='-mr-1 md:hidden'>
               <MobileNavigation />
