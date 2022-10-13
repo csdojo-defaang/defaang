@@ -84,10 +84,19 @@ Alternatively, you can immediately open the workspace on Gitpod by clicking the 
 
 After you have installed defaang on your local machine, head over to our [CONTRIBUTING.md](https://github.com/ykdojo/defaang/blob/main/CONTRIBUTING.md) guide to assist with all you need to know before getting started with making changes to the codebase.
 
+## List of Contributors
+
+
+[![Contributors](https://contrib.rocks/image?repo=ykdojo/defaang)](https://github.com/ykdojo/defaang/graphs/contributors)
+
 ## Discord
 
-Join us [here](https://discord.gg/nNtVfKddDD).
+Join us [here](https://discord.gg/nNtVfKddDD). It's free
 
 ## Streaming
 
 I (YK) stream almost every day showing my progress on this project on Twitch [here](https://twitch.tv/ykdojo).
+
+## Support
+
+Support us by leaving a star ⭐️ on this repository
