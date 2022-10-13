@@ -83,7 +83,7 @@ export function Header({ session }) {
               <img
                 className='logo'
                 style={{ width: '200px' }}
-                src='https://res.cloudinary.com/dxctpvd8v/image/upload/v1665550289/defaangV9_Horizontal_GrBlue_otmfco.png'
+                src='https://res.cloudinary.com/dxctpvd8v/image/upload/v1665629770/defaang-Logo-DF-Horizontal_Blue__iuthdr.svg'
               ></img>
               <span className='font-serif text-xl font-medium text-blue-600'></span>
             </Link>
