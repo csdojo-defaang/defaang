@@ -1,5 +1,6 @@
 import { PageProps } from '@/lib/types';
 import Head from 'next/head';
+import { QuestionApprovalProgressBarSection } from '@/components/QuestionApprovalProgressBarSection';
 import { CallToAction } from '../components/CallToAction';
 import { CallToAction2 } from '../components/CallToAction2';
 import { Features } from '../components/Features';
@@ -17,6 +18,7 @@ export default function Home({ session }: PageProps) {
         <Header session={session} />
         <main>
           <Hero />
+          <QuestionApprovalProgressBarSection />
           <CallToAction />
           <Features />
           <CallToAction2 />
