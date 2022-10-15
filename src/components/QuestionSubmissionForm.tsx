@@ -1,5 +1,8 @@
+// import { useState } from 'react';
+import '../pages/questions/transition.module.css';
 import { type SubmitHandler, useForm, FieldValues } from 'react-hook-form';
 import type { PageProps } from '../lib/types';
+import { useState } from 'react';
 
 interface QuestionSubmissionFormInputs {
   company: string;
@@ -15,6 +18,7 @@ export function QuestionSubmissionForm({ session }: PageProps) {
   // reference: https://react-hook-form.com/get-started#Quickstart
   const { register, handleSubmit, reset, formState } = useForm<QuestionSubmissionFormInputs>();
 
+  const [loading, setLoading] = useState(false);
   const onSubmit: SubmitHandler<FieldValues> = async data => {
     console.log(data);
 
@@ -36,6 +40,10 @@ export function QuestionSubmissionForm({ session }: PageProps) {
     } catch (err) {
       console.log(err);
     }
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
 
     console.log(result);
 
@@ -176,6 +184,12 @@ export function QuestionSubmissionForm({ session }: PageProps) {
           </div>
         </div>
       </form>
+      {loading && (
+        <div className='spinner-wrapper'>
+          <div className='spinner'></div>
+        </div>
+      )}
+      {/* {submitMessage && <div>Submit another Question</div>} */}
     </div>
   );
 }
