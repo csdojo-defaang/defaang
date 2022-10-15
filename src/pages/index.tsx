@@ -1,5 +1,6 @@
 import { PageProps } from '@/lib/types';
 import Head from 'next/head';
+import { ProgressBarSection } from '@/components/ProgressBarSection';
 import { CallToAction } from '../components/CallToAction';
 import { CallToAction2 } from '../components/CallToAction2';
 import { Features } from '../components/Features';
@@ -20,6 +21,7 @@ export default function Home({ session }: PageProps) {
           <CallToAction />
           <Features />
           <CallToAction2 />
+          <ProgressBarSection />
         </main>
       </div>
     </>
