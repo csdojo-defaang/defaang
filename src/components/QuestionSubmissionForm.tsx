@@ -79,10 +79,20 @@ export function QuestionSubmissionForm({ session }: PageProps) {
                 <div className='mt-1 flex flex-col gap-y-1'>
                   <input
                     type='text'
+                    list='companies'
                     id='company'
                     className='block w-full min-w-0 flex-1 rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm'
                     {...register('company', { required: true })}
                   />
+                  <datalist id='companies'>
+                    <option value='Meta/Facebook' />
+                    <option value='Amazon' />
+                    <option value='Apple' />
+                    <option value='Netflix' />
+                    <option value='Google' />
+                    <option value='Microsoft' />
+                    <option value='Salesforce' />
+                  </datalist>
                   {formState.errors.company && <span className='text-xs text-red-500'>Company is required</span>}
                 </div>
               </div>
