@@ -91,6 +91,7 @@ export function QuestionSubmissionForm({ session }: PageProps) {
                     <option value='Netflix' />
                     <option value='Google' />
                     <option value='Microsoft' />
+                    <option value='Salesforce' />
                   </datalist>
                   {formState.errors.company && <span className='text-xs text-red-500'>Company is required</span>}
                 </div>
