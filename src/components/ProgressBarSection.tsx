@@ -7,7 +7,7 @@ export function ProgressBarSection() {
   const approvedQuestionCount = 4;
 
   const progressBarPercentage = Math.floor((approvedQuestionCount / QUESTION_COUNT_LIMIT) * 100);
-
+/nice code
   return (
     <Container className='pt-20 pb-32 text-center lg:pt-32'>
       <h3 className='mx-auto font-display text-2xl font-medium text-slate-900 sm:text-3xl'>Next milestone</h3>
