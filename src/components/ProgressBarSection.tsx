@@ -4,7 +4,7 @@ import { Container } from './Container';
 const QUESTION_COUNT_LIMIT = 10;
 
 export function ProgressBarSection() {
-  const approvedQuestionCount = 4;
+  const approvedQuestionCount = 5;
 
   const progressBarPercentage = Math.floor((approvedQuestionCount / QUESTION_COUNT_LIMIT) * 100);
 
