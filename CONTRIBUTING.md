@@ -19,18 +19,18 @@ defaang lives through contributions from the community. When contributing to thi
 
 ## Where to Get Help
 
-The community is present on various platforms on the internet, where we actively help each other out – not only with using the application. GitHub is the most tech-focused part of the community, albeit [discussing here](https://github.com/ykdojo/defaang/discussions) is the way to go for more theoretical discussions. Furthermore, we have a [Discord-server](https://discord.gg/nNtVfKddDD) where we discuss building the app and help each other out.
+The community is present on various platforms on the internet, where we actively help each other out – not only with using the application. GitHub is the most tech-focused part of the community, albeit [discussing here](https://github.com/csdojo-defaang/defaang/discussions) is the way to go for more theoretical discussions. Furthermore, we have a [Discord-server](https://discord.gg/nNtVfKddDD) where we discuss building the app and help each other out.
 
 ### All Communication Channels
 
 - [Discord](https://discord.gg/nNtVfKddDD)
-- [GitHub](https://github.com/ykdojo/defaang/discussions)
+- [GitHub](https://github.com/csdojo-defaang/defaang/discussions)
 
 ## How to Help
 
 If you have some experience with developing, we would gladly welcome your help in fixing issues and adding features. Even if you just started: There are tons of smaller things and issues to take on, so by cleaning up code here and there, you can improve your skills and help the project. Even if it's a minor fix, it is still a fix!
 
-First, feel free to search for good first issues to tackle: [check here](https://github.com/ykdojo/defaang/labels/good%20first%20issue)
+First, feel free to search for good first issues to tackle: [check here](https://github.com/csdojo-defaang/defaang/labels/good%20first%20issue)
 
 Even if you're an advanced coder, feel free to take one of them :)
 
@@ -45,7 +45,7 @@ Second, please look through the other issues and discussions to get a better ide
 
 ### Project Board
 
-You can find the project board [here](https://github.com/users/ykdojo/projects/1/views/1).
+You can find the project board [here](https://github.com/orgs/csdojo-defaang/projects/2/views/1).
 
 ### Contributor Guidelines
 
@@ -80,7 +80,7 @@ feat: added authentication using supabase auth
 
 ### Making Changes
 
-To contribute, you will need to make a feature branch. This simplifies adding your code to the official repository and ensures the main branch is always working. As a heads up, it's best to let us know what you're working on by commenting on or creating an [issue](https://github.com/ykdojo/defaang/issues). This way, we all save time by working on different things.
+To contribute, you will need to make a feature branch. This simplifies adding your code to the official repository and ensures the main branch is always working. As a heads up, it's best to let us know what you're working on by commenting on or creating an [issue](https://github.com/csdojo-defaang/defaang/issues). This way, we all save time by working on different things.
 Follow the steps below to make changes:
 
 1. In terminal, `cd` into defaang.
