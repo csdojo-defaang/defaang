@@ -1,8 +1,8 @@
 # Contributing
 
-defaang lives through contributions from the community. When contributing to this repository, please first discuss the change you wish to make via an issue, discord, or any other method with the maintainers of this repository before making a change.
+defaang lives through contributions from the community. When contributing to this repository, please first discuss the change you wish to make via an issue, Discord, or any other method with the maintainers of this repository before making a change.
 
-**Table of Contents**
+## Table of Contents
 
 - [Contributing](#contributing)
   - [Where to Get Help](#where-to-get-help)
@@ -93,14 +93,13 @@ Follow the steps below to make changes:
 
 ### Pushing Changes
 
-You are ready for your contribution to be reviewed and merged. There are a few things you can do to make this easier for maintainers to review your code, so please follow all steps.
+You are ready for your contribution to be reviewed and merged. There are a few things you can do to make things easier for the maintainers to review your code, so please follow all these steps.
 
-1. Follow the instructions for Updating Your Repository.
-2. Switch back to your feature branch with `git checkout name-of-your-feature`.
-3. Rebase your branch with `git rebase main`. This will make sure there are no conflicts with other people's contributions.
-4. Rebuild your project to make sure everything still works. If things are broken, resolve them, making commits along the way. Once resolved, return to step 1 as resolving conflict could have made more changes in the meantime.
-5. Push your branch to your online fork with `git push origin name-of-your-feature`.
-6. On GitHub, create a pull request for your feature branch.
+1. Switch to your feature branch with `git checkout name-of-your-feature`.
+2. Rebase your branch with `git rebase main`. This will ensure that there are no conflicts with other people's contributions.
+3. Rebuild your project to make sure everything still works. If things are broken, fix them, making commits along the way.
+4. Push your branch to your fork with `git push origin name-of-your-feature`.
+5. Create a Pull Request for your feature branch on GitHub.
 
 ## Remarks
 
