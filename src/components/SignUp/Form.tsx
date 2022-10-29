@@ -49,11 +49,11 @@ export function SignUpForm() {
             setEmail(e.target.value);
             setShowEmailError(false);
           }}
-          onBlur={_ => setShowEmailError(true)}
+          onBlur={() => setShowEmailError(true)}
         />
         <p
-          className={`invisible mt-2 text-sm text-pink-600 ${
-            email.length > 0 && showEmailError ? 'peer-invalid:visible' : ''
+          className={`mt-2 hidden text-sm text-pink-600 ${
+            email.length > 0 && showEmailError ? 'peer-invalid:block' : ''
           }`}
         >
           Please provide a valid email address.
