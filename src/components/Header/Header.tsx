@@ -1,4 +1,4 @@
-import { ReactNode, Fragment } from 'react';
+import { ReactNode, Fragment, useState, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import clsx from 'clsx';
@@ -77,8 +77,37 @@ function MobileNavigation() {
 }
 
 export function Header({ session }: { session: Session | null | undefined }) {
+  const [y, setY] = useState(0);
+  const [headerClass, setHeaderClass] = useState('py-10');
+
+  const handleNavigation = useCallback(
+    (e: any) => {
+      const window = e.currentTarget;
+
+      if (y < 50) {
+        setHeaderClass('py-10');
+      }
+      if (y > 50) {
+        setHeaderClass('py-5 border-b border-slate-200 bg-slate-50');
+      }
+      setY(window.scrollY);
+    },
+    [y],
+  );
+
+  useEffect(() => {
+    setY(window.scrollY);
+    window.addEventListener('scroll', handleNavigation);
+
+    return () => {
+      window.removeEventListener('scroll', handleNavigation);
+    };
+  }, [handleNavigation]);
+
   return (
-    <header className='py-10'>
+    <header
+      className={`sticky top-0 z-10 bg-opacity-60 backdrop-blur-xl backdrop-filter transition-all duration-300 ease-in-out ${headerClass}`}
+    >
       <Container>
         <nav className='relative z-50 flex justify-between'>
           <div className='flex items-center md:gap-x-12'>
