@@ -8,6 +8,7 @@ export function SignUpForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
   const router = useRouter();
 
   const handleSignUp = async () => {
@@ -42,10 +43,21 @@ export function SignUpForm() {
           id='email'
           autoComplete='email'
           required
-          className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
+          className='peer relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 invalid:text-pink-600 focus:z-10 focus:border-indigo-500 focus:outline-none  focus:ring-indigo-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 sm:text-sm'
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={e => {
+            setEmail(e.target.value);
+            setShowEmailError(false);
+          }}
+          onBlur={() => setShowEmailError(true)}
         />
+        <p
+          className={`mt-2 hidden text-sm text-pink-600 ${
+            email.length > 0 && showEmailError ? 'peer-invalid:block' : ''
+          }`}
+        >
+          Please provide a valid email address.
+        </p>
       </div>
       <div className='flex w-full flex-col space-y-2'>
         <label htmlFor='username' className='text-sm text-gray-600'>
