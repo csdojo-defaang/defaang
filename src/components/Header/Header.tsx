@@ -106,7 +106,7 @@ export function Header({ session }: { session: Session | null | undefined }) {
 
   return (
     <header
-      className={`sticky top-0 z-10 bg-opacity-70 backdrop-blur-xl backdrop-filter transition-all duration-300 ease-in-out ${headerClass}`}
+      className={`sticky top-0 z-10 bg-opacity-60 backdrop-blur-xl backdrop-filter transition-all duration-300 ease-in-out ${headerClass}`}
     >
       <Container>
         <nav className='relative z-50 flex justify-between'>
