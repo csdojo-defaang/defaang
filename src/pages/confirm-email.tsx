@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { MdOutlineMarkEmailRead } from 'react-icons/md';
 import type { PageProps } from '../lib/types';
 
@@ -15,6 +16,12 @@ export default function ConfirmEmail({}: PageProps) {
           <p className='text-center text-gray-700'>
             Thanks for signing up! We&#39;ve sent you an email to confirm your account.
           </p>
+          <Link
+            href='/signin'
+            className='rounded-md bg-blue-500 py-2 px-4 text-sm font-medium text-white hover:bg-blue-700'
+          >
+            Go to Sign in
+          </Link>
         </div>
       </main>
     </>

@@ -8,9 +8,11 @@ export function SignUpForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   const handleSignUp = async () => {
+    setIsLoading(true);
     const { error } = await supabase.auth.signUp(
       { email, password },
       {
@@ -19,8 +21,10 @@ export function SignUpForm() {
         },
       },
     );
-    if (error) alert(error.message);
-    else {
+    if (error) {
+      setIsLoading(false);
+      alert(error.message);
+    } else {
       router.push('/confirm-email');
     }
   };
@@ -89,10 +93,11 @@ export function SignUpForm() {
         </div>
       </div>
       <button
+        disabled={isLoading}
         type='submit'
-        className='group relative my-4 flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+        className='group relative my-4 flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-70'
       >
-        Sign up
+        {isLoading ? 'Loading...' : 'Sign up'}
       </button>
     </form>
   );
