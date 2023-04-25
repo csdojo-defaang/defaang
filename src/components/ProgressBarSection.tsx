@@ -31,7 +31,7 @@ export function ProgressBarSection() {
         </span>
       </div>
       <p className='mx-auto mt-6 max-w-4xl text-lg tracking-tight text-slate-700'>
-        Unlock: you&apos;ll get access to all approved questions once your question has been approved.
+        Unlock: You&apos;ll get access to all approved questions once your question has been approved.
       </p>
     </Container>
   );
