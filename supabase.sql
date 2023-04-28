@@ -1,4 +1,4 @@
--- Create a table for Public Profiles
+-- Creating a table for public profiles
 create table profiles (
   id uuid references auth.users not null,
   updated_at timestamp with time zone,
@@ -23,7 +23,7 @@ create policy "Users can insert their own profile." on profiles
 create policy "Users can update own profile." on profiles
   for update using (auth.uid() = id);
 
--- Set up Storage!
+-- Setting up the storage
 insert into storage.buckets (id, name)
   values ('avatars', 'avatars');
 
@@ -36,13 +36,14 @@ create policy "Anyone can upload an avatar." on storage.objects
 create policy "Anyone can update an avatar." on storage.objects
   for update with check (bucket_id = 'avatars');
 
+--Creating a function to handle new users
 create function public.handle_new_user()
 returns trigger
 language plpgsql
 security definer set search_path = public
 as $$
 begin
-  insert into public.profiles (id, username)
+  insert into public.profiles (id, username) -- Inserting into the public profiles
   values (new.id, new.raw_user_meta_data->>'username');
   return new;
 end;
@@ -52,7 +53,7 @@ create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
 
--- Create a table for questions
+-- Creating a table for questions
 create table questions (
   id uuid default uuid_generate_v4() primary key,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null,
